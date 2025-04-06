@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disclaimer - ReeshEdTech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    p, ul {
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    strong {
+      color: #000;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .button-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-btn {
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Disclaimer</h2>
+    <p>
+      The information provided on <strong>ReeshEdTech</strong> (accessible at <strong>[your-website.com]</strong>) is for educational and informational purposes only. We make every effort to ensure that the content is accurate, up-to-date, and relevant. However:
+    </p>
+
+    <ul>
+      <li>We do not guarantee the accuracy, completeness, or reliability of any notes, videos, blogs, or university question papers shared.</li>
+      <li>The SPPU question papers and materials provided are shared for student reference and learning purposes only. We are not affiliated with Savitribai Phule Pune University.</li>
+      <li>The use of any information is at your own risk. We will not be liable for any loss or damage arising from the use of this site.</li>
+      <li>All content is intended for personal and non-commercial use unless explicitly stated otherwise.</li>
+    </ul>
+
+    <p>
+      If you believe any content violates copyright or should be removed, please contact us at: <strong>reeshedtech@gmail.com</strong>.
+    </p>
+
+    <div class="button-wrapper">
+      <button class="back-btn" onclick="goBack()">I Understand</button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      alert("Thanks for reading the disclaimer.");
+      window.history.back(); // or use window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
