@@ -13,6 +13,7 @@
     background-color: #f9f9f9;
     color: #333;
     scroll-behavior: smooth;
+    width: 100%;
   }
   
   header {
@@ -453,4 +454,13 @@
 /* Show dropdown on hover */
 .nav-links .dropdown:hover .dropdown-content {
   display: block;
+}
+
+@media (min-width: 1400px) {
+  .navbar,
+  .section {
+    max-width: none;
+    width: 100%;
+    padding: 0 2rem;
+  }
 }
