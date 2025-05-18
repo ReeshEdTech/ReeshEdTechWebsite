@@ -493,3 +493,44 @@
 .read-more:hover {
   background-color: #218838;
 }
+/* .bottom-menu {
+  background-color: #0096FF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+} */
+.bottom-menu {
+  text-decoration: none;
+  color: #eff2f5;                /* Dark gray text */
+  background-color: #0096FF	;     /* Light blue background */
+  padding: 10px 15px;
+  margin: 5px;
+  text-align: center;
+  flex: 1 1 30%;                 /* Flexible size with minimum width */
+  max-width: 32%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;              /* Rounded corners */
+  font-weight: bold;
+}
+
+.bottom-card {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+   display: flex;
+  flex-wrap: wrap;               /* Wrap to next line if needed */
+  padding: 10px;
+  background-color: #f3f4f6;     /* Light gray background */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  justify-content: center;   /* Center the row horizontally */
+  gap: 10px;                 /* Space between links */
+}
+
+.bottom-menu:hover {
+  background-color: #c7d2fe;     /* Darker blue on hover */
+}
