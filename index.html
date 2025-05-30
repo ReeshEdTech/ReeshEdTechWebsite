@@ -60,7 +60,7 @@
   
   <!-- Header -->
   <header class="header">
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <div class="logo">TopStudyMaterial</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -77,7 +77,29 @@
           <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li> 
       </ul>
-    </nav>
+    </nav> -->
+    <nav class="navbar">
+  <div class="logo">TopStudyMaterial</div>
+  
+  <!-- Hamburger menu for mobile -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
+        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
+      </ul>
+    </li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li> 
+  </ul>
+</nav>
   </header>
 
   <!-- Hero Section -->
@@ -152,5 +174,14 @@
   <script>
     AOS.init();
   </script>
+<!-- for mobile friendly navbar -->
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>

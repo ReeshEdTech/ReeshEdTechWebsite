@@ -10,8 +10,8 @@
   
   body {
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #fbfafd;
+    color: #0c0101;
     scroll-behavior: smooth;
     width: 100%;
   }
@@ -19,13 +19,13 @@
   header {
     background: #fff;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(238, 237, 237, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
   }
   
-  .navbar {
+  /* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,121 @@
   
   .nav-links a:hover {
     color: #007bff;
+  } */
+
+
+  /* NAVBAR STYLES */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  background: hsl(0, 0%, 100%);
+  color: #fff;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #090000;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+    color: black; /* ← Add this line */
+
+}
+
+/* Dropdown */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 1);
+  z-index: 999;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links .dropdown-content li a {
+  padding: 12px 16px;
+  display: block;
+  color: #ebe7e7;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links .dropdown-content li a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* Extended layout width for larger screens */
+@media (min-width: 1400px) {
+  .navbar,
+  .section {
+    max-width: none;
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+/* Additional utility classes and sections would follow here from your full styles.css file */
+
   
   .hero {
     padding: 4rem 2rem;

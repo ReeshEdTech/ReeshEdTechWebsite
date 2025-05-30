@@ -64,30 +64,33 @@
 <body>
   <div id="top"></div>
 
-  <!-- Header -->
   <header class="header">
+    
     <nav class="navbar">
-      <div class="logo">TopStudyMaterial</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Subjects ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-            <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-            <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-           
-            <!-- Add more subjects as needed -->
-          </ul>
-        </li>
-        <li><a href="#ppts">PPTs</a></li>
+  <div class="logo">TopStudyMaterial</div>
+  
+  <!-- Hamburger menu for mobile -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
+        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
+      </ul>
+    </li>
+    <li><a href="#ppts">PPTs</a></li>
         <li><a href="#questionpapers">Question Papers</a></li>
         <li><a href="#labexperiments">Lab Experiments</a></li>
         <li><a href="#videos">Videos</a></li>
         <li><a href="#lecturenotes">Notes</a></li>
-      </ul>
-    </nav>
+  </ul>
+</nav>
   </header>
+       
 
   <!-- Hero Section -->
   <section id="home" class="hero" data-aos="fade-up">
@@ -214,5 +217,17 @@
   <script>
     AOS.init();
   </script>
+
+<!-- for mobile friendly navbar -->
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+
 </body>
 </html>
