@@ -716,3 +716,25 @@
   .submenu {
     margin-left: 20px;
   }
+  .faq-list {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  margin: 0;
+}
+ 
