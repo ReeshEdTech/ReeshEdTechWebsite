@@ -86,15 +86,50 @@
   <div class="main-container">
   <aside class="sidebar">
     <h3>Subjects</h3>
-    <ul>
-      <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-      <li><a href="principle-of-programming-languages.html"> Principles of Programming Languages</a></li>
-      <li><a href="system-programming-and-operating-system.html">SP & OS</a></li>
-     <li><a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1">Watch Video Lectures</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-
+  <div class="subject">
+    <a class="toggle-link"><strong>🤖 Artificial Intelligence</strong></a>
+    <ul class="submenu">
+      <li><a href="artificial-intelligence.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="artificial-intelligence.html#ppts">PPT </a></li>
+      <li><a href="artificial-intelligence.html#videos">Video Lectures</a></li>
+      <li><a href="artificial-intelligence.html#labexperiments">Lab Experiments</a></li>
+      <li><a href="artificial-intelligence.html#importantquestions">Important Questions</a></li>
+      <li><a href="artificial-intelligence.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+    <li><a href="artificial-intelligence.html#faq">FAQ</a></li>
     </ul>
+  </div>
+
+  <div class="subject">
+    <a class="toggle-link"><strong>🧑‍💻Principles of Programming Languages</strong></a>
+    <ul class="submenu">
+      <li><a href="principle-of-programming-languages.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="principle-of-programming-languages.html#ppts">PPT </a></li>
+      <li><a href="principle-of-programming-languages.html#videos">Video Lectures</a></li>
+      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
+      <li><a href="principle-of-programming-languages.html#importantquestions">Important Questions</a></li>
+      <li><a href="principle-of-programming-languages.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+      <li> <a href="principle-of-programming-languages.html#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="subject">
+    <a class="toggle-link"><strong>⚙️System Programming and Operating System</strong></a>
+    <ul class="submenu">
+      <li><a href="system-programming-and-operating-system.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="system-programming-and-operating-system.html#ppts">PPT </a></li>
+      <li><a href="system-programming-and-operating-system.html#videos">Video Lectures</a></li>
+      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
+      <!-- <li><a href="system-programming-and-operating-system.html#importantquestions">Important Questions</a></li> -->
+      <li><a href="system-programming-and-operating-system.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+      <!-- <li> <a href="system-programming-and-operating-system.html#faq">FAQ</a></li> -->
+    </ul>
+  </div>
+   <div class="subject">
+    <a class="toggle-link"><strong>📚Blogs</strong></a>
+          <li><a href="blogs.html">Blogs</a></li>
+  </div>
   </aside>
+
 
   <section class="content-area">
 
@@ -102,8 +137,21 @@
 
     <div class="blog-card">
       <h2>Your Grades Won't Open Job Doors — But Your GitHub Repo Will! </h2>
-      <p>The Harsh Truth: Grades Aren’t Enough in 2025</p>
+      <p>The Harsh Truth: Grades Aren’t Enough in 2025....</p>
       <a class="read-more" href="assets/blogs/blog1.html">Read More →</a>
+      <a class="read-more" href="index.html">Back To Home</a>
+    </div>
+      <div class="blog-card">
+      <h2>Top 7 Free AI Tools Every Student Must Use in 2025...!</h2>
+      <p>In today’s fast-paced digital world, students need to be smarter, faster, and more productive.</p>
+      <a class="read-more" href="assets/blogs/blog2.html">Read More →</a>
+      <a class="read-more" href="index.html">Back To Home</a>
+    </div>
+      <div class="blog-card">
+      <h2>Why Building a Portfolio Website is a Must for Every Computer Engineering Student
+ </h2>
+      <p>In the digital-first world of 2025, having a strong online presence is no longer optional...</p>
+      <a class="read-more" href="assets/blogs/blog3.html">Read More →</a>
       <a class="read-more" href="index.html">Back To Home</a>
     </div>
      <!-- Footer -->
@@ -125,5 +173,18 @@
   <script>
     AOS.init();
   </script>
+   <!-- Script for handling sidebar -->
+ <script>
+  // Hide all submenus by default
+  document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
+
+  // Add click event to all toggle links
+  document.querySelectorAll('.toggle-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const submenu = link.nextElementSibling;
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 </body>
 </html>

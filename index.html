@@ -91,14 +91,48 @@
 <div class="main-container">
   <aside class="sidebar">
     <h3>Subjects</h3>
-    <ul>
-      <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-      <li><a href="principle-of-programming-languages.html"> Principles of Programming Languages</a></li>
-      <li><a href="system-programming-and-operating-system.html">SP & OS</a></li>
-     <li><a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1">Watch Video Lectures</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-
+  <div class="subject">
+    <a class="toggle-link"><strong>🤖 Artificial Intelligence</strong></a>
+    <ul class="submenu">
+      <li><a href="artificial-intelligence.html#ppts">PPT </a></li>
+      <li><a href="artificial-intelligence.html#videos">Video Lectures</a></li>
+      <li><a href="artificial-intelligence.html#labexperiments">Lab Experiments</a></li>
+        <li><a href="artificial-intelligence.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="artificial-intelligence.html#importantquestions">Important Questions</a></li>
+      <li><a href="artificial-intelligence.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+    <li><a href="artificial-intelligence.html#faq">FAQ</a></li>
     </ul>
+  </div>
+
+  <div class="subject">
+    <a class="toggle-link"><strong>🧑‍💻Principles of Programming Languages</strong></a>
+    <ul class="submenu">
+      <li><a href="principle-of-programming-languages.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="principle-of-programming-languages.html#ppts">PPT </a></li>
+      <li><a href="principle-of-programming-languages.html#videos">Video Lectures</a></li>
+      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
+      <li><a href="principle-of-programming-languages.html#importantquestions">Important Questions</a></li>
+      <li><a href="principle-of-programming-languages.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+      <li> <a href="principle-of-programming-languages.html#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="subject">
+    <a class="toggle-link"><strong>⚙️System Programming and Operating System</strong></a>
+    <ul class="submenu">
+      <li><a href="system-programming-and-operating-system.html#lecturenotes">Lecture Notes</a></li>
+      <li><a href="system-programming-and-operating-system.html#ppts">PPT </a></li>
+      <li><a href="system-programming-and-operating-system.html#videos">Video Lectures</a></li>
+      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
+      <!-- <li><a href="system-programming-and-operating-system.html#importantquestions">Important Questions</a></li> -->
+      <li><a href="system-programming-and-operating-system.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
+      <!-- <li> <a href="system-programming-and-operating-system.html#faq">FAQ</a></li> -->
+    </ul>
+  </div>
+   <div class="subject">
+    <a class="toggle-link"><strong>📚Blogs</strong></a>
+          <li><a href="blogs.html">Blogs</a></li>
+  </div>
   </aside>
 
   <section class="content-area">
@@ -189,5 +223,18 @@
       navLinks.classList.toggle('show');
     });
   </script>
+<!-- Script for handling sidebar -->
+ <script>
+  // Hide all submenus by default
+  document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
+
+  // Add click event to all toggle links
+  document.querySelectorAll('.toggle-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const submenu = link.nextElementSibling;
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 </body>
 </html>
