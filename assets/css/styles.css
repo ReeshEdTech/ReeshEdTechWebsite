@@ -659,6 +659,11 @@
   gap: 20px;
 }
 
+.sidebar ul li:hover > .submenu {
+  display: block;
+}
+
+
 .main-container h3 {
  color: #000506;
 }
@@ -668,8 +673,8 @@
   background-color: #f4f4f4;
   border-right: 1px solid #ddd;
   position: sticky;
-  top: 0;
-  height: 100vh;
+   top: 60px; /* Adjust this based on your header height */
+  height: calc(100vh - 60px);
   overflow-y: auto;
 }
   
@@ -715,6 +720,8 @@
 
   .submenu {
     margin-left: 20px;
+      display: none;
+
   }
   .faq-list {
   margin-top: 20px;
