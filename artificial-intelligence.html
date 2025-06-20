@@ -96,7 +96,7 @@
             <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
             <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
             <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-           
+            <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
             <!-- Add more subjects as needed -->
           </ul>
         </li>
@@ -120,51 +120,54 @@
   <aside class="sidebar">
     <h3>Subjects</h3>
   <div class="subject">
-    <a class="toggle-link"><strong>🤖 Artificial Intelligence</strong></a>
-    <ul class="submenu">
-      <li><a href="artificial-intelligence.html#lecturenotes">Lecture Notes</a></li>
-      <li><a href="artificial-intelligence.html#ppts">PPT </a></li>
-      <li><a href="artificial-intelligence.html#videos">Video Lectures</a></li>
-      <li><a href="artificial-intelligence.html#labexperiments">Lab Experiments</a></li>
-      <li><a href="artificial-intelligence.html#importantquestions">Important Questions</a></li>
-      <li><a href="artificial-intelligence.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-    <li><a href="artificial-intelligence.html#faq">FAQ</a></li>
-    </ul>
-  </div>
+  <a class="toggle-link" onclick="toggleSubmenu('ai')"><strong>🤖 Artificial Intelligence</strong></a>
+  <ul class="submenu" id="submenu-ai">
+    <li><a href="artificial-intelligence.html#lecturenotes" onclick="setOpenSubmenu('ai')">Lecture Notes</a></li>
+    <li><a href="artificial-intelligence.html#ppts" onclick="setOpenSubmenu('ai')">PPT </a></li>
+    <li><a href="artificial-intelligence.html#videos" onclick="setOpenSubmenu('ai')">Video Lectures</a></li>
+    <li><a href="artificial-intelligence.html#labexperiments" onclick="setOpenSubmenu('ai')">Lab Experiments</a></li>
+    <li><a href="artificial-intelligence.html#importantquestions" onclick="setOpenSubmenu('ai')">Important Questions</a></li>
+    <li><a href="artificial-intelligence.html#questionpapers" onclick="setOpenSubmenu('ai')">Previous Year Question Papers(PYQ)</a></li>
+    <li><a href="artificial-intelligence.html#faq" onclick="setOpenSubmenu('ai')">FAQ</a></li>
+  </ul>
+</div>
+<div class="subject">
+  <a class="toggle-link" onclick="toggleSubmenu('bt')"><strong>🤖 Blockchain Technology</strong></a>
+  <ul class="submenu" id="submenu-bt">
+        <li><a href="blockchain-technology.html#questionpapers" onclick="setOpenSubmenu('bt')">Previous Year Question Papers(PYQ)</a></li> 
+  </ul>
+</div>
+  <div class="subject">
+  <a class="toggle-link" onclick="toggleSubmenu('ppl')"><strong>🧑‍💻 Principles of Programming Languages</strong></a>
+  <ul class="submenu" id="submenu-ppl">
+    <li><a href="principle-of-programming-languages.html#lecturenotes" onclick="setOpenSubmenu('ppl')">Lecture Notes</a></li>
+    <li><a href="principle-of-programming-languages.html#videos" onclick="setOpenSubmenu('ppl')">Video Lectures</a></li>
+    <li><a href="principle-of-programming-languages.html#importantquestions" onclick="setOpenSubmenu('ppl')">Important Questions</a></li>
+    <li><a href="principle-of-programming-languages.html#questionpapers" onclick="setOpenSubmenu('ppl')">Previous Year Question Papers(PYQ)</a></li>
+    <li><a href="principle-of-programming-languages.html#faq" onclick="setOpenSubmenu('ppl')">FAQ</a></li>
+  </ul>
+</div>
 
   <div class="subject">
-    <a class="toggle-link"><strong>🧑‍💻Principles of Programming Languages</strong></a>
-    <ul class="submenu">
-      <li><a href="principle-of-programming-languages.html#lecturenotes">Lecture Notes</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#ppts">PPT </a></li> -->
-      <li><a href="principle-of-programming-languages.html#videos">Video Lectures</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
-      <li><a href="principle-of-programming-languages.html#importantquestions">Important Questions</a></li>
-      <li><a href="principle-of-programming-languages.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-      <li> <a href="principle-of-programming-languages.html#faq">FAQ</a></li>
-    </ul>
-  </div>
+  <a class="toggle-link" onclick="toggleSubmenu('spos')"><strong>⚙️ System Programming and Operating System</strong></a>
+  <ul class="submenu" id="submenu-spos">
+    <li><a href="system-programming-and-operating-system.html#ppts" onclick="setOpenSubmenu('spos')">PPT</a></li>
+    <li><a href="system-programming-and-operating-system.html#videos" onclick="setOpenSubmenu('spos')">Video Lectures</a></li>
+    <li><a href="system-programming-and-operating-system.html#questionpapers" onclick="setOpenSubmenu('spos')">Previous Year Question Papers (PYQ)</a></li>
+    <li><a href="system-programming-and-operating-system.html#lecturenotes" onclick="setOpenSubmenu('spos')">Lecture Notes</a></li>
+<li><a href="system-programming-and-operating-system.html#spos-faqs" onclick="setOpenSubmenu('spos')">FAQ</a></li>
+  </ul>
+</div>
 
-  <div class="subject">
-    <a class="toggle-link"><strong>⚙️System Programming and Operating System</strong></a>
-    <ul class="submenu">
-      <li><a href="system-programming-and-operating-system.html#lecturenotes">Lecture Notes</a></li>
-      <li><a href="system-programming-and-operating-system.html#ppts">PPT </a></li>
-      <li><a href="system-programming-and-operating-system.html#videos">Video Lectures</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
-      <!-- <li><a href="system-programming-and-operating-system.html#importantquestions">Important Questions</a></li> -->
-      <li><a href="system-programming-and-operating-system.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-      <li> <a href="system-programming-and-operating-system.html#spos-faqs">FAQ</a></li>
-    </ul>
-  </div>
-   <div class="subject">
-    <a class="toggle-link"><strong>📚Blogs</strong></a>
-    <ul class="submenu">
-          <li><a href="assets/blogs/blog1.html">Blog1</a></li>
-          <li><a href="assets/blogs/blog2.html">Blog2</a></li>
-          <li><a href="assets/blogs/blog3.html">Blog3</a></li>
-</ul>
-  </div>
+<div class="subject">
+  <a class="toggle-link" onclick="toggleSubmenu('blogs')"><strong>📚 Blogs</strong></a>
+  <ul class="submenu" id="submenu-blogs">
+    <li><a href="assets/blogs/blog1.html" onclick="setOpenSubmenu('blogs')">Blog 1</a></li>
+    <li><a href="assets/blogs/blog2.html" onclick="setOpenSubmenu('blogs')">Blog 2</a></li>
+    <li><a href="assets/blogs/blog3.html" onclick="setOpenSubmenu('blogs')">Blog 3</a></li>
+  </ul>
+</div>
+
   </aside>
 
   <section class="content-area">
@@ -604,23 +607,13 @@ Unit 6 Notes are <strong>Exclusively</strong> on Youtube Click Here to Download<
     &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script for Scroll based-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  <!-- Script for handling sidebar -->
- <script>
-  // Hide all submenus by default
-  document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
+ 
+<script src="assets/js/main.js"></script>
 
-  // Add click event to all toggle links
-  document.querySelectorAll('.toggle-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const submenu = link.nextElementSibling;
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
 </body>
 </html>
