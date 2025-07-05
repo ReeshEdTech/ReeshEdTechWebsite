@@ -803,3 +803,37 @@
     display: inline-block;
     border-radius: 8px;
   }
+.whatsapp-banner {
+    background: #25D366;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    animation: pulseBanner 2s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  .whatsapp-banner:hover {
+    transform: scale(1.02);
+  }
+
+  .whatsapp-banner a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  @keyframes pulseBanner {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 255, 100, 1);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
+    }
+  }
