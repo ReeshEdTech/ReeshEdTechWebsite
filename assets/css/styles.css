@@ -843,3 +843,19 @@
     color: #000006;
   }
 }
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+  }
+
+  .content-area {
+    width: 100%;
+  }
+}
