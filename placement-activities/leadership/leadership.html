@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Assessment Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    p.description {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .question h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .option {
+      display: block;
+      background: #f9fafb;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .option:hover {
+      background-color: #e0f2fe;
+      border-color: #38bdf8;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(to right, #1e40af, #1e3a8a);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Leadership Assessment Test</h1>
+    <p class="description">Choose the most appropriate response for each scenario.</p>
+
+    <form>
+      <!-- Question 1 -->
+      <div class="question">
+        <h3>1. A group project is failing due to miscommunication. What do you do?</h3>
+        <label class="option"><input type="radio" name="q1"> Organize a meeting to realign everyone</label>
+        <label class="option"><input type="radio" name="q1"> Do your part and let others handle theirs</label>
+        <label class="option"><input type="radio" name="q1"> Ignore it and hope someone else fixes it</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <h3>2. A teammate is underperforming. What is your response?</h3>
+        <label class="option"><input type="radio" name="q2"> Offer to help and encourage improvement</label>
+        <label class="option"><input type="radio" name="q2"> Mention the issue to the group</label>
+        <label class="option"><input type="radio" name="q2"> Complain or ignore them</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <h3>3. Your team disagrees with your suggestion. What do you do?</h3>
+        <label class="option"><input type="radio" name="q3"> Listen carefully and adapt your idea</label>
+        <label class="option"><input type="radio" name="q3"> Stick to your idea and explain again</label>
+        <label class="option"><input type="radio" name="q3"> Get upset and withdraw</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <h3>4. The deadline is close, and your team is behind. What do you do?</h3>
+        <label class="option"><input type="radio" name="q4"> Prioritize tasks, motivate the team</label>
+        <label class="option"><input type="radio" name="q4"> Focus on completing your work</label>
+        <label class="option"><input type="radio" name="q4"> Panic or give up</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <h3>5. You’re asked to lead a new initiative. How do you react?</h3>
+        <label class="option"><input type="radio" name="q5"> Accept and plan effectively</label>
+        <label class="option"><input type="radio" name="q5"> Hesitate but agree</label>
+        <label class="option"><input type="radio" name="q5"> Decline to avoid pressure</label>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question">
+        <h3>6. Someone disagrees strongly during a discussion. What’s your response?</h3>
+        <label class="option"><input type="radio" name="q6"> Stay calm and seek a solution</label>
+        <label class="option"><input type="radio" name="q6"> Just move on without resolving</label>
+        <label class="option"><input type="radio" name="q6"> Argue back emotionally</label>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question">
+        <h3>7. The team succeeds in a major task. What do you do?</h3>
+        <label class="option"><input type="radio" name="q7"> Appreciate everyone and celebrate together</label>
+        <label class="option"><input type="radio" name="q7"> Feel proud silently</label>
+        <label class="option"><input type="radio" name="q7"> Take credit for yourself</label>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question">
+        <h3>8. You see a conflict rising between two teammates. What’s your action?</h3>
+        <label class="option"><input type="radio" name="q8"> Intervene and mediate respectfully</label>
+        <label class="option"><input type="radio" name="q8"> Stay neutral and quiet</label>
+        <label class="option"><input type="radio" name="q8"> Let them deal with it</label>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question">
+        <h3>9. You have to present a project on behalf of the team. What’s your approach?</h3>
+        <label class="option"><input type="radio" name="q9"> Prepare well and represent everyone’s efforts</label>
+        <label class="option"><input type="radio" name="q9"> Do it quickly to get it over with</label>
+        <label class="option"><input type="radio" name="q9"> Try to avoid presenting</label>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question">
+        <h3>10. You’re overwhelmed with tasks. What do you do?</h3>
+        <label class="option"><input type="radio" name="q10"> Prioritize and ask for help if needed</label>
+        <label class="option"><input type="radio" name="q10"> Work alone and hope it works out</label>
+        <label class="option"><input type="radio" name="q10"> Give up or ignore some tasks</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

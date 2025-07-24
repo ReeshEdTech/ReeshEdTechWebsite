@@ -668,7 +668,7 @@
  color: #000506;
 }
 .sidebar {
-  width: 20%;
+  width: 30%;
   padding: 20px;
   background-color: #f4f4f4;
   border-right: 1px solid #ddd;
@@ -825,15 +825,21 @@
     text-decoration: underline;
     font-weight: bold;
   }
-
-  @keyframes pulseBanner {
-    0% {
-      box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(0, 255, 100, 1);
-    }
-    100% {
-      box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
-    }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #f4f1f1;
+    color: #000006;
   }
+  a, h1, h2, h3, p, li {
+    color: #000006;
+  }
+  .card, .box, .sidebar,.video-card {
+    background-color: #f7f3f3;
+    color: #000006;
+   
+  }
+  a {
+    text-decoration: none;
+    color: #000006;
+  }
+}
