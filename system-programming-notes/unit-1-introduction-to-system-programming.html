@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Notes - Top Study Material</title>
+<link rel="stylesheet" href="../assets/css/notes.css" />
+ <link rel="stylesheet" href="../assets/css/styles.css" />
+
+</head>
+<body>
+<header class="header">
+    
+    <nav class="navbar">
+  <div class="logo">TopStudyMaterial</div>
+  
+  <!-- Hamburger menu for mobile -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
+        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
+      <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
+      </ul>
+    </li>
+    <li><a href="#ppts">PPTs</a></li>
+        <li><a href="#questionpapers">Question Papers</a></li>
+        <!-- <li><a href="#labexperiments">Lab Experiments</a></li> -->
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#lecturenotes">Notes</a></li>
+  </ul>
+</nav>
+  </header>
+<div class="animated-banner">
+  <h1>System Programming and Operating System</h1>
+</div>
+
+ <!-- Main Layout -->
+  <div class="main-container">
+    <!-- Sidebar for headings -->
+    <aside class="sidebar">
+      <h3> Unit 1 Topics</h3>
+      <ol>
+     <li>  <a href="#topic1" class="nav-box"> What is System Programming? </a> <br></li> 
+       <li>  <a href="#topic2" class="nav-box"> Need of System Programming? </a> <br></li> 
+         <li>  <a href="#topic3" class="nav-box"> Software Hierarchy</a> <br></li> 
+         <li> <a href="#topic4" class="nav-box"> Differece between Application Software and Software Software</a> <br></li>
+         <li> <a href="#topic5" class="nav-box"> Evolution of components of Systems Programming</a> <br>
+        <li>  <a href="#topic6" class="nav-box"> Elements of Assembly Language Programming</a> <br></li>
+        <li>  <a href="#topic7" class="nav-box">Assembly Language statements</a> <br></li>
+       <li>   <a href="#topic8" class="nav-box">Benefits of Assembly Language</a> <br></li>
+       <li>   <a href="#topic9" class="nav-box">Pass Structure of Assembler</a><br></li>
+        <li>  <a href="#topic10" class="nav-box">Design of two pass Assembler</a><br></li>
+        <li>  <a href="#topic11" class="nav-box">Processing of declaration statements</a><br></li>
+        <li>  <a href="#topic12" class="nav-box">Processing of Assembler Directives</a><br></li>
+        <li>  <a href="#topic13" class="nav-box">Processing of Imperative Statements</a><br></li>
+        <li>  <a href="#topic14" class="nav-box">Advanced Assembler Directives</a><br></li>
+         <li> <a href="#topic15" class="nav-box">  Pass I and Pass II of two pass Assembler</a><br></li>
+           <li> <a href="#topic16" class="nav-box">  Intermediate code forms</a><br></li>
+         <li> <a href="#topic17" class="nav-box">  Pass II of two pass Assembler</a><br></li>
+
+      </ol>
+    </aside>
+
+    <!-- Notes Content -->
+    <section class="content">
+      <div class="topic-card" id="topic1" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 1: What is System Programming?</h2>
+       <h3>What is System?</h3>
+    <p>A <span class="highlight">system</span> is the collection of various components working together to achieve a goal.</p>
+    <div class="example">
+      <p><strong>Example:</strong> College is a system.</p>
+      <p>It consists of various components like departments, classrooms, faculties, and students.</p>
+    </div> <br>
+ <h3>What is Programming?</h3>
+    <p><span class="highlight">Programming</span> is the art of designing and implementing programs to perform specific tasks.</p>
+    <div class="example">
+      <p><strong>In a college system, what is a program?</strong></p>
+      <p>A <strong>lecture</strong> can be considered as a program because it has input and output.</p>
+      <p><strong>Input:</strong> The information that the teacher is delivering.</p>
+      <p><strong>Output:</strong> The knowledge that the student has received.</p>
+      <br> 
+      
+       <h3>What is Software?</h3>
+    <p><span class="highlight">Software</span> is a collection of many programs designed to perform specific tasks or operations.</p>
+    <p>Types of Software:</p>
+    <ul>
+      <li><span class="highlight">System Software:</span> Assists in the effective execution of general user programs and manages hardware.</li>
+      <div class="example">
+        <p><strong>Examples:</strong> Operating System, Assembler, Compiler</p>
+      </div>
+
+      <li><span class="highlight">Application Software:</span> Developed for specific goals or user tasks.</li>
+      <div class="example">
+        <p><strong>Examples:</strong> Media Player, Adobe Reader</p>
+      </div><br>
+       <h3>What is System Program?</h3>
+    <p><span class="highlight">System Programs</span> are programs required for the effective execution of general user programs on a computer system.</p> <br>
+    <p style="color: red;"> <b> So the system programming is an art of designing and implementing System Programs.  </b></p></div>
+
+  <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 2: Need of System Programming</h2>
+
+    <p>System programming is essential for the smooth functioning of any computer system. Below is a detailed explanation you can use in your teaching, notes, or website:</p>
+
+    <h3><span ></span>What is the Need of System Programming?</h3>
+    <p>System programming is required to design and develop software that manages and controls the hardware components of a computer system. It creates a bridge between the <span class="highlight">hardware</span> and <span class="highlight">application software</span>, enabling the entire system to function efficiently and reliably.</p>
+
+    <h3><span ></span>Reasons Why System Programming is Needed:</h3>
+    <ul>
+      <li><span class="highlight">Hardware Control:</span>
+        <ul class="sub-point">
+          <li>System programs directly interact with the hardware.</li>
+          <li>They enable effective communication between hardware components and the user.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Efficient Resource Management:</span>
+        <ul class="sub-point">
+          <li>System software manages CPU, memory, I/O devices, and other resources.</li>
+          <li>Ensures fair and optimal usage of system resources.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Platform for Application Software:</span>
+        <ul class="sub-point">
+          <li>Provides the necessary environment for application programs to run.</li>
+          <li>Without system software (like OS), application software cannot function.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Automation of Tasks:</span>
+        <ul class="sub-point">
+          <li>Automates hardware-related tasks such as booting, loading programs, and memory allocation.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Security and Protection:</span>
+        <ul class="sub-point">
+          <li>Helps implement security features to protect system resources and user data from unauthorized access.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Performance Optimization:</span>
+        <ul class="sub-point">
+          <li>Allows efficient execution of programs by optimizing memory, CPU scheduling, and I/O operations.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Error Detection and Handling:</span>
+        <ul class="sub-point">
+          <li>Provides mechanisms for detecting, reporting, and handling system-level errors.</li>
+        </ul>
+      </li>
+
+      <li><span class="highlight">Support for Development Tools:</span>
+        <ul class="sub-point">
+          <li>Compilers, assemblers, loaders, linkers, and debuggers are all system programs that support application development.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3><span ></span>Examples of System Programs:</h3>
+    <ul>
+      <li>Operating Systems (Windows, Linux, macOS)</li>
+      <li>Compilers</li>
+      <li>Assemblers</li>
+      <li>Loaders</li>
+      <li>Linkers</li>
+      <li>Device Drivers</li>
+    </ul>
+  </div>
+      </div>
+        <!-- New Notes topic -->
+       <div class="topic-card" id="topic3" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 3: Software Hierarchy </h2>
+
+      </div>
+
+
+   
+        <div class="topic-card" id="topic4" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 4: Differece between Application Software and System Software</h2>
+<br>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Application Software</th>
+        <th>System Software</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definition</strong></td>
+        <td>Application software is designed to perform specific tasks for the user, such as document editing or media playback.</td>
+        <td>System software is developed to manage and control the computer system's hardware and provide a platform for running application software.</td>
+      </tr>
+      <tr>
+        <td><strong>Purpose</strong></td>
+        <td>Helps users accomplish a particular task like creating a presentation or editing a video.</td>
+        <td>Operates the computer hardware and provides essential services for application software to function.</td>
+      </tr>
+      <tr>
+        <td><strong>User Interaction</strong></td>
+        <td>Directly used by end-users for personal or professional tasks.</td>
+        <td>Runs in the background without direct user interaction.</td>
+      </tr>
+      <tr>
+        <td><strong>Dependency</strong></td>
+        <td>Depends on system software to run.</td>
+        <td>Can run independently and supports application software.</td>
+      </tr>
+      <tr>
+        <td><strong>Examples</strong></td>
+        <td>MS Word, Adobe Reader, VLC Media Player.</td>
+        <td>Windows OS, Linux, Compiler, Assembler.</td>
+      </tr>
+      <tr>
+        <td><strong>Installation</strong></td>
+        <td>Installed as per the user’s needs based on tasks to perform.</td>
+        <td>Usually comes pre-installed with the system.</td>
+      </tr>
+      <tr>
+        <td><strong>Execution</strong></td>
+        <td>Runs only when the user manually launches it.</td>
+        <td>Starts automatically during system boot and runs in the background.</td>
+      </tr>
+    </tbody>
+  </table>
+
+      </div>
+      <!-- New Notes topic -->
+       <div class="topic-card" id="topic5" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 5: Evolution of components of Systems Programming:</h2>
+           <p> System programming refers to the development of software that provides services to the computer hardware and application software. As computing needs evolved, various components of system programming were introduced to make systems more efficient, modular, secure, and user-friendly.</p>
+            <h2>1. Text Editors</h2>
+    <p><strong>Purpose:</strong> Used to write and edit source code (program instructions).</p>
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>First-generation editors like <code>ed</code>, <code>ex</code> in Unix were command-line based.</li>
+      <li>Then came full-screen editors like <code>vi</code>, <code>nano</code>, Notepad.</li>
+      <li>Now we have smart editors and IDEs (VS Code, IntelliJ, Eclipse) that support syntax highlighting, code completion, linting, version control integration, and more.</li>
+    </ul>
+    <p><strong>Importance:</strong> Acts as the programmer's workspace.</p> <br>
+    <h2>2. Assembler</h2>
+    <p><strong>Purpose:</strong> Converts assembly language (low-level, human-readable) into machine code (binary instructions understood by CPU).</p>
+
+    <p><strong>Pass Structure:</strong></p>
+    <ul>
+      <li><strong>Pass 1:</strong> Builds symbol table, handles labels, and resolves addresses.</li>
+      <li><strong>Pass 2:</strong> Converts mnemonics to binary, resolves addresses using symbol/literal tables.</li>
+    </ul>
+
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>Early assemblers were simple.</li>
+      <li>Later assemblers included features like macros, conditional assembly, and optimization.</li>
+    </ul>
+
+    <p><strong>Examples:</strong> NASM, MASM, TASM.</p> <br>
+ <h2>3. Macro Processor</h2>
+    <p><strong>Purpose:</strong> Allows code reuse by enabling macro definitions — blocks of code that can be reused with arguments.</p>
+
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>Early assemblers supported inline macros.</li>
+      <li>Later languages added pre-processors (like C preprocessor with <code>#define</code>, <code>#include</code>, etc.).</li>
+    </ul>
+
+    <p><strong>Benefits:</strong></p>
+    <ul>
+      <li>Reduces redundancy.</li>
+      <li>Makes code modular and easier to maintain.</li>
+    </ul>
+ <br>
+    <h2>4. Compiler</h2>
+    <p><strong>Purpose:</strong> Translates high-level language (like C, Java) to machine code.</p>
+
+    <p><strong>Phases:</strong></p>
+    <ul>
+      <li>Lexical analysis → Syntax analysis → Semantic analysis → Optimization → Code generation → Code linking</li>
+    </ul>
+
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>Early compilers were monolithic and platform-dependent.</li>
+      <li>Modern compilers are modular, support cross-compilation, and generate optimized code for multiple architectures.</li>
+    </ul>
+
+    <p><strong>Examples:</strong> GCC (GNU Compiler Collection), Clang, Java Compiler (<code>javac</code>).</p>
+ <br>
+ <h2>5. Interpreter</h2>
+    <p><strong>Purpose:</strong> Directly executes source code line-by-line without compiling.</p>
+
+    <p><strong>Comparison:</strong></p>
+    <ul>
+      <li>Slower than compilers but ideal for testing and rapid development.</li>
+    </ul>
+
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Scripting languages like <code>Python</code>, <code>JavaScript</code>.</li>
+      <li>Education and prototyping where simplicity is more important than performance.</li>
+    </ul>
+
+    <p><strong>Modern Interpreters:</strong> Often use Just-In-Time (JIT) compilation for speed (e.g., V8 engine for JavaScript).</p>
+    <br>
+    <h2>6. Loader</h2>
+    <p><strong>Purpose:</strong> Loads compiled machine code into memory and starts execution.</p>
+
+    <p><strong>Types:</strong></p>
+    <ul>
+      <li><strong>Absolute Loader:</strong> Loads code at fixed memory location.</li>
+      <li><strong>Relocating Loader:</strong> Adjusts memory addresses during load.</li>
+      <li><strong>Dynamic Loader:</strong> Loads shared libraries during program execution.</li>
+    </ul>
+
+    <p><strong>Use:</strong> When you click on an app icon, the loader gets invoked in the background.</p>
+ <br>
+    <h2>7. Linker</h2>
+    <p><strong>Purpose:</strong> Links multiple object files (compiled units) and libraries to form a single executable.</p>
+
+    <p><strong>Responsibilities:</strong></p>
+    <ul>
+      <li>Address resolution.</li>
+      <li>Handling external references (like function calls across files).</li>
+      <li>Static vs. Dynamic linking.</li>
+    </ul>
+
+    <p><strong>Examples:</strong> <code>ld</code> (Linux), <code>MSVC Linker</code> (Windows).</p>
+   <br>
+    <h2>8. Debugger</h2>
+    <p><strong>Purpose:</strong> Helps identify and fix errors in source code.</p>
+
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>Breakpoints – pause execution at specific lines.</li>
+      <li>Step-by-step execution.</li>
+      <li>Variable inspection, memory dumps.</li>
+    </ul>
+
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>Started as command-line tools.</li>
+      <li>Modern debuggers are GUI-based with advanced visualization (e.g., Eclipse, Visual Studio).</li>
+    </ul>
+   <br>
+    <h2>9.  Device Drivers</h2>
+    <p><strong>Purpose:</strong> Acts as interface between hardware and operating system/application software.</p>
+
+    <p><strong>Types:</strong></p>
+    <ul>
+      <li><strong>Kernel-mode drivers:</strong> For low-level hardware operations.</li>
+      <li><strong>User-mode drivers:</strong> For peripheral devices like printers and cameras.</li>
+    </ul>
+
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li>Initially written in assembly.</li>
+      <li>Now written in C/C++ with OS-specific APIs.</li>
+    </ul>
+ <br>
+ <h2>10.  Operating System</h2>
+    <p><strong>Purpose:</strong> Manages computer hardware and software resources and provides common services for programs.</p>
+
+    <p><strong>Functions:</strong></p>
+    <ul>
+      <li>Process management</li>
+      <li>Memory management</li>
+      <li>File system management</li>
+      <li>Device and I/O control</li>
+      <li>Security and user interface</li>
+    </ul>
+  
+    <p><strong>Evolution:</strong></p>
+    <ul>
+      <li><strong>Batch systems</strong> → <strong>Time-sharing systems</strong> → <strong>Multitasking OS</strong></li>
+      <li>Modern OS: Windows, Linux, macOS, Android</li>
+    </ul>
+    <div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/YWfZ49leT_0"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe></div>
+      </div>
+        <!-- New Notes topic -->
+       <div class="topic-card" id="topic6" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 6: Elements of Assembly Language Statements </h2>
+    <h3>Assembly Language Overview</h3>
+
+  <p>Assembly language is a <strong>low-level programming language</strong> that provides a symbolic and human-readable representation of a computer's machine code.</p>
+
+  <h3>Key Characteristics:</h3>
+
+
+    <h3>Low-Level Language</h3>
+    <ul>
+      <li>Assembly language is very close to machine (binary) language but easier to read and write.</li>
+      <li>It directly controls hardware and performs operations at the instruction level.</li>
+    </ul>
+  
+
+  
+    <h3>Machine Dependent</h3>
+    <ul>
+      <li>Assembly language is specific to a processor architecture (e.g., Intel 8086, ARM, MIPS).</li>
+      <li>A program written for one CPU won’t work on another without modification.</li>
+    </ul>
+  
+
+  
+    <h3>Human-Friendly Compared to Binary</h3>
+    <ul>
+      <li>Writing programs in binary (like <code>10100011</code>) is complex and error-prone.</li>
+      <li>Assembly uses mnemonics like <code>MOVEM</code>, <code>ADD</code>, <code>MOVER</code> which are easier to remember and understand.</li>
+    </ul> <br>
+              <p style="color: red;">This explanation is based on the hypothetical assembly language presented in the textbook <strong>“Systems Programming” by D.M. Dhamdhere</strong>. This simplified language model is used for understanding the internal working of assemblers and system software.</p>
+      <br>
+      <h3>Hypothetical Assembly Language Overview</h3>
+<p>This assembly language supports a limited set of CPU registers and instructions. It is commonly used in system programming studies (e.g., in the book by D.M. Dhamdhere).</p>
+
+<h4> Supported CPU Registers</h4>
+<ul>
+  <li>AREG</li>
+  <li>BREG</li>
+  <li>CREG</li>
+  <li>DREG</li>
+</ul>
+
+<h4>Supported Operations (Instructions)</h4>
+<ol>
+  <li>STOP</li>
+  <li>ADD</li>
+  <li>SUB</li>
+  <li>MULT</li>
+  <li>MOVER</li>
+  <li>MOVEM</li>
+  <li>COMP</li>
+  <li>BC</li>
+  <li>DIV</li>
+  <li>READ</li>
+  <li>PRINT</li>
+</ol>
+
+<h4>Instruction Format Rules</h4>
+<ul>
+  <li><strong>First operand</strong> is always a CPU register (e.g., AREG).</li>
+  <li><strong>Second operand</strong> is always a memory operand (e.g., a variable or label).</li>
+  <li><code>READ</code> and <code>PRINT</code> use only a memory operand (no register).</li>
+  <li><code>STOP</code> has <strong>no operands</strong>.</li>
+</ul>
+
+<h4>Machine Opcode Table (MOT)</h4>
+<p>The Machine Opcode Table (MOT) holds details for each instruction:</p>
+<ul>
+  <li>Mnemonic form of the opcode (e.g., ADD, SUB)</li>
+  <li>Machine code (numeric value) associated with the opcode</li>
+</ul> <br>
+<div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/UTkGU86Fhls"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe></div>
+
+      <h3>Assembly language programming Terms:</h3>
+      <h3>1. Location Counter (LC)</h3>
+<p>A pointer that tracks the memory address of the next instruction. The assembler uses the LC to assign addresses to instructions and data elements in the source program.</p>
+
+<h3>2. Literals</h3>
+<p>Literals are constant values directly used in instructions.</p>
+<p><strong>Example:</strong> <code>MOVER AREG, =5</code> → Here, <code>=5</code> is a literal constant.</p>
+
+<h3>3. Symbols</h3>
+<p>Symbols are user-defined names representing variables, labels, or memory locations. They enhance code readability and are stored in the Symbol Table during assembly.</p>
+<p><strong>Example:</strong> <code>X DC 10</code> (Variable)</p>
+
+<h3>4. Procedures</h3>
+<p>Procedures, also called subroutines or functions, are reusable blocks of code that perform specific tasks. They promote modular programming and reduce redundancy.</p>
+<p><strong>Example:</strong><br>
+<code>CALL ADDITION</code><br>
+<div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/h16wOJGMIi8"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe> </div>
+        
+</div>
+        <!-- New Notes topic -->
+       <div class="topic-card" id="topic7" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 7: Assembly Language statements</h2>
+       <h3> Assembly Language Statements (as per Dhamdhere)</h3>
+<p>Assembly language statements in a typical hypothetical system (as described by Dhamdhere) are generally classified into the following categories:</p>
+
+<h4> 1. Imperative Statements</h4>
+<p>These are instructions that generate machine code and are directly executed by the processor.</p>
+<ul>
+  <li><strong>Examples:</strong> <code>ADD AREG, X</code>, <code>MOVER BREG, Y</code>, <code>DIV CREG, Z</code></li>
+  <li>They perform data movement, arithmetic, logical, and control operations.</li>
+</ul> <div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/W0JOnqrLQyk"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe> </div>
+<br>
+<h4> 2. Declarative Statements</h4>
+<p>Used to define constants, reserve memory space, and declare variables. These do not translate to machine instructions.</p>
+<ul>
+  <li><strong>Examples:</strong> <code>X DC 5</code>, <code>Y DS 1</code></li>
+  <li><strong>DC</strong>: Define Constant (e.g., <code>DC 5</code> reserves memory and initializes with 5)</li>
+  <li><strong>DS</strong>: Define Storage (e.g., <code>DS 1</code> reserves one word of memory)</li>
+</ul> <div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/3C6HIBBLnbw"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe></div>
+
+<br>
+<h4>3. Assembler Directives</h4>
+<p>These instructions are for the assembler, not the CPU. They control the assembly process and symbol handling.</p>
+<ul>
+  <li><strong>Examples:</strong> <code>START 100</code>, <code>END</code>, <code>ORIGIN 205</code>, <code>EQU</code>, <code>LTORG</code></li>
+  <li><strong>START</strong>: Specifies the starting address of the program</li>
+  <li><strong>END</strong>: Marks the end of the source code</li>
+  <li><strong>ORIGIN</strong>: Changes the value of the location counter</li>
+  <li><strong>EQU</strong>: Equates a symbol with a value</li>
+  <li><strong>LTORG</strong>: Assigns addresses to literal constants</li>
+</ul> <h3>Watch this video for better understanding:</h3>
+<div class="video-container">
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/KfcDL8UO5-M"  
+title="Assembly Language Tutorial" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe></div>
+<br>
+<h4> General Format of Assembly Language Statement</h4>
+<pre>
+LABEL    OPCODE    OPERAND1, OPERAND2    ; Comment
+</pre>
+<p><strong>Example:</strong></p>
+<pre>
+LOOP     ADD       AREG, NUM             ; Add NUM to AREG
+         MOVEM     AREG, RESULT          ; Move result to memory
+</pre>
+<br>
+<h4> Notes:</h4>
+<ul>
+  <li>The assembler parses each statement into fields: label, opcode, operands, and comment.</li>
+  <li>Statements are stored and translated into machine code during the pass(es) of the assembler.</li>
+</ul>
+      </div>     <!-- New Notes topic -->
+       <div class="topic-card" id="topic8" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 8: Benefits of Assembly Language</h2>
+<h3>Benefits of Assembly Language Statements</h3>
+
+<ol>
+  <li><strong>Close to Hardware:</strong> Assembly language gives precise control over hardware components, making it ideal for systems programming.</li>
+
+  <li><strong>Faster Execution:</strong> Programs written in assembly are highly efficient and execute faster due to minimal abstraction.</li>
+
+  <li><strong>Optimized Performance:</strong> Developers can fine-tune code for speed, memory usage, and performance, especially in critical system tasks.</li>
+
+  <li><strong>Better Understanding of System Architecture:</strong> Working with registers, memory addresses, and opcodes helps understand how a system functions internally.</li>
+
+  <li><strong>Reusability with Procedures:</strong> Assembly language allows modular programming through procedures (subroutines), promoting code reuse and structure.</li>
+
+  <li><strong>Simplified Debugging:</strong> The symbolic nature of labels and mnemonics in assembly statements makes debugging easier compared to binary machine code.</li>
+
+  <li><strong>Essential for OS and Embedded Development:</strong> Critical parts of operating systems, device drivers, and embedded systems rely on assembly for direct hardware interaction.</li>
+
+  <li><strong>Precise Resource Management:</strong> Enables direct allocation and management of system resources like CPU registers and memory.</li>
+
+  <li><strong>Structured through Statement Types:</strong> Use of Imperative, Declarative, and Directive statements helps organize and manage program logic clearly.</li>
+</ol>
+
+      </div>
+         <div class="topic-card" id="topic9" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 9: Pass Structure of Assembler</h2>
+<h2>Pass Structure of an Assembler</h2>
+  <p>An assembler typically operates in two passes to convert assembly language into machine code.</p>
+
+  <h3 style="color: red;">Pass 1: Analysis Phase</h3>
+  <p>Pass 1 of the assembler performs the following tasks:</p>
+  <ul>
+    <li>
+      <strong>Assigns Addresses:</strong><br>
+      Maintains the <em>Location Counter (LC)</em> to assign memory addresses to each instruction and data item.
+    </li>
+    <li>
+      <strong>Builds Symbol Table:</strong><br>
+      Collects all labels and variable names with their corresponding addresses.<br>
+      Adds them to the <em>Symbol Table (SYMTAB)</em>.
+    </li>
+    <li>
+      <strong>Processes Assembler Directives:</strong><br>
+      Handles instructions like <code>START</code>, <code>END</code>, <code>ORIGIN</code>, <code>EQU</code>, and <code>LTORG</code>.
+    </li>
+    <li>
+      <strong>Handles Literals:</strong><br>
+      Detects and stores literals like <code>=5</code> or <code>='A'</code> in the <em>Literal Table (LITTAB)</em>.
+    </li>
+    <li>
+      <strong>Generates Intermediate Code (IC):</strong><br>
+      Produces an intermediate representation of the source code for Pass 2 to use.
+    </li>
+  </ul>
+
+  <h3 style="color: red;">Pass 2: Synthesis Phase</h3>
+  <p>Pass 2 performs actual machine code generation:</p>
+  <ul>
+    <li>
+      <strong>Generates Machine Code:</strong><br>
+      Converts intermediate code from Pass 1 into actual object code (binary or hex).
+    </li>
+    <li>
+      <strong>Uses Symbol & Literal Tables:</strong><br>
+      Looks up operands in the <em>Symbol Table</em> and <em>Literal Table</em> to get memory addresses.
+    </li>
+    <li>
+      <strong>Handles Address Resolution:</strong><br>
+      Calculates and resolves final memory addresses using data from tables.
+    </li>
+    <li>
+      <strong>Generates Final Object Program:</strong><br>
+      Produces the output file (often a <code>.obj</code> or <code>.exe</code>) ready to be loaded into memory.
+    </li>
+  </ul>
+      </div>
+      
+         <div class="topic-card" id="topic10" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 10: Design of Two Pass Assembler</h2>
+       <h2>Design of Two-Pass Assembler</h2>
+  <p>A <strong>Two-Pass Assembler</strong> is used to convert assembly language into machine code in two distinct phases:</p>
+
+  <h3>Pass 1: Analysis Phase</h3>
+  <ul>
+    <li><strong>Initialize:</strong> Location Counter (LC), Symbol Table (SYMTAB), Literal Table (LITTAB), and Intermediate Code (IC) buffer are initialized.</li>
+    <li><strong>Assign Addresses:</strong> Each instruction and data label is assigned a memory address using the LC.</li>
+    <li><strong>Build Symbol Table:</strong> Labels and symbols with their addresses are added to SYMTAB.</li>
+    <li><strong>Detect Literals:</strong> All literals (e.g., =’5’) are stored in LITTAB.</li>
+    <li><strong>Process Directives:</strong> Handles pseudo-instructions like <code>START</code>, <code>END</code>, <code>ORIGIN</code>, <code>LTORG</code>, <code>EQU</code>.</li>
+    <li><strong>Generate Intermediate Code:</strong> A simplified code version with symbolic references for further processing in Pass 2.</li>
+  </ul>
+
+  <h3>Pass 2: Synthesis Phase</h3>
+  <ul>
+    <li><strong>Read Intermediate Code:</strong> Parse IC line by line for translation.</li>
+    <li><strong>Resolve Symbols:</strong> Use SYMTAB and LITTAB to get actual addresses for operands.</li>
+    <li><strong>Translate Opcodes:</strong> Use Machine Opcode Table (MOT) to convert symbolic opcodes into binary/machine code.</li>
+    <li><strong>Generate Object Code:</strong> Write the final machine code to an object file (e.g., <code>.obj</code>, <code>.exe</code>).</li>
+    <li><strong>Handle Address Modifications:</strong> For ORIGIN/EQU and other address adjustments.</li>
+  </ul>
+
+  <h3>Data Structures Used</h3>
+  <ul>
+    <li><strong>SYMTAB:</strong> Stores symbols and corresponding memory locations.</li>
+    <li><strong>LITTAB:</strong> Stores literals and their resolved addresses.</li>
+    <li><strong>MOT (Machine Opcode Table):</strong> Contains symbolic opcodes and their binary equivalents.</li>
+    <li><strong>POT (Pseudo Opcode Table):</strong> Stores directives like START, END, etc.</li>
+  </ul>
+
+  <h3>Advantages of Two-Pass Assembler</h3>
+  <ul>
+    <li>Efficient handling of forward references.</li>
+    <li>Structured code generation.</li>
+    <li>Modular and easy to implement.</li>
+  </ul>
+      </div> 
+      <div class="topic-card" id="topic11" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 11: Processing of Declaration Statements </h2>
+
+  <p>
+    In assembly language, <strong>declaration statements</strong> are used to define and reserve memory for data elements.
+    These statements are processed during <strong>Pass 1</strong> of the assembler.
+  </p>
+
+  <h3>Types of Declaration Statements</h3>
+  <ul>
+    <li><strong>DS (Define Storage):</strong> Reserves memory without initialization.</li>
+    <li><strong>DC (Define Constant):</strong> Reserves memory and initializes it with a constant value.</li>
+  </ul>
+
+  <h3>Steps Involved in Processing</h3>
+  <ol>
+    <li><strong>Location Counter Update:</strong> The assembler uses the Location Counter (LC) to track where memory should be reserved.</li>
+    <li><strong>Symbol Table Entry:</strong> The label or variable is added to the Symbol Table (SYMTAB) with its assigned address.</li>
+    <li><strong>Size Determination:</strong> The size of storage to be reserved is computed based on the declaration type and data type.</li>
+    <li><strong>IC Generation:</strong> Intermediate Code (IC) entry is created for each declaration statement for use in Pass 2.</li>
+  </ol>
+
+  <h3>Example</h3>
+  <pre style="background-color: #f4f4f4; padding: 10px; border-left: 4px solid #ccc;">
+  VALUE   DS    1
+  NUMBER  DC    '5'
+  </pre>
+
+  <h4>Explanation:</h4>
+  <ul>
+    <li><code>VALUE DS 1</code> → Reserves 1 word of memory; no initialization.</li>
+    <li><code>NUMBER DC '5'</code> → Reserves memory and initializes it with 5.</li>
+  </ul>
+
+  <h3>Assembler Tables Used</h3>
+  <ul>
+    <li><strong>Symbol Table (SYMTAB):</strong> Stores label names and corresponding addresses.</li>
+    <li><strong>Literal Table (if literal is used):</strong> Stores literal values and addresses (not applicable here directly).</li>
+  </ul>
+
+  <h3>Final Notes</h3>
+  <p>
+    Declaration statements are critical for memory management and must be processed correctly during Pass 1 to ensure proper allocation and code generation in Pass 2.
+  </p>
+      </div>
+        <div class="topic-card" id="topic12" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 12: Processing of Assembler Directives </h2>
+  <p>
+    Assembler directives are instructions to the assembler itself. They do not generate machine code but guide the assembler during program translation.
+    These are processed during <strong>Pass 1</strong> of the assembler.
+  </p>
+
+  <h3>Common Assembler Directives</h3>
+  <ul>
+    <li><strong>START:</strong> Specifies the starting address of the program.</li>
+    <li><strong>END:</strong> Marks the end of the source code.</li>
+    <li><strong>ORIGIN:</strong> Changes the location counter to a specified address.</li>
+    <li><strong>EQU:</strong> Equates a label to a constant value or another label.</li>
+    <li><strong>LTORG:</strong> Directs the assembler to allocate memory for literals at that point.</li>
+  </ul>
+
+  <h3>Steps Involved in Processing</h3>
+  <ol>
+    <li><strong>Update Location Counter:</strong> Directives like START and ORIGIN modify the value of the LC (Location Counter).</li>
+    <li><strong>Symbol Table Updates:</strong> EQU directives update the Symbol Table with the computed value.</li>
+    <li><strong>Literal Table Allocation:</strong> LTORG assigns addresses to literals collected so far.</li>
+    <li><strong>Directive Execution:</strong> Instructions are interpreted and executed internally without generating object code.</li>
+  </ol>
+
+  <h3>Example</h3>
+  <pre style="background-color: #f4f4f4; padding: 10px; border-left: 4px solid #ccc;">
+  START 100
+  A      EQU   5
+  B      DS    1
+  C      DC    '2'
+  LTORG
+  END
+  </pre>
+
+  <h4>Explanation:</h4>
+  <ul>
+    <li><code>START 100</code> → Location counter starts at 100.</li>
+    <li><code>A EQU 5</code> → Symbol A is assigned constant value 5.</li>
+    <li><code>LTORG</code> → Assigns memory addresses to any literals found before this directive.</li>
+  </ul>
+
+  <h3>Assembler Tables Used</h3>
+  <ul>
+    <li><strong>Symbol Table (SYMTAB):</strong> Stores label names and their addresses/values.</li>
+    <li><strong>Literal Table (LITTAB):</strong> Stores literal constants and their assigned addresses.</li>
+  </ul>
+
+  <h3>Conclusion</h3>
+  <p>
+    Assembler directives help manage memory layout, symbol resolution, and literal storage efficiently. 
+    Though they do not produce machine code, they are essential for correct assembly of the program.
+  </p>
+      </div>
+ <div class="topic-card" id="topic13" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 13: Processing of Imperative Statements</h2>
+  
+
+  <p>
+    Imperative statements in assembly language are actual executable instructions. These are responsible for performing operations like moving data, performing arithmetic, or controlling program flow.
+    They generate machine code and are processed in <strong>Pass 2</strong> of the assembler.
+  </p>
+
+  <h3>Common Imperative Statements</h3>
+  <ul>
+    <li><strong>MOVER</strong> – Move data from memory to register</li>
+    <li><strong>MOVEM</strong> – Move data from register to memory</li>
+    <li><strong>ADD</strong>, <strong>SUB</strong>, <strong>MULT</strong>, <strong>DIV</strong> – Arithmetic operations</li>
+    <li><strong>COMP</strong> – Compare register and memory value</li>
+    <li><strong>BC</strong> – Branch conditionally</li>
+    <li><strong>READ</strong>, <strong>PRINT</strong> – Input/output operations</li>
+    <li><strong>STOP</strong> – End program execution</li>
+  </ul>
+
+  <h3>Steps in Processing Imperative Statements</h3>
+  <ol>
+    <li><strong>Identify Instruction Type:</strong> Using the Mnemonic Opcode Table (MOT).</li>
+    <li><strong>Extract Operands:</strong> Separate register and memory components.</li>
+    <li><strong>Resolve Operands:</strong> Get memory address or constant value from the Symbol Table or Literal Table.</li>
+    <li><strong>Generate Machine Code:</strong> Combine opcode, register code, and memory address to form object code.</li>
+  </ol>
+
+  <h3>Example</h3>
+  <pre style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #ccc;">
+  MOVER AREG, NUM
+  ADD   BREG, COUNT
+  MOVEM AREG, RESULT
+  STOP
+  </pre>
+
+  <h4>Explanation:</h4>
+  <ul>
+    <li><code>MOVER AREG, NUM</code> → Move value at NUM to AREG</li>
+    <li><code>ADD BREG, COUNT</code> → Add value at COUNT to BREG</li>
+    <li><code>MOVEM AREG, RESULT</code> → Move AREG to RESULT</li>
+    <li><code>STOP</code> → End execution</li>
+  </ul>
+
+  <h3>Assembler Tables Used</h3>
+  <ul>
+    <li><strong>Mnemonic Opcode Table (MOT):</strong> Used to map opcodes to machine codes.</li>
+    <li><strong>Register Table:</strong> Used to get binary codes for registers.</li>
+    <li><strong>Symbol Table (SYMTAB):</strong> Used to get memory address of labels.</li>
+  </ul>
+
+  <h3>Conclusion</h3>
+  <p>
+    Imperative statements are core executable commands in assembly language. The assembler converts them into machine-level instructions by using predefined tables during Pass 2.
+  </p>
+      </div>
+       <div class="topic-card" id="topic14" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 14: Advanced Assembler Directives</h2>
+
+  <p>Assembler directives do not generate machine instructions but give instructions to the assembler itself.</p>
+
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #f0f0f0;">
+        <th style="border: 1px solid #ccc; padding: 8px;">Directive</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">EQU</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Defines a constant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">ORIGIN</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Sets memory location counter</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">LTORG</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Allocates memory for literals</td>
+      </tr>
+      
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">START</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Starting address of the program</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">END</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">End of program, triggers literal allocation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Example</h3>
+  <pre style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #ccc;">
+  START 100
+  TEN EQU 10
+  MOVER AREG, ='5'
+  ORIGIN 200
+  NUM DC 5
+  LTORG
+  END
+  </pre></h2>
+
+      </div>
+       <div class="topic-card" id="topic15" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 15: Pass I and Pass II of two pass Assembler</h2>
+
+      </div>
+  <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 16: Intermediate Code Forms</h2>
+
+      </div>
+      <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">Topic 17: Pass II Assembler</h2>
+
+      </div>
+
+
+
+
+    </section>
+</div>
+
+ <footer class="footer">
+    <div class="footer-links">
+        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
+      <a href="#">Instagram</a>
+    </div>
+  
+    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+  </footer>
+
+</body>
+</html>
