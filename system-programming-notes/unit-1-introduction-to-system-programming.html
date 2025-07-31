@@ -18,21 +18,29 @@
   <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="../index.html">Home</a></li>
     <li class="dropdown">
       <a href="#">Subjects ▼</a>
       <ul class="dropdown-content">
-        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-      <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
+        <li><a href="../artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="../principle-of-programming-languages.html">Principles of Programming Languages</a></li>
+        <li><a href="/system-programming-notes/unit-1-introduction-to-system-programming.html">System Programming and Operating System</a></li>
+      <li><a href="../blockchain-technology.html">Blockchain Technology</a></li>
       </ul>
     </li>
-    <li><a href="#ppts">PPTs</a></li>
-        <li><a href="#questionpapers">Question Papers</a></li>
+    <li class="dropdown">
+      <a href="#">Unit Wise Notes ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="unit-1-introduction-to-system-programming.html#content">Unit 1 Notes</a></li>
+        <!-- <li><a href="../principle-of-programming-languages.html">Unit 2 Notes</a></li> -->
+
+      </ul>
+    </li>
+        <li><a href="../system-programming-and-operating-system.html#ppts">PPTs</a></li>
+        <li><a href="../system-programming-and-operating-system.html#questionpapers">Question Papers</a></li>
         <!-- <li><a href="#labexperiments">Lab Experiments</a></li> -->
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#lecturenotes">Notes</a></li>
+        <li><a href="../system-programming-and-operating-system.html#videos">Videos</a></li>
+        <li><a href="../system-programming-and-operating-system.html#lecturenotes">Notes</a></li>
   </ul>
 </nav>
   </header>
@@ -494,6 +502,18 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 allowfullscreen></iframe> </div>
         
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
+     crossorigin="anonymous"></script>
+<!-- SPOS-unit1-ad2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8786639620322882"
+     data-ad-slot="5040531465"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         <!-- New Notes topic -->
        <div class="topic-card" id="topic7" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
         <h2 style="text-align: center; color: #040254;">Topic 7: Assembly Language statements</h2>
@@ -754,7 +774,18 @@ LOOP     ADD       AREG, NUM             ; Add NUM to AREG
   LTORG
   END
   </pre>
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
+     crossorigin="anonymous"></script>
+<!-- SPOS-Unit-1-AD1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8786639620322882"
+     data-ad-slot="8966284288"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
   <h4>Explanation:</h4>
   <ul>
     <li><code>START 100</code> → Location counter starts at 100.</li>
@@ -880,7 +911,225 @@ LOOP     ADD       AREG, NUM             ; Add NUM to AREG
 
       </div>
        <div class="topic-card" id="topic15" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 15: Pass I and Pass II of two pass Assembler</h2>
+        <h2 style="text-align: center; color: #040254;">Topic 15: Pass I  of two pass Assembler</h2>
+<h3>Working of Pass I Assembler</h3>
+
+<p>
+In Pass I, the assembler scans the source program to analyze its structure, collect necessary information, and prepare tables for Pass II.
+</p>
+<br>
+
+<h4>Purpose of Pass I</h4>
+<p>
+- To scan the source code line by line.<br>
+- To assign addresses to instructions and data.<br>
+- To build the Symbol Table (SYMTAB) for all labels/symbols.<br>
+- To build the Literal Table (LITTAB) for all literals.<br>
+- To record assembler directives (like START, ORIGIN, EQU, LTORG, END).<br>
+- To generate the Intermediate Code (IC) that will be used in Pass II.
+</p>
+<br>
+
+<h4>Steps in Pass I Working</h4>
+
+<h4>1. Initialization</h4>
+<p>
+Read the START directive to initialize the Location Counter (LC).<br>
+Example:<br>
+START 200 → Sets LC = 200
+</p>
+<br>
+
+<h4>2. Scanning Each Line</h4>
+<p>
+For each line of source code:<br><br>
+<b>Check for Label</b><br>
+If there’s a label, enter it into SYMTAB with the current LC.<br><br>
+
+<b>Check the Mnemonic</b><br>
+If it’s a machine instruction → Increase LC by instruction length.<br>
+If it’s a declarative statement (e.g., DS, DC) → Allocate memory.<br>
+If it’s an assembler directive (e.g., ORIGIN, EQU, LTORG) → Update tables and LC accordingly.<br><br>
+
+<b>Check for Literals</b><br>
+If a literal appears (e.g., =’5’), store it temporarily in LITTAB without assigning an address yet.
+</p>
+<br>
+
+<h4>3. Processing Literals</h4>
+<p>
+When LTORG or END is encountered:<br>
+- Assign addresses to all unassigned literals in LITTAB.<br>
+- Store them in the Pool Table (POOLTAB).
+</p>
+<br>
+
+<h4>4. Updating Location Counter</h4>
+<p>
+After processing each statement, increment LC based on:<br>
+- Type of instruction.<br>
+- Operand sizes.<br>
+- Data definitions.
+</p>
+<br>
+
+<h4>5. Creating Intermediate Code (IC)</h4>
+<p>
+For each instruction, generate an intermediate representation:<br>
+- OpCode class (Imperative Statement, Declarative Statement, or Assembler Directive)<br>
+- Register codes, constants, symbol references.<br><br>
+Example of IC format:<br>
+(IS, 04) (1) (S, 05) → Imperative Statement 04 (ADD) with register 1 and symbol index 05.
+</p>
+<br>
+
+<h4>Output of Pass I</h4>
+<p>
+At the end of Pass I, we have:<br>
+- SYMTAB → All labels with addresses.<br>
+- LITTAB → All literals with addresses.<br>
+- POOLTAB → Indicating literal pools.<br>
+- Intermediate Code (IC) → For Pass II to generate machine code.
+</p>
+<br>
+<h3>Pass I of Assembler - Example</h3>
+
+<h4>Source Program</h4>
+<pre>
+START 200
+MOVER AREG, A
+ADD BREG, ='5'
+A DS 1
+LTORG
+B DC '2'
+END
+</pre>
+<br>
+
+<h4>Pass I Working</h4>
+<p>
+During Pass I, the assembler:<br>
+- Initializes LC using START directive.<br>
+- Builds Symbol Table (SYMTAB) with labels and addresses.<br>
+- Builds Literal Table (LITTAB) with literals and addresses.<br>
+- Creates Pool Table (POOLTAB) for literal pools.<br>
+- Generates Intermediate Code (IC) for Pass II.<br>
+</p>
+<br>
+<h3>Location Counter (LC) Values for Each Line</h3>
+
+<table border="1" cellpadding="5">
+<tr>
+<th>Line No.</th>
+<th>Statement</th>
+<th>LC Value</th>
+<th>Remarks</th>
+</tr>
+<tr>
+<td>1</td>
+<td>START 200</td>
+<td>200</td>
+<td>START initializes LC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>MOVER AREG, A</td>
+<td>201</td>
+<td>1-word instruction</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ADD BREG, ='5'</td>
+<td>202</td>
+<td>1-word instruction, literal table updated</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A DS 1</td>
+<td>203</td>
+<td>Reserves 1 word for variable A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>LTORG</td>
+<td>203</td>
+<td>Literal =’5’ assigned at LC=202 (no LC change for directive)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>B DC '2'</td>
+<td>204</td>
+<td>Allocates constant at address 204</td>
+</tr>
+<tr>
+<td>7</td>
+<td>END</td>
+<td>205</td>
+<td>End of program</td>
+</tr>
+</table>
+
+
+<h4>SYMTAB (Symbol Table)</h4>
+<table border="1" cellpadding="5">
+<tr>
+<th>Index</th>
+<th>Symbol</th>
+<th>Address</th>
+</tr>
+<tr>
+<td>0</td>
+<td>A</td>
+<td>201</td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>204</td>
+</tr>
+</table>
+
+<br>
+
+<h4>LITTAB (Literal Table)</h4>
+<table border="1" cellpadding="5">
+<tr>
+<th>Index</th>
+<th>Literal</th>
+<th>Address</th>
+</tr>
+<tr>
+<td>0</td>
+<td>=’5’</td>
+<td>202</td>
+</tr>
+</table>
+<br>
+
+
+<h4>POOLTAB (Pool Table)</h4>
+<table border="1" cellpadding="5">
+<tr>
+<th>Pool No</th>
+<th>Start Index</th>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</table>
+<br>
+
+<h4>Intermediate Code (IC)</h4>
+<pre>
+(AD, 01) (C, 200)     ; START 200
+(IS, 04) (1) (S, 0)   ; MOVER AREG, A
+(IS, 01) (2) (L, 0)   ; ADD BREG, ='5'
+(DL, 01) (C, 1)       ; A DS 1
+(DL, 02) (C, 2)       ; B DC '2'
+(AD, 02)              ; END
+</pre>
+<br>
 
       </div>
   <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
@@ -889,6 +1138,61 @@ LOOP     ADD       AREG, NUM             ; Add NUM to AREG
       </div>
       <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
         <h2 style="text-align: center; color: #040254;">Topic 17: Pass II Assembler</h2>
+         <h3>Pass II Working</h3>
+
+<h3>Pass II Working (With IC)</h3>
+
+<table border="1" cellpadding="5">
+<tr>
+<th>Source Code Line</th>
+<th>LC</th>
+<th>Intermediate Code (IC)</th>
+<th>Machine Code</th>
+</tr>
+<tr>
+<td>START 200</td>
+<td>200</td>
+<td>(AD, 01) (C, 200)</td>
+<td>-- (No machine code for START)</td>
+</tr>
+<tr>
+<td>MOVER AREG, A</td>
+<td>201</td>
+<td>(IS, 04) (RG, 01) (S, 0)</td>
+<td>04 01 201</td>
+</tr>
+<tr>
+<td>ADD BREG, ='5'</td>
+<td>202</td>
+<td>(IS, 01) (RG, 02) (L, 0)</td>
+<td>01 02 202</td>
+</tr>
+<tr>
+<td>A DS 1</td>
+<td>203</td>
+<td>(DL, 01) (C, 1)</td>
+<td>-- (Memory reserved, no code)</td>
+</tr>
+<tr>
+<td>LTORG</td>
+<td>203</td>
+<td>-- (Literal assigned)</td>
+<td>00 00 05</td>
+</tr>
+<tr>
+<td>B DC '2'</td>
+<td>204</td>
+<td>(DL, 02) (C, 2)</td>
+<td>00 00 02</td>
+</tr>
+<tr>
+<td>END</td>
+<td>205</td>
+<td>(AD, 02)</td>
+<td>-- (No machine code for END)</td>
+</tr>
+</table>
+
 
       </div>
 

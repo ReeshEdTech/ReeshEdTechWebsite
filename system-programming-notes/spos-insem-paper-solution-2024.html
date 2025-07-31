@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insem Paper 2024 Solutions</title>
+  <link rel="stylesheet" href="/ReeshEdTech/assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">TopStudyMaterial</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#q1">Q.1</a></li>
+        <li><a href="#q2">Q.2</a></li>
+        <li><a href="#q3">Q.3</a></li>
+        <li><a href="#q4">Q.4</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Insem Paper 2024 - Complete Solution</h1>
+    <p>Step-by-step solutions for all questions with diagrams and flowcharts.</p>
+  </section>
+
+  <!-- Main Container -->
+  <div class="main-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Questions</h3>
+      <ul>
+        <li><a href="#q1">Q.1</a>
+          <ul class="submenu">
+            <li><a href="#q1a">Q.1 (a)</a></li>
+            <li><a href="#q1b">Q.1 (b)</a></li>
+          </ul>
+        </li>
+        <li><a href="#q2">Q.2</a>
+          <ul class="submenu">
+            <li><a href="#q2a">Q.2 (a)</a></li>
+            <li><a href="#q2b">Q.2 (b)</a></li>
+          </ul>
+        </li>
+        <li><a href="#q3">Q.3</a>
+          <ul class="submenu">
+            <li><a href="#q3a">Q.3 (a)</a></li>
+            <li><a href="#q3b">Q.3 (b)</a></li>
+          </ul>
+        </li>
+         <li><a href="#q4">Q.4</a>
+          <ul class="submenu">
+            <li><a href="#q4a">Q.4 (a)</a></li>
+            <li><a href="#q4b">Q.4 (b)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Content Area -->
+    <div class="content-area">
+
+      <!-- Q1 -->
+      <section class="section" id="q1">
+        <h2>Q.1</h2>
+
+        <!-- Q1 (a) -->
+        <div class="card" id="q1a">
+          <h3>Q.1 (a) Draw and explain flowchart of pass I of two pass assembler with example.
+</h3>
+          <img src="..\images\pass-1-assembler-flowchart.png" alt="Pass 1 Assembler Flowchart" style="max-width:100%; border-radius:10px;">
+        <h3 style="text-align: center;" > Pass 1 Assembler Flowchart</h3>
+        <h4> Explanation: </h4>
+    <p>Pass 1 of a two-pass assembler scans the source program to determine the addresses of all instructions and data definitions. It does not generate the final object code, but instead builds important tables such as the Symbol Table, Literal Table, and Pool Table, while producing intermediate code for use in Pass 2.</p>
+
+
+<h4>Step 1: Initialize</h4>
+<p>Read <code>START</code> statement (if present) → set LC = starting address.<br>
+Initialize <strong>SYMTAB</strong>, <strong>LITTAB</strong>, <strong>POOLTAB</strong> as empty.</p>
+<br>
+
+
+<h4>Step 2: Read Source Line by Line</h4>
+<ul>
+  <li><strong>If label exists</strong> → Add to SYMTAB with LC value.</li>
+  <li><strong>If opcode is a machine instruction</strong> → Lookup size in MOT → Increment LC.</li>
+  <li><strong>If opcode is declarative (DC, DS)</strong> → Allocate storage → Update LC.</li>
+  <li><strong>If operand contains a literal</strong> → Add to LITTAB (address assigned later at LTORG/END).</li>
+  <li><strong>If opcode is LTORG or END</strong> → Assign addresses to pending literals → Update POOLTAB.</li>
+</ul>
+<br>
+
+
+<h4>Step 3: Generate Intermediate Code</h4>
+<p>For each line, record LC, opcode class/type, symbol/literal references, and flags for Pass 2.</p>
+<br>
+
+
+<h4>Step 4: End of Pass 1</h4>
+<p>Final SYMTAB, LITTAB, POOLTAB completed; Intermediate code ready for Pass 2.</p>
+<br>
+
+<p>Pass 1 of the assembler lays the groundwork for actual code generation in Pass 2. 
+    By scanning the program once and maintaining all necessary address and symbol information, it ensures that forward references are resolved and that machine code can be generated systematically in the second pass.</p> 
+    </div>
+        
+        <!-- Q1 (b) -->
+        <div class="card" id="q1b">
+          <h3>Q.1 (b)  Differentiate : <br>
+            i. Literal and Immediate operand. <br>
+            ii. Assembler and Compiler
+</h3>
+      
+       
+       <p><b>Literal Operand</b><p>
+<p>A <strong>literal</strong> is a constant value explicitly written in the program but stored in a <strong>literal pool</strong> (not directly inside the instruction).</p>
+<p>The assembler creates an entry for each literal in the <strong>Literal Table (LITTAB)</strong>, assigns it a memory location, and during execution the instruction uses the address of that literal.</p>
+
+<div class="example">
+<p><strong>Example:</strong></p>
+<pre>MOVER AREG, ='5'</pre>
+<p><code>='5'</code> is a literal.</p>
+<p>The assembler stores <code>5</code> in memory (literal pool).</p>
+<p>The instruction moves the value from that memory location into the register.</p>
+</div>
+
+<p><b>Immediate Operand</b></p>
+<p>An <strong>immediate operand</strong> is a constant value directly embedded in the instruction itself, not stored in memory separately.</p>
+<p>There is no <strong>LITTAB</strong> entry for immediate operands because the value is part of the instruction.</p>
+
+<div class="example">
+<p><strong>Example:</strong></p>
+<pre>MOVEM AREG, 5</pre>
+<p><code>5</code> is an immediate operand.</p>
+<p>The instruction encodes <code>5</code> directly inside its machine code.</p>
+<p>No separate memory is needed to store it.</p>
+<br>
+</div>
+<h4> Comparision between Immediate Operand and Literal</h4>
+<br>
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Immediate Operand</th>
+    <th>Literal</th>
+  </tr>
+  <tr>
+    <td><strong>Instruction Size & Speed</strong></td>
+    <td>Immediate operand is fast. Value is part of the instruction, no memory lookup needed.</td>
+    <td>Literal allows reusing the same value at multiple places without repeating in instructions.</td>
+  </tr>
+  <tr>
+    <td><strong>Memory Optimization</strong></td>
+    <td>Good for one-time use (small constants).</td>
+    <td>Good when same constant is used multiple times — stored once in a literal pool.</td>
+  </tr>
+  <tr>
+    <td><strong>Assembler Handling</strong></td>
+    <td>No assembler table needed.</td>
+    <td>LITTAB allows assemblers to manage constants systematically.</td>
+  </tr>
+  <tr>
+    <td><strong>Example</strong></td>
+    <td>
+      <code>MVI AREG, 5</code><br>
+      Move Immediate: Uses immediate addressing mode.
+    </td>
+    <td>
+      <code>MOVER AREG, =5</code><br>
+      <code>ADD AREG, =5</code>
+    </td>
+  </tr>
+</table>
+       <br>
+       <h4> Comparision between Assembler and Compiler</h4>
+       <br>
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Assembler</th>
+    <th>Compiler</th>
+  </tr>
+  <tr>
+    <td><strong>Definition</strong></td>
+    <td>An assembler is a system software that translates an assembly language program into its equivalent machine language program (object code).</td>
+    <td>A compiler is a system software that translates a high-level language program into its equivalent machine language program or intermediate code.</td>
+  </tr>
+  <tr>
+    <td><strong>Input Language</strong></td>
+    <td>Takes assembly language instructions, which are low-level mnemonics specific to a particular processor.</td>
+    <td>Takes high-level language programs, which are written in human-readable statements such as loops, conditionals, and functions.</td>
+  </tr>
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>Produces machine code or object code that is directly executable by the target processor.</td>
+    <td>Produces machine code or sometimes intermediate code, which may then be assembled or interpreted into executable code.</td>
+  </tr>
+  <tr>
+    <td><strong>Portability</strong></td>
+    <td>The output program is not portable because assembly language is processor-dependent.</td>
+    <td>The output program is more portable because the same high-level source code can be compiled on different platforms with different compilers.</td>
+  </tr>
+  <tr>
+    <td><strong>Passes/Phases</strong></td>
+    <td>Usually implemented as a one-pass or two-pass assembler.</td>
+    <td>Consists of multiple phases: lexical analysis, syntax analysis, semantic analysis, optimization, and code generation.</td>
+  </tr>
+  <tr>
+    <td><strong>Complexity</strong></td>
+    <td>Relatively simple because it directly converts mnemonics to machine opcodes and resolves addresses.</td>
+    <td>More complex because it analyzes the program structure, checks semantics, and performs optimization before generating code.</td>
+  </tr>
+  <tr>
+    <td><strong>Execution Speed of Output</strong></td>
+    <td>The generated machine code runs very fast because it is close to hardware instructions.</td>
+    <td>The generated machine code also runs fast, and in some cases faster than assembly code if the compiler applies advanced optimizations.</td>
+  </tr>
+</table>
+        </div>
+      </section>
+
+      <!-- Q2 -->
+      <section class="section" id="q2">
+        <h2>Q.2</h2>
+
+        <!-- Q2 (a) -->
+        <div class="card" id="q2a">
+          <h3>Q.2 (a) Consider following Assembly code and show output of pass-I of two pass Assembler with entries in Mnemonic Opcode Table, Pseudo Opcode Table, Symbol Table, Literal Table and Pool Table. [8]
+PROG START 50
+<br>
+USING PROG+2, 15
+<br>
+L1, FIVE
+<br>
+Al, = F ‘2’
+<br>
+LTORG
+<br>
+ST 1, RES
+<br>
+FIVE DC F ‘4’
+<br>
+<p style="color: red;"> RES DS F ‘4’</p>
+<p style="color: red;">RES DS IF</p>
+END
+<p style="color: blue;"> red highlighted text denotes printing mistake in question paper</p>
+<p style="color: blue;"> corrected code is given below</p>
+PROG START 50
+<br>
+USING PROG+2, 15
+<br>
+L 1, FIVE
+<br>
+A l, = F ‘2’
+<br> 
+LTORG
+<br>
+ST 1, RES
+<br>
+FIVE DC F ‘4’
+<br>
+RES DS 4F
+<br>
+END
+</h3>
+
+<h3>Answer:</h3>
+<h4> Step 1: Processing of Location Counter</h4>
+<table>
+  <tr>
+    <th>Line</th>
+    <th>Statement</th>
+    <th>LC</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>PROG START 50</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>USING PROG+2, 15</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>L1 L 1, FIVE</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>A 1, =F'2'</td>
+    <td>54</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>LTORG<br>=F'2'</td>
+    <td>58</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>ST 1, RES</td>
+    <td>62</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>FIVE DC F'4'</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>RES DS 4F</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>END</td>
+    <td>--</td>
+  </tr>
+</table>
+
+<p style="color: blue;"> <b>In IBM 360 / similar assemblers (John J. Donovan examples):
+
+The basic data unit is a word.
+
+One word = 4 bytes.
+
+Most instructions and fullword constants occupy one word (4 bytes) in memory. Hence the LC will be incremented by 4.</b></p>
+<h3>Symbol Table</h3>
+
+<table>
+  <tr>
+    <th>Index</th>
+    <th>Symbol</th>
+    <th>Address</th>
+    <th>Remark (optional)</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>PROG</td>
+    <td>50</td>
+    <td>START doesn’t consume LC, but label on START line takes LC value set by START.<br>That’s why PROG = 50 in SYMTAB.</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>L1</td>
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>FIVE</td>
+    <td>66</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>RES</td>
+    <td>70</td>
+    <td></td>
+  </tr>
+</table>
+<h3> Literal Table</h3>
+<table>
+  <tr>
+    <th>Index</th>
+    <th>Literal</th>
+    <th>Address</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>=F'2'</td>
+    <td>58</td>
+  </tr>
+</table>
+<h3>Pool Table</h3>
+<table>
+  <tr>
+    <th>Pool Table Pointer</th>
+    <th>Start Index in LITTAB</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+<h3> Pseudo Opcode Table</h3>
+<table>
+  <tr>
+    <th>Pseudo Op</th>
+    <th>Meaning</th>
+  </tr>
+  <tr>
+    <td>START</td>
+    <td>Specifies starting address for LC</td>
+  </tr>
+  <tr>
+    <td>USING</td>
+    <td>Specifies base register and address</td>
+  </tr>
+  <tr>
+    <td>LTORG</td>
+    <td>Assigns addresses to literals in pool</td>
+  </tr>
+  <tr>
+    <td>DC</td>
+    <td>Defines constant storage</td>
+  </tr>
+  <tr>
+    <td>DS</td>
+    <td>Reserves storage</td>
+  </tr>
+  <tr>
+    <td>END</td>
+    <td>Indicates end of program</td>
+  </tr>
+</table>
+<h3> Machine Opcode Table </h3>
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Opcode</th>
+    <th>Class</th>
+    <th>Code</th>
+    <th>Length</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>L</td>
+    <td>IS</td>
+    <td>04</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>A</td>
+    <td>IS</td>
+    <td>02</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>ST</td>
+    <td>IS</td>
+    <td>05</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>DC</td>
+    <td>DL</td>
+    <td>01</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>DS</td>
+    <td>DL</td>
+    <td>02</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>START</td>
+    <td>AD</td>
+    <td>01</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>USING</td>
+    <td>AD</td>
+    <td>02</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>LTORG</td>
+    <td>AD</td>
+    <td>05</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>END</td>
+    <td>AD</td>
+    <td>06</td>
+    <td>-</td>
+  </tr>
+</table>
+<h3> Intermediate Code</h3>
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Source Code Line</th>
+    <th>LC</th>
+    <th>Intermediate Code</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>PROG START 50</td>
+    <td>--</td>
+    <td>(AD,01) (C,50)</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>USING PROG+2, 15</td>
+    <td>--</td>
+    <td>(AD,02) (C, 52)</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>L1 L 1, FIVE</td>
+    <td>50</td>
+    <td>(IS,04) (RG,01) (S,2)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>A 1, =F'2'</td>
+    <td>54</td>
+    <td>(IS,02) (RG,01) (L,0)</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>LTORG <br> 
+    =F'2'</td>
+    <td>--<br>58</td>
+    <td><br>(DL,02) (C,2)</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>ST 1, RES</td>
+    <td>62</td>
+    <td>(IS,05) 1 (S,3)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>FIVE DC F'4'</td>
+    <td>66</td>
+    <td>(DL,01) (C,4)</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>RES DS 4F</td>
+    <td>70</td>
+    <td>(DL,02) (C,4)</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>END</td>
+    <td>--</td>
+    <td>(AD,06)</td>
+  </tr>
+</table>
+<p style="color: blue;"><b>After END the value of LC will be 86. as LC will be incremented One word = 4 bytes. Here for RES 4F size is given so 4*4bytes=16. The previous value of LC is 70. So 70 +16 =86 </p>
+     </b>   </div>
+
+        <!-- Q2 (b) -->
+        <div class="card" id="q2b">
+          <h3>Q.2 (b) Enlist and explain the necessity of different data structures used in Pass-I of two pass Assembler?
+</h3>
+<p>In Pass-I of a two-pass assembler, several data structures are essential to prepare all the information required by Pass-II for final machine code generation.</p>
+  <p><strong>List of data structures:</strong></p>
+  <ul>
+    <li>Symbol Table (SYMTAB)</li>
+    <li>Machine Opcode Table (MOT)</li>
+    <li>Literal Table (LITTAB)</li>
+    <li>POOL Table (POOLTAB)</li>
+    <li>Base Table (Specific for certain machines like IBM 360)</li>
+    <li>Pseudo Opcode Table (Specific for certain machines like IBM 360)</li>
+    <li>Intermediate Code</li>
+    <li>Location Counter (LC)</li>
+  </ul>
+  <div class="box">
+  <h3>Symbol Table (SYMTAB)</h3>
+  <p>The Symbol Table stores all symbols, such as labels and variable names, along with their addresses. As Pass-I scans the program, it encounters these symbols and records their addresses in SYMTAB. This ensures that in Pass-II, symbolic names can be directly replaced by their corresponding numeric addresses.</p>
+</div>
+
+<div class="box">
+  <h3>Literal Table (LITTAB)</h3>
+  <p>The Literal Table stores all literals that appear in the program. Whenever a literal such as <code>=‘5’</code> is encountered, it is added to LITTAB. The actual addresses of these literals are assigned when the assembler processes a literal pool, which occurs at the LTORG directive or at the END of the program.</p>
+</div>
+
+<div class="box">
+  <h3>Literal Pool Table (POOLTAB)</h3>
+  <p>The POOLTAB is necessary to manage multiple literal pools in a program. It records the starting index of each literal pool in LITTAB. This allows the assembler to correctly locate and assign addresses to literals in different sections of the program, especially when LTORG is used multiple times.</p>
+</div>
+
+<div class="box">
+  <h3>Intermediate Code</h3>
+  <p>The Intermediate Code is essential because it stores an intermediate representation of the program after Pass-I. This intermediate code contains information such as operation codes, register numbers, and indices to symbols or literals, which are resolved in Pass-II.</p>
+</div>
+
+<div class="box">
+  <h3>Location Counter (LC)</h3>
+  <p>The Location Counter is required to keep track of the memory address currently being assigned to instructions, symbols, and literals. It is updated sequentially as each statement is processed in Pass-I, ensuring correct address allocation throughout the program.</p>
+</div>
+
+<div class="box">
+  <h3>Base Table</h3>
+  <p>The Base Table is used in certain machine architectures, such as the IBM 360, for base-relative addressing. It stores base register information and displacement limits so that addresses beyond direct reach can be resolved.</p>
+</div>
+
+      </section>
+
+      <!-- Q3 -->
+      <section class="section" id="q3">
+        <h2>Q.3</h2>
+
+        <!-- Q3 (a) -->
+        <div class="card" id="q3a">
+          <h3>Q.3 (a) Explain the Phases of Compiler and their output with an example.</h3>
+          <p>Intermediate code helps bridge the gap between source and target languages.</p>
+          <img src="images/icg-example.png" alt="Intermediate Code Example" style="max-width:100%; border-radius:10px;">
+        </div>
+
+        <!-- Q3 (b) -->
+        <div class="card" id="q3b">
+          <h3>Q.3 (b)  Define macro. What are the advantages of macro facility? How they
+are different from function.</h3>
+          <p>Loader places programs into memory and linker resolves external references.</p>
+          <img src="images/loader-linker.png" alt="Loader Linker" style="max-width:100%; border-radius:10px;">
+        </div>
+      </section>
+
+    <!-- Q4 -->
+      <section class="section" id="q4">
+        <h2>Q.4</h2>
+
+        <!-- Q4 (a) -->
+        <div class="card" id="q4a">
+          <h3>Q.4 (a)What is the use of AIF and AGO pseudo-op in macro? Explain macro
+expansion with positional parameter with the help of suitable example.
+[8]</h3>
+          <p>Intermediate code helps bridge the gap between source and target languages.</p>
+          <img src="images/icg-example.png" alt="Intermediate Code Example" style="max-width:100%; border-radius:10px;">
+        </div>
+
+        <!-- Q4 (b) -->
+        <div class="card" id="q4b">
+          <h3>Q.4 (b)  Define macro. What are the advantages of macro facility? How they
+are different from function.</h3>
+          <p>Loader places programs into memory and linker resolves external references.</p>
+          <img src="images/loader-linker.png" alt="Loader Linker" style="max-width:100%; border-radius:10px;">
+        </div>
+      </section>
+
+    </div>
+  
+    </div>
+  <!-- Footer -->
+ <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
+      <a href="#">Instagram</a>
+    </div>
+    
+    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+  </footer>
+
+</body>
+</html>
