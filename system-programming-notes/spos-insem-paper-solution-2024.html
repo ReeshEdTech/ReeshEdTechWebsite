@@ -411,6 +411,18 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
     <td>0</td>
   </tr>
 </table>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
+     crossorigin="anonymous"></script>
+<!-- SPOS_INSEM_AD2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8786639620322882"
+     data-ad-slot="3982502601"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h3> Pseudo Opcode Table</h3>
 <table>
   <tr>
@@ -516,6 +528,18 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
   </tr>
 </table>
 <h3> Intermediate Code</h3>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
+     crossorigin="anonymous"></script>
+<!-- SPOS_INSEM_AD3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8786639620322882"
+     data-ad-slot="1356339268"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <table>
   <tr>
     <th>Sr. No.</th>
@@ -646,7 +670,152 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
           <h3>Q.3 (b)  Define macro. What are the advantages of macro facility? How they
 are different from function.</h3>
           <!-- <p>Loader places programs into memory and linker resolves external references.</p> -->
-          <img src="images/loader-linker.png" alt="Loader Linker" style="max-width:100%; border-radius:10px;">
+         <h2 style="text-align:center;">Definition of Macro</h2>
+    <p>
+        A <strong>macro</strong> is a named block of instructions or statements, optionally with parameters.
+     <p>   In assembly, it is defined using <code>MACRO–MEND</code>, and in high-level languages with preprocessor directives. </p>
+        At each call, its code is expanded in place during assembly or preprocessing, before compilation or execution.
+    </p>
+    <p>
+        During macro expansion, the assembler replaces the macro call with the actual sequence of instructions defined in the macro body.
+    </p>
+    <p>
+        A macro can accept <strong>parameters (arguments)</strong>, which are substituted into the macro body during expansion, allowing code customization at different call sites.
+    </p>
+    <p>
+        Macros are processed by the <strong>macro processor</strong> (part of the assembler), and expansion happens before the assembly process, so the assembler works on the expanded code.
+    </p>
+      <h4>Macro Syntax (Assembly)</h4>
+    <pre>
+MACRO
+MACRONAME &PARAM1, &PARAM2, ...
+    ; Body of macro using parameters
+MEND
+    </pre>
+
+    <h4>Macro Example</h4>
+    <pre>
+MACRO
+INCR &USE_REG1
+    ADD &USE_REG1, ='1'
+MEND
+
+    INCR AREG   ; Macro call – expands into ADD AREG, ='1'
+    INCR BREG   ; Macro call – expands into ADD BREG, ='1'
+    </pre>
+
+    <h4>Expanded Code for Macro Call   INCR AREG is: </h4>
+   
+    <pre>
+    ADD AREG, ='1'
+    </pre>
+     <h4>Expanded Code for Macro Call    INCR BREG is: </h4>
+ 
+     <pre>
+    ADD BREG, ='1'
+    </pre>
+          <!-- <p>Loader places programs into memory and linker resolves external references.</p> -->
+          <!-- <img src="images/loader-linker.png" alt="Loader Linker" style="max-width:100%; border-radius:10px;"> -->
+      
+       <h2>Advantages of Macro Facility</h2>
+
+    <h3>1. Code Reusability</h3>
+    <p>
+        A macro allows you to define a block of instructions once and use it in multiple places by simply calling its name.
+        This avoids writing the same instructions repeatedly.
+    </p>
+    <p><strong>Benefit:</strong> Saves programming effort, reduces chances of errors, and makes programs shorter to write.</p>
+    <pre>
+MACRO
+INCR &USE_REG
+    ADD &USE_REG, ='1'
+MEND
+
+    INCR AREG
+    INCR BREG
+    </pre>
+
+    <h3>2. No Function Call Overhead</h3>
+    <p>
+        In functions, control transfers to another block of code (function call) and then returns. This involves pushing
+        parameters onto the stack, jumping to the function, and returning, which takes extra time.
+        Macros, however, are expanded inline — there is no jump or return; the instructions are directly inserted.
+    </p>
+    <p><strong>Benefit:</strong> Faster execution since there is no overhead of function call and return.</p>
+    <pre>
+#define SQUARE(x) ((x)*(x)) // Macro
+int result = SQUARE(5);     // Expands to (5*5)
+    </pre>
+
+    <h3>3. Parameterization</h3>
+    <p>
+        Macros can take <strong>parameters (arguments)</strong>, allowing customization of the expanded code without redefining the macro.
+    </p>
+    <p><strong>Benefit:</strong> The same macro works for different registers, values, or operations.</p>
+    <pre>
+MACRO
+ADDVAL &USE_REG, &VAL
+    ADD &USE_REG, &VAL
+MEND
+
+    ADDVAL AREG, X
+    ADDVAL BREG, Y
+    </pre>
+
+    <h3>4. Improved Readability</h3>
+    <p>
+        Long or repetitive instruction sequences can be hidden behind a meaningful macro name, making the main program easier
+        to read and maintain.
+    </p>
+    <p><strong>Benefit:</strong> The code looks cleaner, more structured, and easier to understand for others.</p>
+    <pre>
+ADD_TWO_NUMS NUM1, NUM2, RESULT
+    </pre>
+
+    <h3>5. Speed of Execution</h3>
+    <p>
+        Since macros expand inline, there is no runtime lookup or call overhead. The CPU executes the expanded instructions directly.
+    </p>
+    <p><strong>Benefit:</strong> Execution speed is higher (but code size increases due to repeated expansion).</p>
+    <pre>
+#define CUBE(x) ((x)*(x)*(x))
+int c = CUBE(4); // Expands to (4*4*4)
+    </pre>
+      <h2 style="text-align:center;">Macro vs Function</h2>
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>Macro</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Definition</td>
+            <td>A macro is a block of code that is replaced by the preprocessor before the program is compiled. It is essentially a text substitution mechanism.</td>
+            <td>A function is a separate block of instructions that is executed when it is called at runtime.</td>
+        </tr>
+        <tr>
+            <td>Execution</td>
+            <td>A macro is expanded inline at every place it is invoked, meaning the macro code is directly inserted into the program at each call, avoiding control transfer.</td>
+            <td>A function is executed by transferring control to its body during runtime and then returning control to the caller, which involves a small performance overhead.</td>
+        </tr>
+        
+        <tr>
+            <td>Speed</td>
+            <td>A macro executes faster because it avoids function call overhead; the expanded code runs directly as part of the program.</td>
+            <td>A function is slightly slower due to the overhead of control transfer and return during function calls.</td>
+        </tr>
+        <tr>
+            <td>Memory Usage</td>
+            <td>A macro increases program size because its code is expanded in multiple places wherever it is invoked.</td>
+            <td>A function saves memory because its code is stored only once, and every call uses the same single copy.</td>
+        </tr>
+       
+        <tr>
+            <td>Flexibility</td>
+            <td>A macro cannot return values and cannot be recursive because it is not a runtime construct.</td>
+            <td>A function can return values and can be recursive, allowing it to call itself as part of problem-solving.</td>
+        </tr>
+    </table>
         </div>
       </section>
 
@@ -659,16 +828,270 @@ are different from function.</h3>
           <h3>Q.4 (a)What is the use of AIF and AGO pseudo-op in macro? Explain macro
 expansion with positional parameter with the help of suitable example.
 [8]</h3>
+
+
+<h4>AIF vs AGO in Macro Processing</h4>
+
+<h4>AIF (Assembler IF)</h4>
+<p><strong>Meaning:</strong><br>
+AIF stands for Assembler IF. It is used inside a macro for <strong>conditional branching</strong> during macro expansion.</p>
+
+<p><strong>Purpose:</strong><br>
+If a given condition is true, the macro processor jumps to the statement label specified. If the condition is false, expansion continues sequentially.</p>
+
+<p><strong>Syntax:</strong></p>
+<pre>
+AIF (condition/expression) .&lt;sequencing symbol&gt;
+</pre>
+
+<p><strong>Example:</strong></p>
+<pre>
+AIF (&ARG1.EQ.&ARG2) .EQUAL
+</pre>
+<p>If <code>ARG1</code> equals <code>ARG2</code>, control jumps to the label <code>EQUAL</code>.<br>
+If false, execution continues to the next line.</p>
+
+<br>
+
+<h2>AGO (Assembler GO)</h2>
+<p><strong>Meaning:</strong><br>
+AGO stands for Assembler GO. It is used for <strong>unconditional branching</strong> during macro expansion.</p>
+
+<p><strong>Purpose:</strong><br>
+It always transfers control to the specified label without checking any condition.</p>
+
+<p><strong>Syntax:</strong></p>
+<pre>
+AGO .&lt;sequencing symbol&gt;
+</pre>
+
+<p><strong>Example:</strong></p>
+<pre>
+AGO .FINISH
+</pre>
+<p>Control always jumps to the label <code>FINISH</code>.</p>
+
+<br>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
+     crossorigin="anonymous"></script>
+<!-- SPOS_INSEM_AD1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8786639620322882"
+     data-ad-slot="6608665945"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<ul>
+    <li>AIF is like a <strong>conditional IF</strong> statement for macros.</li>
+    <li>AGO is like an <strong>unconditional GOTO</strong> statement for macros.</li>
+    <li>Both operate at <strong>macro expansion time</strong>, not at runtime.</li>
+</ul>
+
+<h2>Macro Expansion with Positional Parameters</h2>
+
+<h3>Definition of Positional Parameters</h3>
+<p>
+Positional parameters are placeholders used in a macro definition, which are replaced by actual arguments during macro expansion based on their position in the macro call.
+</p>
+<p>
+They are usually represented as <code>&amp;ARG1</code>, <code>&amp;ARG2</code> in the macro definition.
+</p>
+
+<h3>Macro Definition</h3>
+<p>
+A macro is defined once with positional parameters representing the values to be substituted during the call.
+</p>
+
+<h3>Macro Call</h3>
+<p>
+When the macro is called, actual arguments are passed in the same order as parameters.
+</p>
+
+<h3>Expansion</h3>
+<p>
+The macro processor replaces positional parameters with actual arguments at each call, inserting the expanded code into the program.  
+The substitution is purely positional:
+</p>
+<ul>
+    <li>The first argument replaces <code>&amp;ARG1</code></li>
+    <li>The second argument replaces <code>&amp;ARG2</code></li>
+</ul>
+
+<br>
+
+<h3>Example</h3>
+
+<strong>Macro Definition:</strong>
+<pre>
+MACRO
+ADDNUM &amp;ARG1, &amp;ARG2
+    MOVER AREG, &amp;ARG1
+    ADD  AREG, &amp;ARG2
+MEND
+</pre>
+<p><code>&amp;ARG1</code> → First positional parameter (First number)<br>
+<code>&amp;ARG2</code> → Second positional parameter (Second number)</p>
+
+<strong>Macro Call:</strong>
+<pre>
+ADDNUM NUM1, NUM2
+</pre>
+
+<strong>Macro Expansion (After expansion):</strong>
+<pre>
+MOVER AREG, NUM1
+ADD  AREG, NUM2
+</pre>
+<p>
+The macro processor replaces <code>&amp;ARG1</code> with <code>NUM1</code> and <code>&amp;ARG2</code> with <code>NUM2</code> according to their positions.
+This avoids rewriting the same addition code for different variable pairs.
+</p>
+
+
           <!-- <p>Intermediate code helps bridge the gap between source and target languages.</p> -->
-          <img src="images/icg-example.png" alt="Intermediate Code Example" style="max-width:100%; border-radius:10px;">
+          <!-- <img src="images/icg-example.png" alt="Intermediate Code Example" style="max-width:100%; border-radius:10px;"> -->
         </div>
 
         <!-- Q4 (b) -->
         <div class="card" id="q4b">
-          <h3>Q.4 (b)  Define macro. What are the advantages of macro facility? How they
-are different from function.</h3>
-          <!-- <p>Loader places programs into memory and linker resolves external references.</p> -->
-          <img src="images/loader-linker.png" alt="Loader Linker" style="max-width:100%; border-radius:10px;">
+          <h3>Q.4 (b)  Explain the concept of single pass Macro processor with example.
+ Give example for macro calls within the macro.</h3>
+      <h3>Definition</h3>
+<p>
+A single-pass macro processor is a type of macro processor that performs macro definition handling and macro expansion in the same single scan (pass) of the source program. 
+The program is read only once, and macro calls are expanded immediately when encountered. 
+There is no separate preprocessing or second pass to expand macros.
+</p>
+
+<p>
+Immediate expansion: When a macro call is detected, its body is substituted right away into the program. 
+The assembler then works on the expanded program directly.
+</p>
+
+<br>
+
+<h3>Working of Single Pass Assembler</h3>
+<ol>
+    <li><strong>Read Source Program Line by Line:</strong> The macro processor scans each line of the program sequentially.</li>
+    <li><strong>Handling Macro Definitions:</strong>
+        <ul>
+            <li>If a <code>MACRO</code> directive is encountered:</li>
+            <ul>
+                <li>Store the macro name in <strong>MNT (Macro Name Table)</strong>.</li>
+                <li>Store its body (between <code>MACRO</code> and <code>MEND</code>) in <strong>MDT (Macro Definition Table)</strong>.</li>
+            </ul>
+        </ul>
+    </li>
+    <li><strong>Handling Macro Calls:</strong>
+        <ul>
+            <li>When a macro name is found in the program:</li>
+            <ul>
+                <li>Search for it in the <strong>MNT</strong>.</li>
+                <li>Retrieve its body from the <strong>MDT</strong>.</li>
+                <li>Substitute arguments (if any) for positional parameters.</li>
+                <li>Insert the expanded code immediately into the output.</li>
+            </ul>
+        </ul>
+    </li>
+    <li><strong>Continue Processing:</strong> The macro processor keeps reading the next lines, expanding macros on the fly.</li>
+</ol>
+
+<br>
+
+<h3>Data Structures Used</h3>
+<ul>
+    <li><strong>MNT (Macro Name Table):</strong> Stores each macro’s name and a pointer to where its definition starts in MDT.</li>
+    <li><strong>MDT (Macro Definition Table):</strong> Stores the sequence of statements of each macro.</li>
+    <li><strong>ALA (Argument List Array):</strong> Stores actual arguments during macro expansion for substitution.</li>
+</ul>
+
+<br>
+
+<h3>Advantages</h3>
+<ul>
+    <li>Faster – Only one pass over the program, resulting in quicker processing.</li>
+    <li>Less I/O – No second scan required, reducing disk/memory operations.</li>
+    <li>Direct Output – Expanded program is generated immediately.</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+    <li>Nested macro calls (macro calling another macro) can be tricky since the inner macro might not be defined before the outer macro is expanded.</li>
+    <li>No forward referencing of macros – A macro must be defined before it is used, otherwise expansion fails.</li>
+    <li>Error handling is difficult – Since expansion happens immediately, errors in macro bodies may appear later in the program, making debugging harder.</li>
+</ul>
+
+<h2>Single-Pass Macro Processor Example</h2>
+
+<h3>Macro Definition</h3>
+<pre>
+MACRO
+INCR &amp;REG
+    ADD &amp;REG, ='1'
+MEND
+</pre>
+<p><code>&amp;REG</code> is a positional parameter representing the register to be incremented.<br>
+This macro adds 1 to the register.</p>
+
+<h3>Program with Macro Calls</h3>
+<pre>
+START 100
+    MOVER AREG, NUM
+    INCR AREG
+    INCR BREG
+NUM DC '5'
+END
+</pre>
+
+<h3>How Single-Pass Macro Processor Works</h3>
+<ol>
+    <li>Reads the first line: <code>START 100</code> → Copies it to output.</li>
+    <li>Next line: <code>MOVER AREG, NUM</code> → Copies it to output.</li>
+    <li>Next line: <code>INCR AREG</code> → Macro call detected.
+        <ul>
+            <li>Finds <code>INCR</code> in MNT.</li>
+            <li>Fetches its body from MDT.</li>
+            <li>Substitutes <code>&amp;REG</code> with <code>AREG</code>.</li>
+            <li>Expands immediately in output.</li>
+        </ul>
+    </li>
+    <li>Next line: <code>INCR BREG</code> → Macro call detected.
+        <ul>
+            <li>Substitutes <code>&amp;REG</code> with <code>BREG</code>.</li>
+            <li>Expands immediately in output.</li>
+        </ul>
+    </li>
+    <li>Remaining lines are copied as they are.</li>
+</ol>
+
+<h3>Expanded Code (Output after Single Pass)</h3>
+<pre>
+START 100
+    MOVER AREG, NUM
+    ADD AREG, ='1'
+    ADD BREG, ='1'
+NUM DC '5'
+END
+</pre>
+
+<h3>Why It Works in One Pass</h3>
+<ul>
+    <li>The macro is defined before it is called.</li>
+    <li>As soon as the processor encounters a macro call, it expands it immediately without going back for another scan.</li>
+</ul>
+
+<ul>
+    <li>No second pass is required.</li>
+    <li>Expansion is immediate.</li>
+    <li>Works well when macros are defined before use.</li>
+</ul>
+
+</body>
+</html>
+
         </div>
       </section>
 
