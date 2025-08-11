@@ -246,7 +246,7 @@ Initialize <strong>SYMTAB</strong>, <strong>LITTAB</strong>, <strong>POOLTAB</st
 <br>
 USING PROG+2, 15
 <br>
-L1, FIVE
+L 1, FIVE
 <br>
 Al, = F ‘2’
 <br>
@@ -311,7 +311,7 @@ END
   </tr>
   <tr>
     <td>3</td>
-    <td>L1 L 1, FIVE</td>
+    <td>L 1, FIVE</td>
     <td>50</td>
   </tr>
   <tr>
@@ -368,20 +368,15 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
     <td>50</td>
     <td>START doesn’t consume LC, but label on START line takes LC value set by START.<br>That’s why PROG = 50 in SYMTAB.</td>
   </tr>
+ 
   <tr>
     <td>1</td>
-    <td>L1</td>
-    <td>50</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>2</td>
     <td>FIVE</td>
     <td>66</td>
     <td></td>
   </tr>
   <tr>
-    <td>3</td>
+    <td>2</td>
     <td>RES</td>
     <td>70</td>
     <td></td>
@@ -561,9 +556,9 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
   </tr>
   <tr>
     <td>3</td>
-    <td>L1 L 1, FIVE</td>
+    <td>L 1, FIVE</td>
     <td>50</td>
-    <td>(IS,04) (RG,01) (S,2)</td>
+    <td>(IS,04) (RG,01) (S,1)</td>
   </tr>
   <tr>
     <td>4</td>
@@ -582,7 +577,7 @@ Most instructions and fullword constants occupy one word (4 bytes) in memory. He
     <td>6</td>
     <td>ST 1, RES</td>
     <td>62</td>
-    <td>(IS,05) 1 (S,3)</td>
+    <td>(IS,05) 1 (S,2)</td>
   </tr>
   <tr>
     <td>7</td>
@@ -975,7 +970,7 @@ The assembler then works on the expanded program directly.
 
 <br>
 
-<h3>Working of Single Pass Assembler</h3>
+<h3>Working of Single Pass Macroprocessor</h3>
 <ol>
     <li><strong>Read Source Program Line by Line:</strong> The macro processor scans each line of the program sequentially.</li>
     <li><strong>Handling Macro Definitions:</strong>
