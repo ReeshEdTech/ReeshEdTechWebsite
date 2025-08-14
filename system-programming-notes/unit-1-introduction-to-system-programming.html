@@ -1050,32 +1050,32 @@ During Pass I, the assembler:<br>
 <tr>
 <td>1</td>
 <td>START 200</td>
-<td>200</td>
+<td>-</td>
 <td>START initializes LC</td>
 </tr>
 <tr>
 <td>2</td>
 <td>MOVER AREG, A</td>
-<td>201</td>
+<td>200</td>
 <td>1-word instruction</td>
 </tr>
 <tr>
 <td>3</td>
 <td>ADD BREG, ='5'</td>
-<td>202</td>
+<td>201</td>
 <td>1-word instruction, literal table updated</td>
 </tr>
 <tr>
 <td>4</td>
 <td>A DS 1</td>
-<td>203</td>
+<td>202</td>
 <td>Reserves 1 word for variable A</td>
 </tr>
 <tr>
 <td>5</td>
 <td>LTORG</td>
 <td>203</td>
-<td>Literal =’5’ assigned at LC=202 (no LC change for directive)</td>
+<td>Literal =’5’ assigned at LC=203 (no LC change for directive)</td>
 </tr>
 <tr>
 <td>6</td>
@@ -1086,7 +1086,7 @@ During Pass I, the assembler:<br>
 <tr>
 <td>7</td>
 <td>END</td>
-<td>205</td>
+<td>-</td>
 <td>End of program</td>
 </tr>
 </table>
@@ -1102,7 +1102,7 @@ During Pass I, the assembler:<br>
 <tr>
 <td>0</td>
 <td>A</td>
-<td>201</td>
+<td>202</td>
 </tr>
 <tr>
 <td>1</td>
@@ -1123,7 +1123,7 @@ During Pass I, the assembler:<br>
 <tr>
 <td>0</td>
 <td>=’5’</td>
-<td>202</td>
+<td>203</td>
 </tr>
 </table>
 <br>
@@ -1162,7 +1162,7 @@ During Pass I, the assembler:<br>
         <h2 style="text-align: center; color: #040254;">Topic 17: Pass II Assembler</h2>
          <h3>Pass II Working</h3>
 
-<h3>Pass II Working (With IC)</h3>
+
 
 <table border="1" cellpadding="5">
 <tr>
