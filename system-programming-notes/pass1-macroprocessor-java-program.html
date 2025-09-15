@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Notes - Top Study Material</title>
+<link rel="stylesheet" href="../assets/css/notes.css" />
+ <link rel="stylesheet" href="../assets/css/styles.css" />
+
+</head>
+<body>
+<header class="header">
+    
+    <nav class="navbar">
+  <div class="logo">TopStudyMaterial</div>
+  
+  <!-- Hamburger menu for mobile -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="../artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="../principle-of-programming-languages.html">Principles of Programming Languages</a></li>
+        <li><a href="/system-programming-notes/unit-1-introduction-to-system-programming.html">System Programming and Operating System</a></li>
+      <li><a href="../blockchain-technology.html">Blockchain Technology</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">Unit Wise Notes ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="unit-1-introduction-to-system-programming.html#content">Unit 1 Notes</a></li>
+        <!-- <li><a href="../principle-of-programming-languages.html">Unit 2 Notes</a></li> -->
+
+      </ul>
+    </li>
+        <li><a href="../system-programming-and-operating-system.html#ppts">PPTs</a></li>
+        <li><a href="../system-programming-and-operating-system.html#questionpapers">Question Papers</a></li>
+        <!-- <li><a href="#labexperiments">Lab Experiments</a></li> -->
+        <li><a href="../system-programming-and-operating-system.html#videos">Videos</a></li>
+        <li><a href="../system-programming-and-operating-system.html#lecturenotes">Notes</a></li>
+  </ul>
+</nav>
+  </header>
+<div class="animated-banner">
+  <h1>System Programming and Operating System</h1>
+</div>
+
+ <!-- Main Layout -->
+  <div class="main-container">
+    <!-- Sidebar for headings -->
+    <!-- <aside class="sidebar">
+      <h3> SPOS Practicals</h3>
+      <ol>
+     <li>  <a href="#topic1" class="nav-box">Implementation of Pass 1 Assembler </a> <br></li> 
+       <li>  <a href="#topic2" class="nav-box"> Implementation of Pass 2 Assembler </a> <br></li> 
+         <li>  <a href="#topic3" class="nav-box"> Implementation of Pass 1 Macroprocessor </a> <br></li> 
+         <li> <a href="#topic4" class="nav-box"> Implementation of Pass 2 Macroprocessor </a> <br></li>
+        
+      </ol>
+    </aside> -->
+
+    <!-- Notes Content -->
+    <section class="content">
+      <div class="topic-card" id="topic1" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; color: #040254;">SPOS (LP-I) Practicals</h2>
+      
+    </div> <br>
+<p> <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Pass 1 Macroprocessor Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+    }
+    h2 {
+      color: #333;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+  </style>
+</head>
+<body>
+ <h3 style="text-align: justify;">Design suitable data structures and implement Pass-I of a two pass macro processor
+using OOP features in Java/C++. The output of Pass-I (MNT, MDT, ALA &amp;
+Intermediate code file without any macro definitions) should be input for Pass-II.</h3>
+
+<h2>Java Program: Macro Processor Pass 1</h2>
+  <p> To implement Macro Processor Pass 1 we need two classes:
+    <ol>
+        <li> MNTEntry</li>
+        <li> Macroprocessor1</li>
+    </ol>
+  </p>
+  <h3>MNTEntry Class: </h3>
+  <pre><code> public class MNTEntry {
+	int index;
+    String name;
+    int mdtIndex;
+
+    MNTEntry(int index, String name, int mdtIndex) {
+        this.index = index;
+        this.name = name;
+        this.mdtIndex = mdtIndex;
+    }
+}
+</code></pre>
+ <h3>Macroprocessor1 Class: </h3>
+  <pre><code>
+public class Macroprocessor1 {
+    static List&lt;MNTEntry&gt; MNT = new ArrayList&lt;&gt;(); // Macro Name Table
+    static List&lt;String&gt; MDT = new ArrayList&lt;&gt;();   // Macro Definition Table
+    static Map&lt;String, List&lt;String&gt;&gt; ALA = new LinkedHashMap&lt;&gt;(); // MacroName -> Actual Args
+
+    public static void main(String[] args) {
+        // Example program with two macros
+        String[] program = {
+            "MACRO",
+            "INCR &amp;A,&amp;B",
+            "ADD AREG,&amp;A",
+            "SUB BREG,&amp;B",
+            "MEND",
+            "MACRO",
+            "DECR &amp;X,&amp;Y",
+            "SUB AREG,&amp;X",
+            "SUB BREG,&amp;Y",
+            "MEND",
+            "START 100",
+            "INCR A,B",
+            "DECR 5,10",
+            "END"
+        };
+
+        pass1(program);
+
+        // Print results
+        printMNT();
+        printMDT();
+        printALA();
+    }
+
+    // ---------------- PASS 1 -----------------
+    static void pass1(String[] program) {
+        boolean inMacroDef = false;
+        String macroName = "";
+        int mntIndex = 0;
+        List&lt;String&gt; formals = new ArrayList&lt;&gt;();
+
+        for (int lineNo = 0; lineNo &lt; program.length; lineNo++) {
+            String line = program[lineNo].trim();
+            if (line.isEmpty()) continue;
+            String[] parts = line.split("[ ,]+"); //"ADD AREG,&amp;A",
+
+            if (line.equals("MACRO")) {
+                inMacroDef = true;
+                macroName = "";
+                formals.clear();
+                continue;
+            }
+
+            if (inMacroDef) {
+                if (line.equals("MEND")) {
+                    MDT.add("MEND");
+                    inMacroDef = false;
+                    continue;
+                }
+
+                if (macroName.equals("")) {
+                    // Macro prototype
+                    macroName = parts[0];
+                    int mdtStart = MDT.size();
+                    MNT.add(new MNTEntry(mntIndex++, macroName, mdtStart));
+
+                    // Store formals
+                    for (int i = 1; i &lt; parts.length; i++) {
+                        formals.add(parts[i]);
+                    }
+                } else {
+                    // Replace formals with positional notations (#0, #1…)
+                    StringBuilder mdtLine = new StringBuilder();
+                    for (String word : parts) {
+                        if (formals.contains(word)) {
+                            int index = formals.indexOf(word);
+                            mdtLine.append("#").append(index).append(" ");
+                        } else {
+                            mdtLine.append(word).append(" ");
+                        }
+                    }
+                    MDT.add(mdtLine.toString().trim());
+                }
+            } else {
+                MNTEntry found = null;
+                for (MNTEntry e : MNT) {
+                    if (e.name.equals(parts[0])) {
+                        found = e;
+                        break;
+                    }
+                }
+                if (found != null) {
+                    List&lt;String&gt; actuals = new ArrayList&lt;&gt;();
+                    for (int i = 1; i &lt; parts.length; i++) {
+                        actuals.add(parts[i]);
+                    }
+                    ALA.put(parts[0], actuals);
+                }
+            }
+        }
+    }
+
+    // ---------------- PRINT TABLES -----------------
+    static void printMNT() {
+        System.out.println("MNT (Macro Name Table):");
+        System.out.println("Index\tName\tMDT Index");
+        for (MNTEntry entry : MNT) {
+            System.out.println(entry.index + "\t" + entry.name + "\t" + entry.mdtIndex);
+        }
+        System.out.println();
+    }
+
+    static void printMDT() {
+        System.out.println("MDT (Macro Definition Table):");
+        System.out.println("Index\tDefinition");
+        for (int i = 0; i &lt; MDT.size(); i++) {
+            System.out.println(i + "\t" + MDT.get(i));
+        }
+        System.out.println();
+    }
+
+    static void printALA() {
+        System.out.println("ALA (Actual Argument List Array):");
+        for (Map.Entry&lt;String, List&lt;String&gt;&gt; entry : ALA.entrySet()) {
+            System.out.println("Macro: " + entry.getKey());
+            List&lt;String&gt; args = entry.getValue();
+            for (int i = 0; i &lt; args.size(); i++) {
+                System.out.println("  #" + i + " -> " + args.get(i));
+            }
+        }
+    }
+}
+  </code></pre></p>
+<h3> Output: </h3>
+  <pre><code> 
+MNT (Macro Name Table):
+Index	Name	MDT Index
+0	INCR	0
+1	DECR	3
+
+MDT (Macro Definition Table):
+Index	Definition
+0	ADD AREG #0
+1	SUB BREG #1
+2	MEND
+3	SUB AREG #0
+4	SUB BREG #1
+5	MEND
+
+ALA (Actual Argument List Array):
+Macro: INCR
+  #0 -> A
+  #1 -> B
+Macro: DECR
+  #0 -> 5
+  #1 -> 10
+
+
+
+  </code></pre>
+
+
+ 
+
+ 
+
+
+
+
+    </section>
+</div>
+
+ <footer class="footer">
+    <div class="footer-links">
+        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
+      <a href="#">Instagram</a>
+    </div>
+  
+    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+  </footer>
+
+</body>
+</html>
