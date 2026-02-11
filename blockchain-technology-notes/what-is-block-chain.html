@@ -1,450 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Blockchain? | TopStudyMaterial</title>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7KZ9KSPV6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L7KZ9KSPV6');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8786639620322882"
-     crossorigin="anonymous"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Blockchain Technology Notes PDF | SPPU | Free BT PPTs, Practicals & Question Papers</title>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "TopStudyMaterial",
-  "url": "https://www.topstudymaterial.com",
-  "description": "Free BT notes, question papers and practicals for SPPU Computer Engineering students"
-}
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.topstudymaterial.com"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Artificial Intelligence",
-      "item": "https://www.topstudymaterial.com/blockchain-technology.html"
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
     }
-  ]
-}
-</script>
 
-  
-  <link rel="canonical" href="https://www.topstudymaterial.com/blockchain-technology.html" />
-  <meta name="robots" content="index, follow">
-<meta name="description" content="Download free Blockchain Technology notes in PDF, SPPU question papers, Blockchain lab practicals, unit-wise important questions, and PPTs for Computer Engineering students." />
-<meta name="keywords" content="BlockChain Technology notes, BT PDF, SPPU BT, BT question papers, BT practicals, BT PPTs, Computer Engineering" />
-  <meta name="author" content="TopStudyMaterial" />
-  <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="Blockchain Technology Notes PDF | SPPU | Computer Engineering" />
-  <meta property="og:description" content="Free SPPU Blockchain Technology notes, question papers, practicals, and PPTs in PDF for Computer Engineering students." />
-  <meta property="og:image" content="https://topstudymaterial.netlify.app/assets/ai-thumbnail.jpg" />
-  <meta property="og:url" content="https://topstudymaterial.netlify.app/blockchain-technology.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- Structured Data (Optional but SEO-friendly) -->
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
 
- 
+    .note-card {
+      @apply bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8;
+    }
 
-  <!-- Tailwind CSS or any framework stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
- <link rel="stylesheet" href="../assets/css/styles.css" />
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-indigo-900 mb-6 border-b pb-2;
+    }
 
-<style>
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-  }
-}
-</style>
+    h3 {
+      @apply text-xl font-bold text-indigo-700 mt-6 mb-3;
+    }
+
+    h4 {
+      @apply text-lg font-bold text-gray-800 mt-4 mb-2;
+    }
+
+    p {
+      @apply text-gray-700 mb-4 leading-relaxed;
+    }
+
+    ul,
+    ol {
+      @apply list-disc list-inside space-y-2 mb-4 text-gray-700 ml-4;
+    }
+
+    .cta-button {
+      @apply inline-block px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300;
+    }
+
+    .whatsapp-banner {
+      @apply bg-green-50 border border-green-200 text-green-800 p-4 rounded-lg text-center mb-8;
+    }
+  </style>
 </head>
-<!-- Google tag (gtag.js) -->
 
-<body>
-<div id="top"></div>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="../index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="../index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="../blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="../about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="../index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="../blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="../about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
   <!-- Header -->
-  <header  class="header">
-    <nav class="navbar">
-      <div class="logo">TopStudyMaterial</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Subjects ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-            <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-            <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-           <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
-            <!-- Add more subjects as needed -->
-          </ul>
-        </li>
-        
-        <!-- <li><a href="#ppts">PPTs</a></li> -->
-        <li><a href="#questionpapers">Question Papers</a></li>
-        <!-- <li><a href="#importantquestions">Imp Questions</a></li>
-        <li><a href="#labexperiments">Lab Experiments</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#lecturenotes">Notes</a></li> -->
-      </ul>
-    </nav>
+  <header class="hero-gradient text-white py-12 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">What is Blockchain?</h1>
+    <p class="text-lg opacity-90">Understanding the Fundamentals</p>
+    <div class="text-sm mt-4 opacity-75">
+      <a href="../index.html" class="hover:underline">Home</a> &gt;
+      <a href="../blockchain-technology.html" class="hover:underline">Blockchain</a> &gt;
+      Fundamentals
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero" data-aos="fade-up">
-   <h1>Blockchain Technology - Notes, PPTs, Practicals & Videos </h1>
-   <p>Smarter Notes for Smarter Minds...!</p>
-      
-  </section>
-<div class="main-container">
-  <aside class="sidebar">
-    <h3>Subjects</h3>
-  <div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('ai')"><strong>🤖 Artificial Intelligence</strong></a>
-  <ul class="submenu" id="submenu-ai">
-    <li><a href="artificial-intelligence.html#lecturenotes" onclick="setOpenSubmenu('ai')">Lecture Notes</a></li>
-    <li><a href="artificial-intelligence.html#ppts" onclick="setOpenSubmenu('ai')">PPT </a></li>
-    <li><a href="artificial-intelligence.html#videos" onclick="setOpenSubmenu('ai')">Video Lectures</a></li>
-    <li><a href="artificial-intelligence.html#labexperiments" onclick="setOpenSubmenu('ai')">Lab Experiments</a></li>
-    <li><a href="artificial-intelligence.html#importantquestions" onclick="setOpenSubmenu('ai')">Important Questions</a></li>
-    <li><a href="artificial-intelligence.html#questionpapers" onclick="setOpenSubmenu('ai')">Previous Year Question Papers(PYQ)</a></li>
-    <li><a href="artificial-intelligence.html#faq" onclick="setOpenSubmenu('ai')">FAQ</a></li>
-  </ul>
-</div>
-<div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('bt')"><strong>⛓️ Blockchain Technology</strong></a>
-  <ul class="submenu" id="submenu-bt">
-        <li><a href="blockchain-technology.html#questionpapers" onclick="setOpenSubmenu('bt')">Previous Year Question Papers(PYQ)</a></li> 
-        <li><a href="blockchain-technology.html#videos" onclick="setOpenSubmenu('bt')">Video Lectures</a></li> 
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+
+    <!-- Topic 1: Need -->
+    <section id="need" class="note-card">
+      <h2>1. Need of Blockchain Technology</h2>
+      <p>Why do we need blockchain? Let's understand through the story of <strong>Techgaon</strong>.</p>
+
+      <p class="italic text-gray-600 border-l-4 border-indigo-200 pl-4 py-2 my-4">
+        Imagine a village led by a clerk who manages all records. If the clerk becomes corrupt, the entire system fails.
+        Blockchain solves this by distributing the ledger to everyone, making it "trustless" - you trust the system, not
+        a person.
+      </p>
+
+      <h3 class="text-lg font-bold mt-4 mb-2">Key Reasons for Blockchain:</h3>
+      <ul>
+        <li>✅ <strong>Decentralization:</strong> No single point of failure or control.</li>
+        <li>✅ <strong>Transparency:</strong> Everyone sees the same data.</li>
+        <li>✅ <strong>Security:</strong> Cryptographically locked against tampering.</li>
+        <li>✅ <strong>Immutability:</strong> Once data is written, it cannot be changed.</li>
       </ul>
-</div>
-  <div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('ppl')"><strong>🧑‍💻 Principles of Programming Languages</strong></a>
-  <ul class="submenu" id="submenu-ppl">
-    <li><a href="principle-of-programming-languages.html#lecturenotes" onclick="setOpenSubmenu('ppl')">Lecture Notes</a></li>
-    <li><a href="principle-of-programming-languages.html#videos" onclick="setOpenSubmenu('ppl')">Video Lectures</a></li>
-    <li><a href="principle-of-programming-languages.html#importantquestions" onclick="setOpenSubmenu('ppl')">Important Questions</a></li>
-    <li><a href="principle-of-programming-languages.html#questionpapers" onclick="setOpenSubmenu('ppl')">Previous Year Question Papers(PYQ)</a></li>
-    <li><a href="principle-of-programming-languages.html#faq" onclick="setOpenSubmenu('ppl')">FAQ</a></li>
-  </ul>
-</div>
+    </section>
 
-  <div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('spos')"><strong>⚙️ System Programming and Operating System</strong></a>
-  <ul class="submenu" id="submenu-spos">
-    <li><a href="system-programming-and-operating-system.html#ppts" onclick="setOpenSubmenu('spos')">PPT</a></li>
-    <li><a href="system-programming-and-operating-system.html#videos" onclick="setOpenSubmenu('spos')">Video Lectures</a></li>
-    <li><a href="system-programming-and-operating-system.html#questionpapers" onclick="setOpenSubmenu('spos')">Previous Year Question Papers (PYQ)</a></li>
-    <li><a href="system-programming-and-operating-system.html#lecturenotes" onclick="setOpenSubmenu('spos')">Lecture Notes</a></li>
-<li><a href="system-programming-and-operating-system.html#spos-faqs" onclick="setOpenSubmenu('spos')">FAQ</a></li>
-  </ul>
-</div>
+    <!-- Topic 2: What is Blockchain -->
+    <section id="what-is" class="note-card">
+      <h2>2. What is Blockchain?</h2>
+      <p>A blockchain is a decentralized, distributed ledger that records transactions across many computers so that the
+        record cannot be altered retroactively.</p>
 
-<div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('blogs')"><strong>📚 Blogs</strong></a>
-  <ul class="submenu" id="submenu-blogs">
-    <li><a href="assets/blogs/blog1.html" onclick="setOpenSubmenu('blogs')">Blog 1</a></li>
-    <li><a href="assets/blogs/blog2.html" onclick="setOpenSubmenu('blogs')">Blog 2</a></li>
-    <li><a href="assets/blogs/blog3.html" onclick="setOpenSubmenu('blogs')">Blog 3</a></li>
-  </ul>
-</div>
+      <h3>Core Components of a Block</h3>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <strong>1. Data:</strong> The actual information (transactions, contracts).
+        </li>
+        <li class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <strong>2. Timestamp:</strong> When the block verified.
+        </li>
+        <li class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <strong>3. Nonce:</strong> Random number for mining proof.
+        </li>
+        <li class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <strong>4. Hash (Self):</strong> Unique digital signature of the block.
+        </li>
+        <li class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <strong>5. Previous Hash:</strong> Link to the previous block.
+        </li>
+      </ul>
 
-  </aside>
-
-  <section class="content-area">
-
-  <!-- PPT Section -->
-  <div class="nav-boxes">
-        <a href="#section1" class="nav-box">1. Need of Blockchain</a> <br>
-        <a href="#section2" class="nav-box">2. What is Blockchain</a> <br>
-        <a href="#section3" class="nav-box">3. History of Blockchain</a> <br>
-        <a href="#section4" class="nav-box">4. Mathematical Foundation for Blockchain</a> <br>
-        <a href="#section3" class="nav-box">3. Blockchain Layers</a> <br>
-        <a href="#section4" class="nav-box">4. Application Layer</a> <br>
-        <a href="#section5" class="nav-box">5. Execution Layer</a> <br>
-        <a href="#section6" class="nav-box">6. Consensus Layer</a><br> 
-        <a href="#section7" class="nav-box">7. Limitations</a><br>
-        <a href="#section8" class="nav-box">8. Importance</a><br>
+      <div class="text-center my-8">
+        <img src="../images/Block1.png" alt="Block Structure"
+          class="max-w-full md:max-w-xl mx-auto rounded-lg shadow-md">
+        <p class="text-sm text-gray-500 mt-2">Figure: Structure of a single Block</p>
       </div>
 
-      <!-- Sections -->
-      <section id="section1" class="content-section">
-        <h2 style="text-align: center;">1. Need of Blockchain</h2>
-       <section class="notes-section" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-  <div class="custom-card">
-    <h2>📖 Need of Blockchain Technology – A Story of Techgaon</h2>
+      <div class="text-center my-8">
+        <img src="../images/Blockchain internal.png" alt="Blockchain Structure"
+          class="max-w-full md:max-w-xl mx-auto rounded-lg shadow-md">
+        <p class="text-sm text-gray-500 mt-2">Figure: Blocks linked together form a Chain</p>
+      </div>
+    </section>
 
-    <p>Once upon a time in a village named <strong>Techgaon</strong>, all the villagers used a big notebook in the town hall 
-    to record important things — who owned which land, who borrowed money from whom, and who had paid their taxes.</p>
+    <!-- Additional Topics -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div class="note-card mb-0">
+        <h3>3. Blockchain Layers</h3>
+        <p>Application, Execution, Semantic, Propagation, and Consensus layers make up the blockchain architecture. Each
+          layer serves a distinct purpose in the ecosystem.</p>
+      </div>
+      <div class="note-card mb-0">
+        <h3>4. Consensus Layer</h3>
+        <p>The mechanism by which nodes agree on the validity of transactions. Examples include Proof of Work (PoW) used
+          by Bitcoin and Proof of Stake (PoS).</p>
+      </div>
+    </section>
 
-    <p>At first, this system worked well because everyone trusted the town clerk, <strong>Mr. Narayana</strong>, who managed the notebook.</p>
+    <!-- CTA / Download -->
+    <section class="text-center py-10">
+      <div class="whatsapp-banner">
+        📢 <strong>Join Our WhatsApp Channel</strong> for instant updates & notes! <br>
+        <a href="https://whatsapp.com/channel/0029Vb6Fy24KbYMQpWj0oQ1t"
+          class="text-green-600 font-bold hover:underline">Click here to join</a>
+      </div>
 
-    <p>But one day, Mr. Narayana made a <strong>mistake</strong>. Some people <strong>bribed</strong> him to 
-    change records in their favor. The villagers started arguing:</p>
+      <h2 class="mb-8">Download Notes & Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+          <h4 class="font-bold text-lg mb-2">Unit 1: Mathematical Foundations</h4>
+          <p class="text-sm text-gray-600 mb-4">Number theory, modular arithmetic, cryptography.</p>
+          <a href="#" class="text-indigo-600 hover:underline font-semibold">Download PDF</a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+          <h4 class="font-bold text-lg mb-2">Unit 2: Feature Engineering</h4>
+          <p class="text-sm text-gray-600 mb-4">Decentralization, security, and layers.</p>
+          <a href="#" class="text-indigo-600 hover:underline font-semibold">Download PDF</a>
+        </div>
+      </div>
 
-    <ul>
-      <li>"That land is mine!"</li>
-      <li>"No, it says here I own it!"</li>
-      <li>"But I never signed that!"</li>
-    </ul>
-
-    <p>The village descended into <strong>chaos</strong>. People no longer trusted the notebook or Mr. Narayana. 
-    That’s when a young girl named <strong>Sanika</strong> came forward with a revolutionary idea.</p>
-
-    <div class="blockquote">
-      “What if instead of one person keeping the record, <strong>everyone</strong> keeps a copy of the notebook?” said Sanika. <br>
-      “And what if each new page of the notebook is <strong>linked</strong> to the previous one in a way that it <strong>can’t be changed</strong>?”
-    </div>
-
-    <p><strong>Sanika explained:</strong></p>
-    <ul>
-      <li>Each person would keep a <strong>copy</strong> of the notebook (ledger).</li>
-      <li>Every time someone adds a new transaction (like a land sale), it’s <strong>checked by everyone</strong> before it’s approved.</li>
-      <li>Once verified, the new page (or <strong>block</strong>) is added and <strong>locked</strong> using a complex code (hash).</li>
-      <li>That page is then <strong>linked</strong> to the previous page, forming a chain — <strong>a blockchain</strong>.</li>
-    </ul>
-   <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/blockchain.png" alt="Blockchain Image" style="border: 3px solid #333; border-radius: 8px; max-width: 90%; height: auto;">
-</div>
-    <p>Now, even if someone tries to <strong>change a page</strong>, it won't match the others. 
-    And because it's locked with code, it’s <strong>nearly impossible to fake</strong>.</p>
-
-    <p>The villagers loved the idea.</p>
-
-    <p>From that day, <strong>Techgaon</strong> became a truly <strong>trustless society</strong> — not because there was no trust, 
-    but because they no longer <strong>needed</strong> to trust one person. The <strong>system itself was trustworthy</strong>.</p>
-
-    <h4>🎯 Moral of the Story (Why We Need Blockchain)</h4>
-    <ul>
-      <li>✅ To <strong>remove the need for a middleman</strong>.</li>
-      <li>✅ To make records <strong>tamper-proof and transparent</strong>.</li>
-      <li>✅ To ensure <strong>trust through technology</strong> — not just people.</li>
-      <li>✅ To protect against <strong>fraud, hacking, and manipulation</strong>.</li>
-    </ul>
-  </div>
-</section>
-
-      </section>
-
-      <section id="section2" class="content-section">
-        <h2 style="text-align: center;">2. What is Blockchain? </h2>
-  <div class="custom-card">
-    <h2>🧱 Blockchain Technology</h2>
-    <p>
-      A blockchain is a sequence of blocks (like digital pages), where each block contains key components and is securely linked to the previous one.
-    </p>
-
-    <h3>📦 Each Block Contains:</h3>
-    <p>Let’s explore the 5 key components inside a block:</p>
-
-    <h4>1️⃣ Data</h4>
-    <p>
-      The core purpose of a block is to store data. This could be:
-    </p>
-    <ul>
-      <li>💸 Financial transactions (e.g., Alice pays Bob 5 BTC)</li>
-      <li>📜 Smart contracts</li>
-      <li>🛍️ Supply chain records</li>
-      <li>🔐 Any digital information</li>
-    </ul>
-
-    <h4>2️⃣ Timestamp</h4>
-    <p>
-      Records the exact time and date when the block was created.
-      <br>It ensures chronological order of events and helps prevent double-spending and fraud.
-    </p>
-
-    <h4>3️⃣ Nonce ("Number Only Used Once")</h4>
-    <p>
-      This is the "magic number" used in mining. Miners try thousands or millions of nonces to find a hash that starts with a required number of zeros.
-      <br>Once such a nonce is found, the block is considered valid.
-      <br>This process makes mining difficult — ensuring security through computational effort.
-    </p>
-
-    <h4>4️⃣ Hash of the Current Block</h4>
-    <p>
-      This is a unique fingerprint of all the block’s content (data, timestamp, nonce, and previous hash).
-      <br>It’s generated using cryptographic functions like SHA-256.
-      <br>If even 1 bit of data changes, the entire hash changes drastically.
-      <br><strong>Note:</strong> If someone modifies a transaction, the hash will change and break the chain — making tampering easily detectable.
-    </p>
-     <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/Block1.png" alt="Block"
-       style="border: 3px solid #333; border-radius: 8px; width: 500px; height: auto;">
-</div>
-    <h4>5️⃣ Hash of the Previous Block</h4>
-    <p>
-      This links one block to the previous one — like holding hands in a chain.
-      <br>If someone tries to change any block, it will break the link with the next block.
-      <br>This linkage builds trust in the integrity of the entire blockchain.
-    </p>
-
-    <h3>How They Form the Chain:</h3>
-    <p>
-      Each block contains the hash of the previous block, making it mathematically linked. This chain of blocks forms the “blockchain”.
-      <br><strong>Structure:</strong> Block 1 → Block 2 → Block 3 → Block 4 → ...
-      <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/Blockchain internal.png" alt="Blockchain Internal Image"
-       style="border: 3px solid #333; border-radius: 8px; width: 500px; height: auto;">
-</div>
-    </p>
-  </div>
-</section>
-
-    
-
-
-
-      <section id="section3" class="content-section">
-        <h2>3. Blockchain Layers</h2>
-        <p>Application, Execution, Semantic, Propagation, and Consensus layers make up the blockchain architecture.</p>
-      </section>
-
-      <section id="section4" class="content-section">
-        <h2>4. Application Layer</h2>
-        <p>This is where end-user apps and smart contracts operate...</p>
-      </section>
-
-      <section id="section5" class="content-section">
-        <h2>5. Execution Layer</h2>
-        <p>This layer executes all blockchain instructions and transaction logic...</p>
-      </section>
-
-      <section id="section6" class="content-section">
-        <h2>6. Consensus Layer</h2>
-        <p>Consensus mechanisms (PoW, PoS) ensure trust across the network...</p>
-      </section>
-
-      <section id="section7" class="content-section">
-        <h2>7. Limitations</h2>
-        <p>Centralized systems suffer from single point failures, lack of transparency, etc...</p>
-      </section>
-
-      <section id="section8" class="content-section">
-        <h2>8. Importance</h2>
-        <p>Blockchain ensures data integrity, trust, and security in distributed systems...</p>
-      </section>
-
-<!-- Notes Section -->
-     <div class="whatsapp-banner">
-  📢 <strong>Join Our WhatsApp Channel</strong> for instant updates, notes, and videos!<br>
-  👉 <a href="https://whatsapp.com/channel/0029Vb6Fy24KbYMQpWj0oQ1t" target="_blank">Click here to join now</a>
-</div>
-     <br>
-  <div style="text-align: center; margin-top: 40px;">
-  <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-    <button style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    ">
-Subscribe for More</button>
-  </a>
-</div>
-  
-<section id="lecturenotes" class="section" data-aos="fade-right">
-<h2>To Download PDF Click Below </h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3> Unit 1 - Mathematical Foundation for Blockchain Technology </h3>
-      <p style="text-align: justify;"> Understanding blockchain technology requires a strong grasp of the mathematical principles that support its secure, decentralized, and immutable nature. This unit introduces the core mathematical concepts that form the backbone of blockchain systems, including number theory, modular arithmetic, prime numbers, cryptographic hash functions, and elliptic curve cryptography.
-
-</p>
-      <a href="assets/notes/artificial-intelligence/sppu-ai-unit-2-notes.pdf" target="_blank">Download Notes</a>
-    </div>
-    <div class="card">
-      <h3>Unit 2 - Feature Engineering </h3>
-       
-      <p style="text-align: justify;">Blockchain technology emerged with Bitcoin in 2008 to solve the problems of centralized systems like data breaches, single points of failure, and lack of transparency. Blockchain offers a decentralized and secure way to store and verify data using cryptographic techniques and consensus mechanisms. It consists of layers like the application, execution, semantic, propagation, and consensus layers.</p>
-      <a href="assets/notes/artificial-intelligence/sppu-ai-unit-2-notes.pdf" target="_blank">Download Notes</a>
-    </div>   
-    </div>
-
-     
-  <div style="text-align: center; margin-top: 40px;">
-  <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-    <button style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    ">
-Unit 6 Notes are <strong>Exclusively</strong> on Youtube Click Here to Download</button>
-  </a>
-</div>
-
-
-
-</section>
-
- <div class="bottom-card">
-   <a class="bottom-menu" href="#top">Back To Top</a>
-
-      <a class="bottom-menu" href="system-programming-and-operating-system.html">System Programming & Operating System</a>
-     <a class="bottom-menu" href="principle-of-programming-languages.html">Principles of Programming Languages</a>
-   <a class="bottom-menu" href="index.html">Back To Home</a>
-    </div>
-</section>
-
-<!-- FAQ Section Start -->
-
-
-</div>
+      <div class="mt-10">
+        <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" class="cta-button">
+          <i class="fab fa-youtube mr-2"></i> Subscribe on YouTube
+        </a>
+      </div>
+    </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="../assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="../assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="../assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-    <div class="adsense-placeholder">AdSense Banner Placeholder</div>
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
   </footer>
 
-  <!-- Script for Scroll based-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init();
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
   </script>
- 
-<script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

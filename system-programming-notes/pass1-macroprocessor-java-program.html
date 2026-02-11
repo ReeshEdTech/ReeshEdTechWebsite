@@ -1,117 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Notes - Top Study Material</title>
-<link rel="stylesheet" href="../assets/css/notes.css" />
- <link rel="stylesheet" href="../assets/css/styles.css" />
 
-</head>
-<body>
-<header class="header">
-    
-    <nav class="navbar">
-  <div class="logo">TopStudyMaterial</div>
-  
-  <!-- Hamburger menu for mobile -->
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Subjects ▼</a>
-      <ul class="dropdown-content">
-        <li><a href="../artificial-intelligence.html">Artificial Intelligence</a></li>
-        <li><a href="../principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-        <li><a href="/system-programming-notes/unit-1-introduction-to-system-programming.html">System Programming and Operating System</a></li>
-      <li><a href="../blockchain-technology.html">Blockchain Technology</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">Unit Wise Notes ▼</a>
-      <ul class="dropdown-content">
-        <li><a href="unit-1-introduction-to-system-programming.html#content">Unit 1 Notes</a></li>
-        <!-- <li><a href="../principle-of-programming-languages.html">Unit 2 Notes</a></li> -->
-
-      </ul>
-    </li>
-        <li><a href="../system-programming-and-operating-system.html#ppts">PPTs</a></li>
-        <li><a href="../system-programming-and-operating-system.html#questionpapers">Question Papers</a></li>
-        <!-- <li><a href="#labexperiments">Lab Experiments</a></li> -->
-        <li><a href="../system-programming-and-operating-system.html#videos">Videos</a></li>
-        <li><a href="../system-programming-and-operating-system.html#lecturenotes">Notes</a></li>
-  </ul>
-</nav>
-  </header>
-<div class="animated-banner">
-  <h1>System Programming and Operating System</h1>
-</div>
-
- <!-- Main Layout -->
-  <div class="main-container">
-    <!-- Sidebar for headings -->
-    <!-- <aside class="sidebar">
-      <h3> SPOS Practicals</h3>
-      <ol>
-     <li>  <a href="#topic1" class="nav-box">Implementation of Pass 1 Assembler </a> <br></li> 
-       <li>  <a href="#topic2" class="nav-box"> Implementation of Pass 2 Assembler </a> <br></li> 
-         <li>  <a href="#topic3" class="nav-box"> Implementation of Pass 1 Macroprocessor </a> <br></li> 
-         <li> <a href="#topic4" class="nav-box"> Implementation of Pass 2 Macroprocessor </a> <br></li>
-        
-      </ol>
-    </aside> -->
-
-    <!-- Notes Content -->
-    <section class="content">
-      <div class="topic-card" id="topic1" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">SPOS (LP-I) Practicals</h2>
-      
-    </div> <br>
-<p> <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Java Pass 1 Macroprocessor Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pass 1 Macro Processor Java Program | SPOS Practical</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f4;
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
     }
-    h2 {
-      color: #333;
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
+
     pre {
-      background: #272822;
+      background-color: #1a202c;
       color: #f8f8f2;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
       overflow-x: auto;
-      font-size: 14px;
-      line-height: 1.5;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
+
     code {
-      font-family: "Courier New", monospace;
+      color: #bd93f9;
     }
   </style>
 </head>
-<body>
-    <h1 style="text-align: center;">Pass1 Macro Processor Implementation</h1>
- <h3 style="text-align: justify;">Design suitable data structures and implement Pass-I of a two pass macro processor
-using OOP features in Java/C++. The output of Pass-I (MNT, MDT, ALA &amp;
-Intermediate code file without any macro definitions) should be input for Pass-II.</h3>
 
-<h2>Java Program: Macro Processor Pass 1</h2>
-  <p> To implement Macro Processor Pass 1 we need two classes:
-    <ol>
-        <li> MNTEntry</li>
-        <li> Macroprocessor1</li>
-    </ol>
-  </p>
-  <h3>MNTEntry Class: </h3>
-  <pre><code> public class MNTEntry {
-	int index;
+<body class="bg-gray-50 font-sans text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="../index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="../index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="../blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="../about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="../index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="../blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="../about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero-gradient text-white py-12 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Pass I Macro Processor Implementation</h1>
+    <p class="text-lg opacity-90">SPOS (LP-I) Practical - Java Code Solution</p>
+    <div class="text-sm mt-4 opacity-75">
+      <a href="../index.html" class="hover:underline">Home</a> &gt;
+      <a href="../system-programming-and-operating-system.html" class="hover:underline">SPOS</a> &gt;
+      Pass I Macro Processor
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+
+    <section class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Problem Statement</h2>
+      <p class="text-gray-700 mb-6">Design suitable data structures and implement Pass-I of a two pass macro processor
+        using OOP features in Java/C++. The output of Pass-I (MNT, MDT, ALA & Intermediate code file without any macro
+        definitions) should be input for Pass-II.</p>
+
+      <h3 class="text-xl font-bold text-indigo-700 mb-4">Java Code Implementation</h3>
+
+      <h4 class="font-bold text-gray-800 mt-4 mb-2">1. MNTEntry Class</h4>
+      <pre><code>public class MNTEntry {
+    int index;
     String name;
     int mdtIndex;
 
@@ -123,25 +106,26 @@ Intermediate code file without any macro definitions) should be input for Pass-I
 }
 </code></pre>
 
- <h3>Macroprocessor1 Class: </h3>
-  <pre><code>
+      <h4 class="font-bold text-gray-800 mt-8 mb-2">2. Macroprocessor1 Class</h4>
+      <pre><code>import java.util.*;
+
 public class Macroprocessor1 {
-    static List&lt;MNTEntry&gt; MNT = new ArrayList&lt;&gt;(); // Macro Name Table
-    static List&lt;String&gt; MDT = new ArrayList&lt;&gt;();   // Macro Definition Table
-    static Map&lt;String, List&lt;String&gt;&gt; ALA = new LinkedHashMap&lt;&gt;(); // MacroName -> Actual Args
+    static List<MNTEntry> MNT = new ArrayList<>(); // Macro Name Table
+    static List<String> MDT = new ArrayList<>();   // Macro Definition Table
+    static Map<String, List<String>> ALA = new LinkedHashMap<>(); // MacroName -> Actual Args
 
     public static void main(String[] args) {
         // Example program with two macros
         String[] program = {
             "MACRO",
-            "INCR &amp;A,&amp;B",
-            "ADD AREG,&amp;A",
-            "SUB BREG,&amp;B",
+            "INCR &A,&B",
+            "ADD AREG,&A",
+            "SUB BREG,&B",
             "MEND",
             "MACRO",
-            "DECR &amp;X,&amp;Y",
-            "SUB AREG,&amp;X",
-            "SUB BREG,&amp;Y",
+            "DECR &X,&Y",
+            "SUB AREG,&X",
+            "SUB BREG,&Y",
             "MEND",
             "START 100",
             "INCR A,B",
@@ -162,12 +146,12 @@ public class Macroprocessor1 {
         boolean inMacroDef = false;
         String macroName = "";
         int mntIndex = 0;
-        List&lt;String&gt; formals = new ArrayList&lt;&gt;();
+        List<String> formals = new ArrayList<>();
 
-        for (int lineNo = 0; lineNo &lt; program.length; lineNo++) {
+        for (int lineNo = 0; lineNo < program.length; lineNo++) {
             String line = program[lineNo].trim();
             if (line.isEmpty()) continue;
-            String[] parts = line.split("[ ,]+"); //"ADD AREG,&amp;A",
+            String[] parts = line.split("[ ,]+"); //"ADD AREG,&A",
 
             if (line.equals("MACRO")) {
                 inMacroDef = true;
@@ -190,7 +174,7 @@ public class Macroprocessor1 {
                     MNT.add(new MNTEntry(mntIndex++, macroName, mdtStart));
 
                     // Store formals
-                    for (int i = 1; i &lt; parts.length; i++) {
+                    for (int i = 1; i < parts.length; i++) {
                         formals.add(parts[i]);
                     }
                 } else {
@@ -215,8 +199,8 @@ public class Macroprocessor1 {
                     }
                 }
                 if (found != null) {
-                    List&lt;String&gt; actuals = new ArrayList&lt;&gt;();
-                    for (int i = 1; i &lt; parts.length; i++) {
+                    List<String> actuals = new ArrayList<>();
+                    for (int i = 1; i < parts.length; i++) {
                         actuals.add(parts[i]);
                     }
                     ALA.put(parts[0], actuals);
@@ -238,7 +222,7 @@ public class Macroprocessor1 {
     static void printMDT() {
         System.out.println("MDT (Macro Definition Table):");
         System.out.println("Index\tDefinition");
-        for (int i = 0; i &lt; MDT.size(); i++) {
+        for (int i = 0; i < MDT.size(); i++) {
             System.out.println(i + "\t" + MDT.get(i));
         }
         System.out.println();
@@ -246,34 +230,31 @@ public class Macroprocessor1 {
 
     static void printALA() {
         System.out.println("ALA (Actual Argument List Array):");
-        for (Map.Entry&lt;String, List&lt;String&gt;&gt; entry : ALA.entrySet()) {
+        for (Map.Entry<String, List<String>> entry : ALA.entrySet()) {
             System.out.println("Macro: " + entry.getKey());
-            List&lt;String&gt; args = entry.getValue();
-            for (int i = 0; i &lt; args.size(); i++) {
+            List<String> args = entry.getValue();
+            for (int i = 0; i < args.size(); i++) {
                 System.out.println("  #" + i + " -> " + args.get(i));
             }
         }
     }
 }
-  </code></pre></p>
-<h3> Output: </h3>
-  <pre><code> 
+</code></pre>
 
-   
- 
-MNT (Macro Name Table):
+      <h3 class="text-xl font-bold text-indigo-700 mt-8 mb-4">Output</h3>
+      <pre><code>MNT (Macro Name Table):
 Index	Name	MDT Index
-0	INCR	0
-1	DECR	3
+0	    INCR	0
+1	    DECR	3
 
 MDT (Macro Definition Table):
 Index	Definition
-0	ADD AREG #0
-1	SUB BREG #1
-2	MEND
-3	SUB AREG #0
-4	SUB BREG #1
-5	MEND
+0	    ADD AREG #0
+1	    SUB BREG #1
+2	    MEND
+3	    SUB AREG #0
+4	    SUB BREG #1
+5	    MEND
 
 ALA (Actual Argument List Array):
 Macro: INCR
@@ -281,33 +262,48 @@ Macro: INCR
   #1 -> B
 Macro: DECR
   #0 -> 5
-  #1 -> 10
-
-
-
-  </code></pre>
-
-
-
- 
-
-
-
-
+  #1 -> 10</code></pre>
     </section>
-</div>
 
- <footer class="footer">
-    <div class="footer-links">
-        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="../assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="../assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="../assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-  
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
   </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
 </body>
+
 </html>

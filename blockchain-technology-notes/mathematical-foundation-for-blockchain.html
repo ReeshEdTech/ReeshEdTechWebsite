@@ -1,231 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Notes - Top Study Material</title>
-<link rel="stylesheet" href="../assets/css/notes.css" />
- <link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematical Foundation for Blockchain | TopStudyMaterial</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .note-card {
+      @apply bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8;
+    }
+
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-indigo-900 mb-6 border-b pb-2;
+    }
+
+    h3 {
+      @apply text-xl font-bold text-indigo-700 mt-6 mb-3;
+    }
+
+    h4 {
+      @apply text-lg font-bold text-gray-800 mt-4 mb-2;
+    }
+
+    p {
+      @apply text-gray-700 mb-4 leading-relaxed;
+    }
+
+    ul,
+    ol {
+      @apply list-disc list-inside space-y-2 mb-4 text-gray-700 ml-4;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    .blockquote {
+      @apply bg-indigo-50 border-l-4 border-indigo-500 p-4 italic text-gray-700 mb-6 rounded-r-lg;
+    }
+  </style>
 </head>
-<body>
-<header class="header">
-    
-    <nav class="navbar">
-  <div class="logo">TopStudyMaterial</div>
-  
-  <!-- Hamburger menu for mobile -->
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Subjects ▼</a>
-      <ul class="dropdown-content">
-        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-      <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
-      </ul>
-    </li>
-    <li><a href="../blockchain-technology.html#ppts">PPTs</a></li>
-        <li><a href="../blockchain-technology.html#questionpapers">Question Papers</a></li>
-        <!-- <li><a href="#labexperiments">Lab Experiments</a></li> -->
-        <li><a href="../blockchain-technology.html#videos">Videos</a></li>
-        <li><a href="../blockchain-technology.html#lecturenotes">Notes</a></li>
-  </ul>
-</nav>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="../index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="../index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="../blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="../about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="../index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="../blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="../about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero-gradient text-white py-12 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Mathematical Foundation for Blockchain</h1>
+    <p class="text-lg opacity-90">Blockchain Technology (BT)</p>
+    <div class="text-sm mt-4 opacity-75">
+      <a href="../index.html" class="hover:underline">Home</a> &gt;
+      <a href="../blockchain-technology.html" class="hover:underline">Blockchain</a> &gt;
+      Math Foundation
+    </div>
   </header>
-<div class="animated-banner">
-  <h1>Blockchain Technology</h1>
-</div>
 
- <!-- Main Layout -->
-  <div class="main-container">
-    <!-- Sidebar for headings -->
-    <aside class="sidebar">
-      <h3>Topics</h3>
-      <ol>
-     <li>  <a href="#topic1" class="nav-box"> Need of Blockchain</a> <br></li> 
-         <li> <a href="#topic2" class="nav-box"> What is Blockchain</a> <br></li>
-         <li> <a href="#topic3" class="nav-box"> History of Blockchain</a> <br>
-        <li>  <a href="#topic4" class="nav-box"> Mathematical Foundation for Blockchain</a> <br></li>
-        <li>  <a href="#topic5" class="nav-box">Cryptography</a> <br></li>
-        <li>  <a href="#topic6" class="nav-box">Symmetric Key Cryptography and Asymmetric Key Cryptography,</a> <br></li>
-       <li>   <a href="#topic7" class="nav-box">Elliptic Curve Cryptography (ECC)</a> <br></li>
-       <li>   <a href="#topic8" class="nav-box">Cryptographic Hash Functions: SHA256</a><br> </li>
-       <li>   <a href="#topic9" class="nav-box">Digital Signature Algorithm(DSA)</a><br></li>
-        <li>  <a href="#topic10" class="nav-box">Merkel Trees</a><br></li>
-      </ol>
-    </aside>
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
 
-    <!-- Notes Content -->
-    <section class="content">
-      <div class="topic-card" id="topic1" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 1: Need of Blockchain</h2>
-        <p>Once upon a time in a village named <strong>Techgaon</strong>, all the villagers used a big notebook in the town hall 
-    to record important things — who owned which land, who borrowed money from whom, and who had paid their taxes.</p>
-
-    <p>At first, this system worked well because everyone trusted the town clerk, <strong>Mr. Narayana</strong>, who managed the notebook.</p>
-<br>
-    <p>But one day, Mr. Narayana made a <strong>mistake</strong>. Some people <strong>bribed</strong> him to 
-    change records in their favor. The villagers started arguing:</p>
-
-    <ul>
-     <p><li>"That land is mine!"</li></p> 
-     <p> <li>"No, it says here I own it!"</li></p>
-    <p>  <li>"But I never signed that!"</li> </p>
-    </ul>
-<br>
-    <p>The village descended into <strong>chaos</strong>. People no longer trusted the notebook or Mr. Narayana. 
-    That’s when a young girl named <strong>Sanika</strong> came forward with a revolutionary idea.</p>
-<br>
-    <div class="blockquote">
-      “What if instead of one person keeping the record, <strong>everyone</strong> keeps a copy of the notebook?” said Sanika. <br>
-      “And what if each new page of the notebook is <strong>linked</strong> to the previous one in a way that it <strong>can’t be changed</strong>?”
+    <!-- Table of Contents -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-10">
+      <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-2">📖 Topics Covered</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm">
+        <a href="#topic1" class="hover:text-indigo-600 hover:underline">1. Need of Blockchain</a>
+        <a href="#topic2" class="hover:text-indigo-600 hover:underline">2. What is Blockchain?</a>
+        <a href="#topic3" class="hover:text-indigo-600 hover:underline">3. History of Blockchain</a>
+        <a href="#topic4" class="hover:text-indigo-600 hover:underline">4. Mathematical Foundation</a>
+        <a href="#topic5" class="hover:text-indigo-600 hover:underline">5. Cryptography</a>
+        <a href="#topic6" class="hover:text-indigo-600 hover:underline">6. Key Cryptography Types</a>
+        <a href="#topic7" class="hover:text-indigo-600 hover:underline">7. Elliptic Curve Cryptography</a>
+        <a href="#topic8" class="hover:text-indigo-600 hover:underline">8. Hash Functions (SHA-256)</a>
+        <a href="#topic9" class="hover:text-indigo-600 hover:underline">9. Digital Signature Algorithm</a>
+        <a href="#topic10" class="hover:text-indigo-600 hover:underline">10. Merkel Trees</a>
+      </div>
     </div>
 
-    <p><strong>Sanika explained:</strong></p>
-    <ul>
-      <li>Each person would keep a <strong>copy</strong> of the notebook (ledger).</li>
-      <li>Every time someone adds a new transaction (like a land sale), it’s <strong>checked by everyone</strong> before it’s approved.</li>
-      <li>Once verified, the new page (or <strong>block</strong>) is added and <strong>locked</strong> using a complex code (hash).</li>
-      <li>That page is then <strong>linked</strong> to the previous page, forming a chain — <strong>a blockchain</strong>.</li>
-    </ul> <br>
-   <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/blockchain.png" alt="Blockchain Image" style="border: 3px solid #333; border-radius: 8px; max-width: 90%; height: auto;">
-</div>
-    <p>Now, even if someone tries to <strong>change a page</strong>, it won't match the others. 
-    And because it's locked with code, it’s <strong>nearly impossible to fake</strong>.</p>
+    <!-- Topic 1 -->
+    <section id="topic1" class="note-card">
+      <h2>Topic 1: Need of Blockchain</h2>
+      <p>Once upon a time in a village named <strong>Techgaon</strong>, all the villagers used a big notebook in the
+        town hall to record important things — who owned which land, who borrowed money from whom, and who had paid
+        their taxes.</p>
+      <p>At first, this system worked well because everyone trusted the town clerk, <strong>Mr. Narayana</strong>, who
+        managed the notebook.</p>
+      <p>But one day, Mr. Narayana made a <strong>mistake</strong>. Some people <strong>bribed</strong> him to change
+        records in their favor. The villagers started arguing:</p>
 
-    <p>The villagers loved the idea.</p>
+      <ul>
+        <li>"That land is mine!"</li>
+        <li>"No, it says here I own it!"</li>
+        <li>"But I never signed that!"</li>
+      </ul>
 
-    <p>From that day, <strong>Techgaon</strong> became a truly <strong>trustless society</strong> — not because there was no trust, 
-    but because they no longer <strong>needed</strong> to trust one person. The <strong>system itself was trustworthy</strong>.</p>
+      <p>The village descended into <strong>chaos</strong>. That’s when a young girl named <strong>Sanika</strong> came
+        forward with a revolutionary idea.</p>
 
-    <h4>🎯 Moral of the Story (Why We Need Blockchain)</h4>
-    <ul>
-      <li>✅ To <strong>remove the need for a middleman</strong>.</li>
-      <li>✅ To make records <strong>tamper-proof and transparent</strong>.</li>
-      <li>✅ To ensure <strong>trust through technology</strong> — not just people.</li>
-      <li>✅ To protect against <strong>fraud, hacking, and manipulation</strong>.</li>
-    </ul>
-  
+      <div class="blockquote">
+        “What if instead of one person keeping the record, <strong>everyone</strong> keeps a copy of the notebook? And
+        what if each new page is <strong>linked</strong> to the previous one so it <strong>can’t be changed</strong>?”
       </div>
-        <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 2: What is Blockchain ?</h2>
-       <p>
-      A blockchain is a sequence of blocks (like digital pages), where each block contains key components and is securely linked to the previous one.
-    </p>
 
-    <h3>📦 Internal Structure of Block:</h3>
-    <p>Let’s explore the 5 key components inside a block:</p>
+      <p><strong>Sanika explained:</strong></p>
+      <ul>
+        <li>Each person keeps a <strong>copy</strong> of the ledger.</li>
+        <li>Every new transaction is <strong>checked by everyone</strong>.</li>
+        <li>Once verified, the block is <strong>locked</strong> using a hash.</li>
+        <li>Blocks are <strong>linked</strong> to form a chain.</li>
+      </ul>
 
-    <h4>1️⃣ Data</h4>
-    <p>
-      The core purpose of a block is to store data. <br>
-      This could be:
-    </p>
-    <ul>
-      <li>💸 Financial transactions (e.g., Alice pays Bob 5 BTC)</li>
-      <li>📜 Smart contracts</li>
-      <li>🛍️ Supply chain records</li>
-      <li>🔐 Any digital information</li>
-    </ul>
-<br> 
-    <h4>2️⃣ Timestamp</h4>
-    <p>
-      Records the exact time and date when the block was created.
-      <br>It ensures chronological order of events and helps prevent double-spending and fraud.
-    </p>
-<br> 
-    <h4>3️⃣ Nonce ("Number Only Used Once")</h4>
-    <p>
-      This is the "magic number" used in mining. Miners try thousands or millions of nonces to find a hash that starts with a required number of zeros.
-      <br>Once such a nonce is found, the block is considered valid.
-      <br>This process makes mining difficult — ensuring security through computational effort.
-    </p><br>
-
-    <h4>4️⃣ Hash of the Current Block</h4>
-    <p>
-      This is a unique fingerprint of all the block’s content (data, timestamp, nonce, and previous hash).
-      <br>It’s generated using cryptographic functions like SHA-256.
-      <br>If even 1 bit of data changes, the entire hash changes drastically.
-      <br><strong>Note:</strong> If someone modifies a transaction, the hash will change and break the chain — making tampering easily detectable.
-    </p><br> 
-     <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/Block1.png" alt="Block"
-       style="border: 3px solid #333; border-radius: 8px; width: 500px; height: auto;">
-</div>
-<br>
-    <h4>5️⃣ Hash of the Previous Block</h4>
-    <p>
-      This links one block to the previous one — like holding hands in a chain.
-      <br>If someone tries to change any block, it will break the link with the next block.
-      <br>This linkage builds trust in the integrity of the entire blockchain.
-    </p>
-<br> 
-    <h3>How They Form the Chain:</h3>
-    <p style="color: red;">
-   <b> <i>  Each block contains the hash of the previous block, making it mathematically linked. This chain of blocks forms the “blockchain”.</i></b></p>
-     <strong>Structure:</strong> Block 1 → Block 2 → Block 3 → Block 4 → ...
-      <div style="text-align: center; margin-top: 20px;">
-  <img src="../images/Blockchain internal.png" alt="Blockchain Internal Image"
-       style="border: 3px solid #333; border-radius: 8px; width: 500px; height: auto;">
-</div>
-    </p>
-  
+      <div class="text-center my-6">
+        <img src="../images/blockchain.png" alt="Blockchain Illustration"
+          class="max-w-full md:max-w-lg mx-auto rounded-lg shadow-md border border-gray-200">
       </div>
-      <!-- New Notes topic -->
-       <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 3: History of Blockchain ?</h2>
 
+      <h4>🎯 Moral of the Story (Why We Need Blockchain)</h4>
+      <ul>
+        <li>✅ To <strong>remove the need for a middleman</strong>.</li>
+        <li>✅ To make records <strong>tamper-proof and transparent</strong>.</li>
+        <li>✅ To ensure <strong>trust through technology</strong>.</li>
+        <li>✅ To protect against <strong>fraud, hacking, and manipulation</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- Topic 2 -->
+    <section id="topic2" class="note-card">
+      <h2>Topic 2: What is Blockchain?</h2>
+      <p>A blockchain is a sequence of blocks (like digital pages), where each block contains key components and is
+        securely linked to the previous one.</p>
+
+      <h3>📦 Internal Structure of Block:</h3>
+
+      <h4>1️⃣ Data</h4>
+      <p>Stores information like financial transactions, smart contracts, etc.</p>
+
+      <h4>2️⃣ Timestamp</h4>
+      <p>Records exactly when the block was created.</p>
+
+      <h4>3️⃣ Nonce ("Number Only Used Once")</h4>
+      <p>The "magic number" used in mining to find a valid hash.</p>
+
+      <h4>4️⃣ Hash of the Current Block</h4>
+      <p>Unique fingerprint of the block content. Changes completely if data changes.</p>
+      <div class="text-center my-4">
+        <img src="../images/Block1.png" alt="Block Structure"
+          class="max-w-full md:max-w-lg mx-auto rounded-lg shadow-md border border-gray-200">
       </div>
-        <!-- New Notes topic -->
-       <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 4: Mathematical Foundation for Blockchain </h2>
 
-      </div>
-        <!-- New Notes topic -->
-       <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 5: Cryptography</h2>
+      <h4>5️⃣ Hash of the Previous Block</h4>
+      <p>Links the block to the previous one, creating the chain.</p>
 
-      </div>     <!-- New Notes topic -->
-       <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 6: Symmetric & Asymmetric Key Cryptography</h2>
-
-      </div>
-         <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 7: Elliptic Curve Cryptography</h2>
-
-      </div>
-      
-         <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 8: Cryptographic Hash Functions: SHA256</h2>
-
-      </div>
-      <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 9: Digital Signature Algorithm</h2>
-
-      </div>
-        <div class="topic-card" id="topic2" style="text-align: justify; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #040254;">Topic 11: Merkel Trees</h2>
-
+      <h3 class="mt-6">The Chain Structure</h3>
+      <p>Each block contains the hash of the previous block, making it mathematically linked.</p>
+      <div class="text-center my-4">
+        <img src="../images/Blockchain internal.png" alt="Blockchain Structure"
+          class="max-w-full md:max-w-lg mx-auto rounded-lg shadow-md border border-gray-200">
       </div>
     </section>
-</div>
 
- <footer class="footer">
-    <div class="footer-links">
-        <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+    <!-- Placeholders for other topics -->
+    <!-- These sections were empty in the original file, keeping them as placeholders for future content -->
+
+    <section id="topic3" class="note-card">
+      <h2>Topic 3: History of Blockchain</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic4" class="note-card">
+      <h2>Topic 4: Mathematical Foundation for Blockchain</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic5" class="note-card">
+      <h2>Topic 5: Cryptography</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic6" class="note-card">
+      <h2>Topic 6: Symmetric & Asymmetric Key Cryptography</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic7" class="note-card">
+      <h2>Topic 7: Elliptic Curve Cryptography (ECC)</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic8" class="note-card">
+      <h2>Topic 8: Cryptographic Hash Functions: SHA256</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic9" class="note-card">
+      <h2>Topic 9: Digital Signature Algorithm (DSA)</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+    <section id="topic10" class="note-card">
+      <h2>Topic 10: Merkel Trees</h2>
+      <p class="text-gray-500 italic">Content coming soon...</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="../assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="../assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="../assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-    <div class="adsense-placeholder">AdSense Banner Placeholder</div>
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u>   All rights reserved.
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
   </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
 </body>
+
 </html>

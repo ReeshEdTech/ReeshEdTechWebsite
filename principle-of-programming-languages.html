@@ -1,464 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principles of Programming Languages (PPL) Notes, PPTs & Question Papers | SPPU Study Material</title>
+
   <!-- Google tag (gtag.js) -->
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
 
-  gtag('config', 'G-D2S5XM7GD6');
-</script>
+  <meta name="description"
+    content="Download unit-wise Principles of Programming Languages (PPL) notes, PPTs, lab manuals, video lectures, and SPPU question papers. Free study resources for Computer Engineering students.">
+  <meta name="keywords"
+    content="PPL SPPU notes, Principles of Programming Languages ppt, computer engineering notes, sppu important questions, ppl practicals, video lectures, free study material">
+  <meta name="author" content="TopStudyMaterial">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download unit-wise Principles of Programming Languages (PPL) notes, PPTs, lab manuals, video lectures, and SPPU question papers. Free study resources for Computer Engineering students.">
-  <meta name="keywords" content="PPL SPPU notes, Principles of Programming Languages ppt, computer engineering notes, sppu important questions, ppl practicals, video lectures, free study material">
-  <meta name="author" content="Ms. Reshma Kapadi">
-  <meta name="robots" content="index, follow">
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="PPL Notes, PPTs, Practicals & SPPU Question Papers | TopStudyMaterial">
-  <meta property="og:description" content="Get unit-wise PPL notes, solved SPPU question papers, PPTs, and video lectures. Download free Principles of Programming Languages study material now.">
+  <meta property="og:description"
+    content="Get unit-wise PPL notes, solved SPPU question papers, PPTs, and video lectures. Download free Principles of Programming Languages study material now.">
   <meta property="og:url" content="https://www.topstudymaterial.com/principle-of-programming-languages.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.topstudymaterial.com/assets/images/ppl-thumbnail.jpg">
-  <title>Principles of Programming Languages (PPL) Notes, PPTs & Question Papers | SPPU Study Material</title>
-  <link rel="canonical" href="https://www.topstudymaterial.com/principle-of-programming-languages.html" />
+  <meta name="twitter:card" content="summary_large_image">
 
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "TopStudyMaterial",
-    "url": "https://www.topstudymaterial.com",
-    "description": "Free ppl notes, question papers, practicals, and study materials for SPPU Computer Engineering students"
-  }
-  </script>
-
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "TopStudyMaterial",
+      "url": "https://www.topstudymaterial.com",
+      "description": "Free ppl notes, question papers, practicals, and study materials for SPPU Computer Engineering students"
+    }
+    </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.topstudymaterial.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Principles of Programming Languages",
-        "item": "https://www.topstudymaterial.com/principle-of-programming-languages.html"
-      }
-    ]
-  }
-  </script>
+    {
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.topstudymaterial.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Principles of Programming Languages",
+          "item": "https://www.topstudymaterial.com/principle-of-programming-languages.html"
+        }
+      ]
+    }
+    </script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
   <style>
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-  }
-}
-</style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+  </style>
 </head>
 
-<body>
-  <div id="top"></div>
-  
-  <header class="header">
-    
-    <nav class="navbar">
-  <div class="logo">TopStudyMaterial</div>
-  
-  <!-- Hamburger menu for mobile -->
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<body class="bg-gray-50 font-sans text-gray-900">
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Subjects ▼</a>
-      <ul class="dropdown-content">
-        <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-        <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-        <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-        <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
-      </ul>
-    </li>
-    <!-- <li><a href="blogs.html">Blogs</a></li> -->
-    <li><a href="#questionpapers" >Question Papers</a></li>
-     <li><a href="#importantquestions">Imp Questions</a></li>
-    <li><a href="#videos">Videos</a></li>
-      <li><a href="#lecturenotes">Notes</a></li>  
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <button class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">Get
+        Started</button>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-gradient text-white py-16 md:py-24 px-4 text-center">
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-6">Principles of Programming Languages (PPL)</h1>
+    <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">PPTs, Notes, Labs, Videos – All for Free!</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#questionpapers"
+        class="bg-white text-indigo-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">Question
+        Papers</a>
+      <a href="#videos"
+        class="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-lg"><i
+          class="fab fa-youtube mr-2"></i> Videos</a>
+      <a href="#lecturenotes"
+        class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-indigo-600 transition shadow-lg">Notes</a>
+    </div>
   </header>
 
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero" data-aos="fade-up">
-<h1>Principles of Programming Languages</h1>
-    <p>PPTs, Notes, Labs, Videos – All for Free </p>
-    <a href="#videos" class="cta">Explore Video Lectures</a>
-  </section>
-  <div class="main-container">
- <aside class="sidebar">
-    <h3>Subjects</h3>
-  <div class="subject">
-    <a class="toggle-link"><strong>🤖 Artificial Intelligence</strong></a>
-    <ul class="submenu">
-      <li><a href="artificial-intelligence.html#lecturenotes">Lecture Notes</a></li>
-      <li><a href="artificial-intelligence.html#ppts">PPT </a></li>
-      <li><a href="artificial-intelligence.html#videos">Video Lectures</a></li>
-      <li><a href="artificial-intelligence.html#labexperiments">Lab Experiments</a></li>
-      <li><a href="artificial-intelligence.html#importantquestions">Important Questions</a></li>
-      <li><a href="artificial-intelligence.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-    <li><a href="artificial-intelligence.html#faq">FAQ</a></li>
-    </ul>
-  </div>
-<div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('bt')"><strong>⛓️ Blockchain Technology</strong></a>
-  <ul class="submenu" id="submenu-bt">
-        <li><a href="blockchain-technology.html#questionpapers" onclick="setOpenSubmenu('bt')">Previous Year Question Papers(PYQ)</a></li> 
-         <li><a href="blockchain-technology.html#videos" onclick="setOpenSubmenu('bt')">Video Lectures</a></li> 
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-16 space-y-20">
 
-      </ul>
-</div>
-  <div class="subject">
-    <a class="toggle-link"><strong>🧑‍💻Principles of Programming Languages</strong></a>
-    <ul class="submenu">
-      <li><a href="principle-of-programming-languages.html#lecturenotes">Lecture Notes</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#ppts">PPT </a></li> -->
-      <li><a href="principle-of-programming-languages.html#videos">Video Lectures</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
-      <li><a href="principle-of-programming-languages.html#importantquestions">Important Questions</a></li>
-      <li><a href="principle-of-programming-languages.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-      <li> <a href="principle-of-programming-languages.html#faq">FAQ</a></li>
-    </ul>
-  </div>
-
-  <div class="subject">
-    <a class="toggle-link"><strong>⚙️System Programming and Operating System</strong></a>
-    <ul class="submenu">
-      <li><a href="system-programming-and-operating-system.html#lecturenotes">Lecture Notes</a></li>
-           <li><a href="system-programming-notes/unit-1-introduction-to-system-programming.html">Unit 1  Notes</a></li>
-
-      <li><a href="system-programming-and-operating-system.html#ppts">PPT </a></li>
-      <li><a href="system-programming-and-operating-system.html#videos">Video Lectures</a></li>
-      <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li>
-      <!-- <li><a href="system-programming-and-operating-system.html#importantquestions">Important Questions</a></li> -->
-      <li><a href="system-programming-and-operating-system.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-      <li> <a href="system-programming-and-operating-system.html#spos-faqs">FAQ</a></li>
-    </ul>
-  </div>
-   <div class="subject">
-    <a class="toggle-link"><strong>📚Blogs</strong></a>
-    <ul class="submenu">
-          <li><a href="assets/blogs/blog1.html">Blog1</a></li>
-          <li><a href="assets/blogs/blog2.html">Blog2</a></li>
-          <li><a href="assets/blogs/blog3.html">Blog3</a></li>
-</ul>
-  </div>
-  </aside>
-
-
-  <section class="content-area">
-  <!-- <section id="ppts" class="section" data-aos="fade-left">
-    <h2>Unit-wise PPL PPTs Download - Principles of Programming Languages</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Principles of Programming Languages Unit 3</h3>
-            <p style="text-align: justify;">This unit covers essential Java programming concepts including classes, methods, arrays, and string handling.</p>
-
-        <a href="assets/ppts/principles-of-programming-languages/ppl-unit-3-ppt.pdf" download>Download PPT</a>
+    <!-- Question Papers Section -->
+    <section id="questionpapers" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">SPPU PPL Previous Year Question Papers</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Practice with previous years’ question papers to boost your
+          preparation.</p>
       </div>
-    </div>
-  </section> 
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-<button  style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    ">        Subscribe to Get More...!!!!
-      </button>
-    </a>
-  </div> -->
 
-  <section id="questionpapers" class="section" data-aos="fade-in">
-    <h2>Download SPPU PPL Question Papers - Insem & Endsem</h2>
-     <p style="text-align: justify;">Practice with previous years’ question papers to boost your preparation for upcoming SPPU exams. Our collection covers both in-semester (Insem) and end-semester (Endsem) exams, helping you get familiar with question patterns, marking schemes, and frequently asked questions.</p>
-  <p>Use these question papers to:</p>
-  <ul>
-    <li>Test your knowledge unit-wise</li>
-    <li>Improve time management skills</li>
-    <li>Identify important topics frequently asked</li>
-    <li>Prepare for practical and theory exams effectively</li>
-  </ul>
-  <br>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Insem - 2023</h3>
-        
-        <a href="assets/question-papers/principle-of-programming-languages/insem-april-2023.pdf" target="_blank">Download Pdf</a>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Insem 2023 -->
+        <a href="assets/question-papers/principle-of-programming-languages/insem-april-2023.pdf" target="_blank"
+          class="p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-700 transition text-center border border-gray-100 group">
+          <i class="fas fa-file-pdf text-red-500 text-2xl mb-2 group-hover:scale-110 transition"></i>
+          <div class="font-semibold text-sm">Insem Apr 2023</div>
+        </a>
+        <!-- Endsem 2023 (July) -->
+        <a href="assets/question-papers/principle-of-programming-languages/endsem-july-2023.pdf" target="_blank"
+          class="p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-700 transition text-center border border-gray-100 group">
+          <i class="fas fa-file-pdf text-red-500 text-2xl mb-2 group-hover:scale-110 transition"></i>
+          <div class="font-semibold text-sm">Endsem Jul 2023</div>
+        </a>
+        <!-- Endsem 2023 (Jan) -->
+        <a href="assets/question-papers/principle-of-programming-languages/endesem-jan-2023.pdf" target="_blank"
+          class="p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-700 transition text-center border border-gray-100 group">
+          <i class="fas fa-file-pdf text-red-500 text-2xl mb-2 group-hover:scale-110 transition"></i>
+          <div class="font-semibold text-sm">Endsem Jan 2023</div>
+        </a>
+        <!-- Endsem 2022 -->
+        <a href="assets/question-papers/principle-of-programming-languages/endsem-july-2022.pdf" target="_blank"
+          class="p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-700 transition text-center border border-gray-100 group">
+          <i class="fas fa-file-pdf text-red-500 text-2xl mb-2 group-hover:scale-110 transition"></i>
+          <div class="font-semibold text-sm">Endsem Jul 2022</div>
+        </a>
       </div>
-      <div class="card">
-        <h3>Endsem - 2022</h3>
-        <a href="assets/question-papers/principle-of-programming-languages/endsem-july-2022.pdf" target="_blank">Download Pdf</a>
+
+      <!-- WhatsApp Banner -->
+      <div class="mt-8 bg-green-50 border border-green-200 rounded-xl p-4 text-center">
+        <p class="text-green-800">
+          📢 <strong>Join Our WhatsApp Channel</strong> for instant updates, notes, and videos!
+          <a href="https://whatsapp.com/channel/0029Vb6Fy24KbYMQpWj0oQ1t" target="_blank"
+            class="text-green-600 font-bold hover:underline ml-2">Click here to join now</a>
+        </p>
       </div>
-      <div class="card">
-        <h3>Endsem - 2023</h3>
-        <a href="assets/question-papers/principle-of-programming-languages/endesem-jan-2023.pdf" target="_blank">Download Pdf</a>
+    </section>
+
+    <!-- Important Questions Section -->
+    <section id="importantquestions">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Unit Wise Important Questions</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
       </div>
-      <div class="card">
-        <h3>Endsem - 2023</h3>
-        <a href="assets/question-papers/principle-of-programming-languages/endsem-july-2023.pdf" target="_blank">Download Pdf</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Unit 3 -->
+        <div
+          class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col items-center text-center">
+          <div
+            class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600 text-2xl">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Unit 3 - Classes & Objects</h3>
+          <p class="text-gray-600 text-sm mb-4">Frequently asked questions on Java classes, methods, arrays, and
+            strings.</p>
+          <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-3-important-questions.pdf"
+            target="_blank" class="text-indigo-600 font-bold hover:underline mt-auto">Download PDF</a>
+        </div>
+        <!-- Unit 4 -->
+        <div
+          class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col items-center text-center">
+          <div
+            class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600 text-2xl">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Unit 4 - Inheritance</h3>
+          <p class="text-gray-600 text-sm mb-4">Important questions on inheritance, encapsulation, and constructors.</p>
+          <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-4-important-questions.pdf"
+            target="_blank" class="text-indigo-600 font-bold hover:underline mt-auto">Download PDF</a>
+        </div>
+        <!-- Unit 5 -->
+        <div
+          class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col items-center text-center">
+          <div
+            class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600 text-2xl">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Unit 5 - Multithreading</h3>
+          <p class="text-gray-600 text-sm mb-4">Key questions on inheritance types, method overriding, and access
+            specifiers.</p>
+          <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-5-important-questions.pdf"
+            target="_blank" class="text-indigo-600 font-bold hover:underline mt-auto">Download PDF</a>
+        </div>
       </div>
-    </div>
-  </section>
-  <br>
-<section id="importantquestions" class="section" data-aos="fade-left">
-    <h2>Unit Wise Important Questions and Answers </h2>
-      <p >Download the most frequently asked exam questions and short answers for each unit of the Principles of Programming Languages subject. These PDFs are based on the SPPU exam pattern and help in quick revision before the exam.</p>
-
-    <div class="card-grid">
-   
-      <div class="card">
-        <h3> Unit 3 - Classes & Objects</h3>
-        <p>Download the most frequently asked exam questions and short answers for each unit of the Principles of Programming Languages subject. These PDFs are based on the SPPU exam pattern and help in quick revision before the exam.</p>
-
-        <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-3-important-questions.pdf" target="_blank">Download</a>
+      <div class="mt-8 text-center">
+        <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank"
+          class="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition shadow-lg animate-pulse">
+          <i class="fab fa-youtube text-2xl"></i> Subscribe for Updates
+        </a>
       </div>
-      <div class="card">
-        <h3> Unit 4 - Inheritance </h3>
-              <p>This PDF includes important questions on class definitions, object-oriented principles, encapsulation, and constructor/destructor concepts—frequently asked in university exams.</p>
+    </section>
 
-        <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-4-important-questions.pdf" target="_blank">Download </a>
+    <!-- Video Lectures Section -->
+    <section id="videos" class="bg-gray-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Free PPL Video Lectures</h2>
+        <div class="w-20 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+        <p class="mt-4 opacity-80 max-w-2xl mx-auto">Comprehensive explanations perfect for visual learners.</p>
       </div>
-      <div class="card">
-        <h3> Unit 5 - Multithreading </h3>
-              <p>Practice key questions on single, multiple, and hybrid inheritance, method overriding, and access specifiers used in object-oriented programming languages.</p>
-
-        <a href="assets/unit-wise-imp-questions/principles-of-programming-languages/ppl-unit-5-important-questions.pdf" target="_blank">Download </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Unit 3 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition duration-300">
+          <div class="aspect-video">
+            <iframe class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PL_xGuJKqvelCvihTcWgKprc-Z2j6y2V1a"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Unit 3 - Java Fundamentals</h3>
+            <p class="text-sm opacity-70">Arrays, Strings, Classes, Objects, Constructors, static/final keywords.</p>
+          </div>
+        </div>
+        <!-- Unit 4 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition duration-300">
+          <div class="aspect-video">
+            <iframe class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PL_xGuJKqvelCU6Zk-N5ZLd0Ux54sqmlha"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Unit 4 - Advanced Java</h3>
+            <p class="text-sm opacity-70">Inheritance, Packages, Interfaces, Exception Handling, I/O Streams.</p>
+          </div>
+        </div>
       </div>
-    
-    </div>
-    
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-<button  style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    ">        🔔Click here to receive updates
-      </button>
-    </a>
-  </div>
-  </section>
-  <br>
-  <section id="videos" class="section" data-aos="fade-right">
-    <h2>Watch Free Unit-wise PPL Video Lectures </h2>
-    <p>Our video lecture series provides comprehensive explanations on each topic from the Principles of Programming Languages syllabus. These videos are perfect for visual learners and those who want to reinforce their understanding through expert instruction and real coding demonstrations.</p>
-  <p>Benefits of these videos include:</p>
-  <ul>
-    <li>Step-by-step explanation of Java concepts</li>
-    <li>Code walkthroughs and debugging tips</li>
-    <li>Interactive examples to follow along</li>
-  </ul>
-  <br>
-    <div class="video-grid-4x4">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PL_xGuJKqvelCvihTcWgKprc-Z2j6y2V1a" allowfullscreen></iframe>
-        <h3>Principle of Programming Languages Unit 3</h3>
-<p style="text-align: justify;"> Master Java fundamentals with this unit! Topics include:
-Arrays and Strings in Java Classes, Objects, and Constructors Access Specifiers & Static/Final keywords Method Overloading & Classes and Command-Line Arguments</p>      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PL_xGuJKqvelCU6Zk-N5ZLd0Ux54sqmlha" allowfullscreen></iframe>
-        <h3>Principle of Programming Languages Unit 4</h3>
-        <p style="text-align: justify;">Level up your Java skills with advanced concepts: Inheritance, super, and abstract classes Java Packages, Interfaces & instanceof Exception Handling with try-catch-finally Custom Exceptions & I/O Streams PrintWriter & Console Input/Output</p>   
+    </section>
+
+    <!-- Lecture Notes Section -->
+    <section id="lecturenotes">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">PPL Handwritten Notes</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
       </div>
-    </div>
-  </section>
-
-  <section id="lecturenotes" class="section" data-aos="fade-in">
-    <h2>Download PPL Handwritten Notes PDF - Unit-wise Study Material</h2>
-    
-    <div class="card-grid">
-      <div class="card">
-        <h3> Unit 3 : Java as Object Oriented Programming LanguageOverview</h3>
-              <p style="text-align: justify;">This unit covers essential Java programming concepts including classes, methods, arrays, and string handling.</p>
-
-        <a href="assets/ppts/principles-of-programming-languages/ppl-unit-3-ppt.pdf" target="_blank">Download PDF</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Unit 3 PPT -->
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col">
+          <div
+            class="h-12 w-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4 text-indigo-600 text-xl">
+            <i class="fas fa-file-powerpoint"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-indigo-700">Unit 3 - Java OOPs</h3>
+          <p class="text-gray-600 text-sm mb-4 flex-grow">Essential Java concepts: classes, methods, arrays, string
+            handling.</p>
+          <a href="assets/ppts/principles-of-programming-languages/ppl-unit-3-ppt.pdf" target="_blank"
+            class="mt-auto text-indigo-600 font-bold hover:underline">Download PPT <i
+              class="fas fa-download ml-1"></i></a>
+        </div>
+        <!-- Unit 4 Notes -->
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col">
+          <div
+            class="h-12 w-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4 text-indigo-600 text-xl">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-indigo-700">Unit 4 - Inheritance & Packages</h3>
+          <p class="text-gray-600 text-sm mb-4 flex-grow">Inheritance, packages, interfaces, exception handling, I/O
+            streams.</p>
+          <a href="assets/notes/principle-of-programming-langugaes/ppl-unit-4-notes.pdf" target="_blank"
+            class="mt-auto text-indigo-600 font-bold hover:underline">Download Notes <i
+              class="fas fa-download ml-1"></i></a>
+        </div>
       </div>
-      <div class="card">
-        <h3> Unit 4 : Inheritance, Packages and Exception Handling using Java </h3>
-       <p style="text-align: justify;">This units extends OOP principles by introducing inheritance, packages, interfaces, and exception handling in Java. It also introduces I/O stream management. </p>
+    </section>
 
-        <a href="assets/notes/principle-of-programming-langugaes/ppl-unit-4-notes.pdf" target="_blank">Download PDF</a>
+    <!-- Additional Information Sections -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-indigo-50 p-8 rounded-2xl border border-indigo-100">
+        <h3 class="text-xl font-bold text-indigo-900 mb-4">Study Tips for PPL</h3>
+        <ul class="space-y-3 text-indigo-800">
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Understand core OOP concepts vs
+            memorizing.</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Practice coding simple Java
+            programs.</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Solve previous year question
+            papers.</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1"></i> Use multiple resources (Notes +
+            Videos).</li>
+        </ul>
       </div>
-    </div>
-     <div style="text-align: center; margin-top: 40px;">
-    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-<button  style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    ">        Subscribe to Get More...!!!!
-      </button>        
-      
-    </a>
-  </div>
-  <br>
-    <div class="bottom-card">
-      <a class="bottom-menu" href="#top">Back To Top</a>
-      <a class="bottom-menu" href="system-programming-and-operating-system.html">System Programming & Operating System</a>
-      <a class="bottom-menu" href="artificial-intelligence.html">Artificial Intelligence</a>
-      <a class="bottom-menu" href="index.html">Back To Home</a>
-    </div>
-  </section>
-<section id="faq"class="section" data-aos="fade-up">
-  <h2>Frequently Asked Questions – PPL Study Material</h2>
-  <div class="faq">
-    <h3>What topics are covered in PPL (Principles of Programming Languages)?</h3>
-    <p style="text-align: justify;"><strong> Unit 3:</strong>Fundamentals of JAVA, Arrays: one dimensional array, multi-dimensional array, alternative array
-declaration statements ,String Handling: String class methods, Classes and Methods: class
-fundamentals, declaring objects, assigning object reference variables, adding methods to a class,
-returning a value, constructors, this keyword, garbage collection, finalize() method, overloading
-methods, argument passing, object as parameter, returning objects, access control, static, final,
-nested and inner classes, command line arguments, variable -length arguments. </p>
+      <div class="bg-purple-50 p-8 rounded-2xl border border-purple-100">
+        <h3 class="text-xl font-bold text-purple-900 mb-4">Why Learn PPL?</h3>
+        <ul class="space-y-3 text-purple-800">
+          <li class="flex items-start gap-2"><i class="fas fa-lightbulb mt-1"></i> Foundation for efficient software
+            development.</li>
+          <li class="flex items-start gap-2"><i class="fas fa-lightbulb mt-1"></i> Helps choose the right paradigm (OOP
+            vs Functional).</li>
+          <li class="flex items-start gap-2"><i class="fas fa-lightbulb mt-1"></i> Prepares for compiler design &
+            advanced topics.</li>
+        </ul>
+      </div>
+    </section>
 
-<p style="text-align: justify;"> <strong> Unit 4:</strong>Inheritances: member access and inheritance, super class references, Using super, multilevel
-hierarchy, constructor call sequence, method overriding, dynamic method dispatch, abstract
-classes, Object class. Packages and Interfaces: defining a package, finding packages and
-CLASSPATH, access protection, importing packages, interfaces (defining, implementation, nesting,
-applying), variables in interfaces, extending interfaces, instance of operator. fundamental,
-exception types, uncaught exceptions, try, catch, throw, throws, finally, multiple catch clauses,
-nested try statements, built-in exceptions, custom exceptions (creating your own exception sub
-classes). Managing I/O: Streams, Byte Streams and Character Streams, Predefined Streams, Reading
-console Input, Writing Console Output, Print Writer class</p>
-    <h3>Where can I download SPPU PPL question papers?</h3>
-    <p>You can download previous year question papers for Insem and Endsem from this page under the "SPPU Previous Year Question Papers" section.</p>
+    <section class="text-center">
+      <h3 class="text-2xl font-bold mb-6">Useful Online Resources</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://www.tutorialspoint.com/principles_of_programming_languages/index.htm" target="_blank"
+          rel="nofollow noopener noreferrer"
+          class="bg-white border border-gray-200 px-6 py-3 rounded-full hover:bg-gray-50 transition shadow-sm font-semibold text-gray-700">
+          TutorialsPoint Guide
+        </a>
+        <a href="https://www.onlinegdb.com/online_java_compiler" target="_blank" rel="nofollow noopener noreferrer"
+          class="bg-white border border-gray-200 px-6 py-3 rounded-full hover:bg-gray-50 transition shadow-sm font-semibold text-gray-700">
+          Online Java Compiler
+        </a>
+      </div>
+    </section>
 
-    <h3>Are there handwritten notes available for PPL?</h3>
-    <p>Yes, you can access handwritten notes in PDF format for each unit. Visit the "Lecture Notes" section to download them.</p>
-
-    <h3>Do these materials follow the latest SPPU syllabus?</h3>
-    <p>Yes, all our notes, PPTs, and question papers are curated as per the latest SPPU Computer Engineering curriculum.</p>
-  </div>
-</section>
-
-<section class="section" data-aos="fade-up">
-    <h2>Additional Study Tips for Principles of Programming Languages (PPL)</h2>
-    <p style="text-align: justify;">
-      Studying Principles of Programming Languages requires a clear understanding of both theoretical concepts and practical implementation. Here are some tips to help you prepare effectively:
-    </p>
-    <ul>
-      <li><strong>Understand the Concepts:</strong> Focus on understanding the core concepts such as data types, control structures, and object-oriented programming principles rather than just memorizing.</li>
-      <li><strong>Practice Coding:</strong> Implement example programs in Java and other languages covered in your syllabus to strengthen your programming skills.</li>
-      <li><strong>Refer to Multiple Resources:</strong> Use the downloadable notes, PPTs, and video lectures available on this page alongside your textbooks for a comprehensive study approach.</li>
-      <li><strong>Attempt Previous Year Question Papers:</strong> Solving past SPPU question papers helps you get familiar with the exam pattern and important questions.</li>
-      <li><strong>Join Study Groups:</strong> Discussing topics with peers can clarify doubts and improve your understanding.</li>
-      <li><strong>Make Summary Notes:</strong> Create concise notes for quick revision before exams.</li>
-    </ul>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>Importance of Learning Principles of Programming Languages</h2>
-    <p style="text-align: justify;">
-      Principles of Programming Languages form the foundation for writing efficient, maintainable, and scalable software. Understanding these principles:
-    </p>
-    <ul>
-      <li>Helps you choose the right programming paradigm for your project, whether procedural, object-oriented, or functional programming.</li>
-      <li>Enhances your problem-solving skills by teaching you different approaches to handle programming challenges.</li>
-      <li>Prepares you for advanced topics in compiler design, language theory, and software engineering.</li>
-      <li>Improves your adaptability to learn new programming languages quickly by understanding underlying concepts.</li>
-    </ul>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>Useful Online Resources and Tools for PPL</h2>
-    <p style="text-align: justify;">
-      Apart from the study materials provided here, the following resources can assist you in mastering Principles of Programming Languages:
-    </p>
-    <ul>
-      <li><a href="https://www.tutorialspoint.com/principles_of_programming_languages/index.htm" target="_blank" rel="nofollow noopener noreferrer">TutorialsPoint PPL Guide</a> – Easy-to-understand notes and examples.</li>
-      <li><a href="https://www.onlinegdb.com/online_java_compiler" target="_blank" rel="nofollow noopener noreferrer">Online Java Compiler</a> – Practice Java coding directly in your browser.</li>
-    </ul>
-  </section>
-</section>
-</div>
+    <!-- FAQ Section -->
+    <section id="faq" class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <summary
+            class="flex justify-between items-center p-4 cursor-pointer font-bold text-gray-800 hover:text-indigo-600 transition">
+            <span>1. What topics are covered in PPL Unit 3?</span>
+            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-sm"></i></span>
+          </summary>
+          <div class="p-4 pt-0 text-gray-600 bg-gray-50 border-t border-gray-100">
+            PPL Unit 3 covers Fundamentals of JAVA, Arrays (1D, Multi-dimensional), String Handling, Classes and Methods
+            (Objects, Constructors, Overloading, static, final, nested classes), and Garbage Collection.
+          </div>
+        </details>
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <summary
+            class="flex justify-between items-center p-4 cursor-pointer font-bold text-gray-800 hover:text-indigo-600 transition">
+            <span>2. What topics are covered in PPL Unit 4?</span>
+            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-sm"></i></span>
+          </summary>
+          <div class="p-4 pt-0 text-gray-600 bg-gray-50 border-t border-gray-100">
+            Unit 4 covers Inheritance (multilevel, super, method overriding, abstract classes), Packages and Interfaces,
+            Exception Handling (try-catch-finally, custom exceptions), and Managing I/O Streams.
+          </div>
+        </details>
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <summary
+            class="flex justify-between items-center p-4 cursor-pointer font-bold text-gray-800 hover:text-indigo-600 transition">
+            <span>3. Where can I download SPPU PPL question papers?</span>
+            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-sm"></i></span>
+          </summary>
+          <div class="p-4 pt-0 text-gray-600 bg-gray-50 border-t border-gray-100">
+            You can download previous year question papers for Insem and Endsem from the "Question Papers" section
+            above.
+          </div>
+        </details>
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <summary
+            class="flex justify-between items-center p-4 cursor-pointer font-bold text-gray-800 hover:text-indigo-600 transition">
+            <span>4. Do these materials follow the latest SPPU syllabus?</span>
+            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-sm"></i></span>
+          </summary>
+          <div class="p-4 pt-0 text-gray-600 bg-gray-50 border-t border-gray-100">
+            Yes, all our notes, PPTs, and question papers are curated as per the latest SPPU Computer Engineering
+            curriculum.
+          </div>
+        </details>
+      </div>
+    </section>
 
   </main>
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="assets/privacy-policy.html">Privacy Policy</a> |
-      <a href="assets/terms-and-conditions.html">Terms and Conditions</a> |
-      <a href="assets/disclaimer.html">Disclaimer</a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-    <div class="adsense-placeholder">AdSense Banner Placeholder</div>
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u> All rights reserved.
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Scripts -->
   <script>
-    AOS.init();
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
   </script>
-  <!-- for mobile friendly navbar -->
- 
-<!-- for mobile friendly navbar -->
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
- <!-- Script for handling sidebar -->
- <script>
-  // Hide all submenus by default
-  document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
-
-  // Add click event to all toggle links
-  document.querySelectorAll('.toggle-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const submenu = link.nextElementSibling;
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
 </body>
+
 </html>
