@@ -1,336 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopStudyMaterial | Engineering Notes, PPTs & PYQs (SPPU)</title>
+    <meta name="description"
+        content="Download free SPPU engineering notes, handwritten materials, PPTs, and previous year question papers. The ultimate resource for Computer Engineering students.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
 
-  gtag('config', 'G-D2S5XM7GD6');
-</script>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download SPPU question papers, handwritten notes, AI lecture PPTs, spos theory notes, sppu ppl notes,Computer science mini projects for diploma and free educational content by Ms. Reshma Kapadi.">
-  <meta name="keywords" content=" Artificial Intelligence, Principles of programming Languages lecture notes ppt, sppu, study material, computer science notes, system programming and operating system lecture notes, operating system notes for engineering pdf, ppl sppu notes">
-  <meta name="author" content="Ms. Reshma Kapadi">
-  <meta name="robots" content="index, follow">
-  <title>TopStudyMaterial</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "TopStudyMaterial",
-    "url": "https://www.topstudymaterial.com",
-    "description": "Free AI notes, question papers, practicals, and study materials for SPPU Computer Engineering students"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.topstudymaterial.com"
-      }
-    ]
-  }
-  </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="canonical" href="https://www.topstudymaterial.com" />
-  
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GP2M7Z7N6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1GP2M7Z7N6');
-</script>
-<body>
-  
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">TopStudyMaterial</div>
-      
-      <!-- Hamburger menu for mobile -->
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li class="dropdown">
-          <a href="#">Subjects ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-            <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-            <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-          <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
-          </ul>
-        </li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li> 
-      </ul>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">TopStudy<span
+                    class="text-gray-800">Material</span></a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#notes" class="hover:text-indigo-600">Notes</a>
+                <a href="blogs.html" class="hover:text-indigo-600">Blogs</a>
+                <a href="about.html" class="hover:text-indigo-600">About</a>
+            </div>
+            <button
+                class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">Get
+                Started</button>
+        </div>
     </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <section id="home" class="hero" data-aos="fade-up">
-      <h1>Welcome to TopStudyMaterial</h1>
-      <p>Smarter Notes for Smarter Minds...!</p>
-    </section>
-    
-<div class="main-container">
-  <aside class="sidebar">
-    <h3>Subjects</h3>
-  <div class="subject">
-    <a class="toggle-link"><strong>🤖 Artificial Intelligence</strong></a>
-    <ul class="submenu">
-      <li><a href="artificial-intelligence.html#ppts">PPT </a></li>
-      <li><a href="artificial-intelligence.html#videos">Video Lectures</a></li>
-      <li><a href="artificial-intelligence.html#labexperiments">Lab Experiments</a></li>
-        <li><a href="artificial-intelligence.html#lecturenotes">Lecture Notes</a></li>
-      <li><a href="artificial-intelligence.html#importantquestions">Important Questions</a></li>
-      <li><a href="artificial-intelligence.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-    <li><a href="artificial-intelligence.html#faq">FAQ</a></li>
-    </ul>
-  </div>
-<div class="subject">
-  <a class="toggle-link" onclick="toggleSubmenu('bt')"><strong>⛓️ Blockchain Technology</strong></a>
-  <ul class="submenu" id="submenu-bt">
-        <li><a href="blockchain-technology.html#questionpapers" onclick="setOpenSubmenu('bt')">Previous Year Question Papers(PYQ)</a></li> 
-          <li><a href="blockchain-technology.html#videos" onclick="setOpenSubmenu('bt')">Video Lectures</a></li> 
-          <li><a href="blockchain-technology-notes/mathematical-foundation-for-blockchain.html" onclick="setOpenSubmenu('bt')">Unit 1 Notes</a></li> 
-
-      </ul>
-</div>
-  <div class="subject">
-    <a class="toggle-link"><strong>🧑‍💻Principles of Programming Languages</strong></a>
-    <ul class="submenu">
-      <li><a href="principle-of-programming-languages.html#lecturenotes">Lecture Notes</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#ppts">PPT </a></li> -->
-      <li><a href="principle-of-programming-languages.html#videos">Video Lectures</a></li>
-      <!-- <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li> -->
-      <li><a href="principle-of-programming-languages.html#importantquestions">Important Questions</a></li>
-      <li><a href="principle-of-programming-languages.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-      <li> <a href="principle-of-programming-languages.html#faq">FAQ</a></li>
-    </ul>
-  </div>
-
-  <div class="subject">
-    <a class="toggle-link"><strong>⚙️System Programming and Operating System</strong></a>
-    <ul class="submenu">
-      <li><a href="system-programming-and-operating-system.html#lecturenotes">Lecture Notes</a></li>
-            <li><a href="system-programming-notes/unit-1-introduction-to-system-programming.html">Unit 1  Notes</a></li>
-
-      <li><a href="system-programming-and-operating-system.html#ppts">PPT </a></li>
-      <li><a href="system-programming-and-operating-system.html#videos">Video Lectures</a></li>
-      <li><a href="principle-of-programming-languages.html#labexperiments">Lab Experiments</a></li>
-      <!-- <li><a href="system-programming-and-operating-system.html#importantquestions">Important Questions</a></li> -->
-      <li><a href="system-programming-and-operating-system.html#questionpapers">Previous Year Question Papers(PYQ)</a></li>
-                <li><a href=".\system-programming-notes\spos-insem-paper-solution-2024.html">Insem Question Paper Solution 2024</a></li>
-
-      <li> <a href="system-programming-and-operating-system.html#spos-faqs">FAQ</a></li>
-    </ul>
-  </div>
-   <div class="subject">
-    <a class="toggle-link"><strong>📚Blogs</strong></a>
-    <ul class="submenu">
-          <li><a href="assets/blogs/blog1.html">Blog1</a></li>
-          <li><a href="assets/blogs/blog2.html">Blog2</a></li>
-          <li><a href="assets/blogs/blog3.html">Blog3</a></li>
-</ul>
-  </div>
-   👉 <a href="https://whatsapp.com/channel/0029Vb6Fy24KbYMQpWj0oQ1t" target="_blank">Join What's app Channel</a>
-  </aside>
-
-  <section class="content-area">
-    <!-- Place your existing sections like #home, #news, #about, etc. here -->
-     <!-- Website Introduction Section -->
-
-<!-- Home_Top_Ad1 -->
-
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<section class="intro-section" id="about-home" data-aos="fade-up">
-  <h2>🧠 Everything You Need to Learn, Practice & Succeed</h2>
-  <p><strong>TopStudyMaterial</strong> is a comprehensive online learning platform for engineering students, offering high-quality study materials such as handwritten notes, video lectures, solved university question papers, lab experiments and more. 
-</p>
-<!-- Home_Top_Ad1 -->
-
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
-    <div class="feature-card">
-      <i class="fas fa-pen-nib"></i>
-      <h4>Lecture Notes</h4>
-      <p>Clean and simple handwritten notes organized by unit.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-chalkboard-teacher"></i>
-      <h4>Video Lectures</h4>
-      <p>Concept-driven teaching to help you learn effectively.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-file-powerpoint"></i>
-      <h4>PPTs</h4>
-      <p>Downloadable subject-wise presentations for easy revision.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-book-open"></i>
-      <h4>PYQs</h4>
-      <p>University Question Paper Solutions with step-by-step answers.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-flask"></i>
-      <h4>Lab Experiments</h4>
-      <p>Practical files and outputs aligned with university syllabus.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-question-circle"></i>
-      <h4>Important Questions</h4>
-      <p>Most expected questions for quick revision and exam prep.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-book-reader"></i>
-      <h4>E-books</h4>
-      <p>Study-friendly PDFs and reference books for deeper learning.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-lightbulb"></i>
-      <h4>Mini Projects</h4>
-      <p>Innovative ideas with practical implementation tips.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-heart"></i>
-      <h4>Motivation & Tips</h4>
-      <p>Boost your focus, productivity, and academic growth.</p>
-    </div>
-  </div>
-
-  <div class="announcement" data-aos="zoom-in" data-aos-delay="300">
-    📢 More subjects are coming soon on TopStudyMaterial. Stay tuned!
-  </div>
-</section>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-    <!-- News and Announcements -->
-    <section id="news" class="section" data-aos="fade-in">
-      <h2>News & Announcements</h2>
-      <div class="announcement-bar">
-        <div class="news-container">
-          <div class="news-list">
-            <span>📌 LP II Artificial Intelligence Practicals Uploaded...!</span>
-            <span>🎉 PPL Video Lectures are Uploaded</span>
-            <span>📌 SPPU Question Papers for Artificial Intelligence Added..!</span>
-            <span>🎉 SPPU Question Papers for System Programming and Operating System Uploaded...!!!</span>
-          </div>
+    <header class="hero-gradient text-white py-16 md:py-24 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Study Smarter...Score Better...
+        </h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">Handwritten Notes, Unit-wise PPTs, and Solved
+            Question Papers</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <input type="text" placeholder="Search subject (e.g. AI, SPOS...)"
+                class="px-6 py-4 rounded-full text-gray-800 w-full md:w-96 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+            <button
+                class="bg-yellow-400 text-indigo-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 shadow-lg">Search
+                Resources</button>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="section" data-aos="fade-right">
-      <h2>About Me</h2>
-      <div class="about-container card-grid">
-        <div class="card about-image">
-          <img src="images/my pic1.png" alt="Ms. Reshma" style="width: 100%; border-radius: 12px;">
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12" id="notes">Popular Subject Hubs</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover">
+                <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-robot"></i></div>
+                <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+                <p class="text-gray-600 mb-4">Unit-wise notes, Lab Practicals (LP-II), and 2024 PYQs.</p>
+                <a href="artificial-intelligence.html"
+                    class="text-indigo-600 font-semibold flex items-center gap-2">View Materials <i
+                        class="fas fa-arrow-right text-sm"></i></a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover">
+                <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-microchip"></i></div>
+                <h3 class="text-xl font-bold mb-2">SPOS</h3>
+                <p class="text-gray-600 mb-4">System Programming and OS solutions + In-sem papers.</p>
+                <a href="system-programming-and-operating-system.html"
+                    class="text-indigo-600 font-semibold flex items-center gap-2">View Materials <i
+                        class="fas fa-arrow-right text-sm"></i></a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover">
+                <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-code"></i></div>
+                <h3 class="text-xl font-bold mb-2">PPL</h3>
+                <p class="text-gray-600 mb-4">Principles of Programming Languages - Handwritten notes.</p>
+                <a href="principle-of-programming-languages.html"
+                    class="text-indigo-600 font-semibold flex items-center gap-2">View Materials <i
+                        class="fas fa-arrow-right text-sm"></i></a>
+            </div>
         </div>
+        <section class="bg-indigo-50 py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Smart Student Tools</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <div class="card about-content">
-          <p>Hello! I'm <strong>Ms. Reshma Kapadi</strong>, a passionate educator and developer who loves teaching computer science and building innovative web solutions. I'm currently working as an Assistant Professor and actively engaged in research, content creation, and student mentorship.</p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-indigo-500">
+                        <div
+                            class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Daily Quiz Bot</h3>
+                        <p class="text-sm text-gray-600 mb-4">Practice 5 important questions every day based on your
+                            syllabus.</p>
+                        <button class="text-indigo-600 font-bold text-sm hover:underline">Start Quiz →</button>
+                    </div>
 
-          <p>I enjoy creating educational content, developing tech tools for learning, and exploring topics like Artificial Intelligence, Programming Languages, and Web Development.</p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-green-500">
+                        <div
+                            class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                            <i class="fas fa-magic text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">AI Summarizer</h3>
+                        <p class="text-sm text-gray-600 mb-4">Upload your handwritten scans and get clean, formatted
+                            notes.</p>
+                        <button class="text-green-600 font-bold text-sm hover:underline">Upload Scans →</button>
+                    </div>
 
-          <p>Feel free to explore my work, check out my YouTube channel, or connect with me on LinkedIn!</p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500">
+                        <div
+                            class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4">
+                            <i class="fas fa-tasks text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Syllabus Tracker</h3>
+                        <p class="text-sm text-gray-600 mb-4">Track which units you've finished and what's pending.</p>
+                        <button class="text-purple-600 font-bold text-sm hover:underline">Open Dashboard →</button>
+                    </div>
 
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/reshma-kapadi-2588492a1/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/yourprofile" target="_blank">GitHub</a> |
-            <a href="mailto:reshmak300891@gmail.com">Email Me</a>
-          </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mb-4">
+                            <i class="fas fa-bell text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Exam Alerts</h3>
+                        <p class="text-sm text-gray-600 mb-4">Live updates on SPPU circulars, In-sem, and Oral dates.
+                        </p>
+                        <span class="inline-block bg-red-100 text-red-600 text-[10px] font-bold px-2 py-1 rounded">LIVE
+                            UPDATES</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+                <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                <ul class="opacity-70 space-y-2">
+                    <li><a href="assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+                    <li><a href="assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a>
+                    </li>
+                    <li><a href="assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                <div class="flex justify-center md:justify-start gap-4 text-2xl">
+                    <a href="https://www.linkedin.com/in/reshma-kapadi-2588492a1/"><i
+                            class="fab fa-linkedin hover:text-blue-400"></i></a>
+                    <!-- <a href="#"><i class="fab fa-github hover:text-gray-400"></i></a> -->
+                    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg"><i
+                            class="fab fa-youtube hover:text-red-500"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+        <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial</p>
+    </footer>
 
-    <!-- Contact Form -->
-    <section id="contact" class="section" data-aos="fade-right">
-      <h2>Contact Us</h2>
-      <form action="mailto:contact@reeshedtech.com" method="post">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-
-</div>
-
-  </main>
->
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="assets/privacy-policy.html">Privacy Policy</a> | 
-      <a href="assets/terms-and-conditions.html">Terms and Conditions</a> | 
-      <a href="assets/disclaimer.html">Disclaimer</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u> All rights reserved.
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <!-- Mobile friendly navbar toggle -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-<!-- Script for handling sidebar -->
- <script>
-  // Hide all submenus by default
-  document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
-
-  // Add click event to all toggle links
-  document.querySelectorAll('.toggle-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const submenu = link.nextElementSibling;
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
 </body>
+
 </html>

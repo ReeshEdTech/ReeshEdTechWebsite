@@ -2,237 +2,179 @@
 <html lang="en">
 
 <head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D2S5XM7GD6');
-</script>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs - TopStudyMaterial</title>
   <meta name="description"
     content="Read the latest blogs on Artificial Intelligence, Study Tips, and Career Guidance for Engineering Students.">
-  <meta name="keywords" content="Blogs, AI, Study Tips, Engineering, Career Guidance, TopStudyMaterial">
-  <meta name="author" content="Ms. Reshma Kapadi">
-  <meta name="robots" content="index, follow">
-  <title>Blogs - TopStudyMaterial</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.topstudymaterial.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blogs",
-        "item": "https://www.topstudymaterial.com/blogs.html"
-      }
-    ]
-  }
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
   </script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="canonical" href="https://www.topstudymaterial.com/blogs.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
 
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+
+    /* Smooth transition for submenus */
+    .submenu {
+      display: none;
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-gray-50 font-sans text-gray-900">
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">TopStudyMaterial</div>
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="blogs.html" class="text-indigo-600 font-bold">Blogs</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <button class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">Get
+        Started</button>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="blogs.html" class="block py-2 text-indigo-600 font-bold">Blogs</a>
+      <a href="about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
 
-      <!-- Hamburger menu for mobile -->
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#news">News</a></li>
-        <li class="dropdown">
-          <a href="#">Subjects ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
-            <li><a href="principle-of-programming-languages.html">Principles of Programming Languages</a></li>
-            <li><a href="system-programming-and-operating-system.html">System Programming and Operating System</a></li>
-            <li><a href="blockchain-technology.html">Blockchain Technology</a></li>
-          </ul>
-        </li>
-        <li><a href="blogs.html" style="color: #007bff;">Blogs</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Hero Section -->
+  <header class="hero-gradient text-white py-16 md:py-24 px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">📚 Blogs</h1>
+    <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">Insights, Tips, and Trends for Engineering Students
+    </p>
   </header>
 
   <!-- Main Content -->
-  <main>
-    <section class="hero" data-aos="fade-up">
-      <h1>📚 Blogs</h1>
-      <p>Insights, Tips, and Trends for Engineering Students</p>
-    </section>
+  <main class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <div class="main-container">
-      <aside class="sidebar">
-        <h3>Subjects</h3>
-        <div class="subject">
-          <a class="toggle-link" onclick="toggleSubmenu('ai')"><strong>🤖 Artificial Intelligence</strong></a>
-          <ul class="submenu" id="submenu-ai">
-            <li><a href="artificial-intelligence.html#ppts" onclick="setOpenSubmenu('ai')">PPT </a></li>
-            <li><a href="artificial-intelligence.html#videos" onclick="setOpenSubmenu('ai')">Video Lectures</a></li>
-            <li><a href="artificial-intelligence.html#labexperiments" onclick="setOpenSubmenu('ai')">Lab Experiments</a>
-            </li>
-            <li><a href="artificial-intelligence.html#lecturenotes" onclick="setOpenSubmenu('ai')">Lecture Notes</a>
-            </li>
-            <li><a href="artificial-intelligence.html#importantquestions" onclick="setOpenSubmenu('ai')">Important
-                Questions</a></li>
-            <li><a href="artificial-intelligence.html#questionpapers" onclick="setOpenSubmenu('ai')">Previous Year
-                Question Papers(PYQ)</a></li>
-            <li><a href="artificial-intelligence.html#faq" onclick="setOpenSubmenu('ai')">FAQ</a></li>
-          </ul>
+      <!-- Blog Card 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col h-full">
+        <div class="mb-4">
+          <div class="inline-block bg-indigo-100 text-indigo-600 text-xs font-bold px-2 py-1 rounded-full mb-2">
+            CAREER</div>
+          <h2 class="text-xl font-bold text-gray-900 leading-tight">Your Grades Won't Open Job Doors — But Your
+            GitHub Repo Will!</h2>
         </div>
-        <div class="subject">
-          <a class="toggle-link" onclick="toggleSubmenu('bt')"><strong>⛓️ Blockchain Technology</strong></a>
-          <ul class="submenu" id="submenu-bt">
-            <li><a href="blockchain-technology.html#questionpapers" onclick="setOpenSubmenu('bt')">Previous Year
-                Question Papers(PYQ)</a></li>
-            <li><a href="blockchain-technology.html#videos" onclick="setOpenSubmenu('bt')">Video Lectures</a></li>
-            <li><a href="blockchain-technology-notes/mathematical-foundation-for-blockchain.html"
-                onclick="setOpenSubmenu('bt')">Unit 1 Notes</a></li>
-          </ul>
-        </div>
-        <div class="subject">
-          <a class="toggle-link" onclick="toggleSubmenu('ppl')"><strong>🧑‍💻 Principles of Programming
-              Languages</strong></a>
-          <ul class="submenu" id="submenu-ppl">
-            <li><a href="principle-of-programming-languages.html#lecturenotes" onclick="setOpenSubmenu('ppl')">Lecture
-                Notes</a></li>
-            <li><a href="principle-of-programming-languages.html#videos" onclick="setOpenSubmenu('ppl')">Video
-                Lectures</a></li>
-            <li><a href="principle-of-programming-languages.html#importantquestions"
-                onclick="setOpenSubmenu('ppl')">Important Questions</a></li>
-            <li><a href="principle-of-programming-languages.html#questionpapers"
-                onclick="setOpenSubmenu('ppl')">Previous Year Question Papers(PYQ)</a></li>
-            <li><a href="principle-of-programming-languages.html#faq" onclick="setOpenSubmenu('ppl')">FAQ</a></li>
-          </ul>
-        </div>
+        <p class="text-gray-600 mb-6 flex-grow">The Harsh Truth: Grades Aren’t Enough in 2025. Discover why
+          practical experience outweighs theory.</p>
+        <a href="assets/blogs/blog1.html" class="text-indigo-600 font-bold hover:underline flex items-center gap-2">Read
+          More <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
 
-        <div class="subject">
-          <a class="toggle-link" onclick="toggleSubmenu('spos')"><strong>⚙️ System Programming and Operating
-              System</strong></a>
-          <ul class="submenu" id="submenu-spos">
-            <li><a href="system-programming-and-operating-system.html#lecturenotes"
-                onclick="setOpenSubmenu('spos')">Lecture Notes</a></li>
-            <li><a href="system-programming-notes/unit-1-introduction-to-system-programming.html">Unit 1 Notes</a></li>
-            <li><a href="system-programming-and-operating-system.html#ppts" onclick="setOpenSubmenu('spos')">PPT </a>
-            </li>
-            <li><a href="system-programming-and-operating-system.html#videos" onclick="setOpenSubmenu('spos')">Video
-                Lectures</a></li>
-            <li><a href="system-programming-and-operating-system.html#questionpapers"
-                onclick="setOpenSubmenu('spos')">Previous Year Question Papers(PYQ)</a></li>
-            <li><a href=".\system-programming-notes\spos-insem-paper-solution-2024.html">Insem Question Paper Solution
-                2024</a></li>
-            <li><a href="system-programming-and-operating-system.html#spos-faqs"
-                onclick="setOpenSubmenu('spos')">FAQ</a></li>
-          </ul>
+      <!-- Blog Card 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col h-full">
+        <div class="mb-4">
+          <div class="inline-block bg-purple-100 text-purple-600 text-xs font-bold px-2 py-1 rounded-full mb-2">
+            TOOLS</div>
+          <h2 class="text-xl font-bold text-gray-900 leading-tight">Top 7 Free AI Tools Every Student Must Use in
+            2025...!</h2>
         </div>
+        <p class="text-gray-600 mb-6 flex-grow">In today’s fast-paced digital world, students need to be smarter,
+          faster, and more productive using AI.</p>
+        <a href="assets/blogs/blog2.html" class="text-indigo-600 font-bold hover:underline flex items-center gap-2">Read
+          More <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
 
-        <div class="subject">
-          <a class="toggle-link" onclick="toggleSubmenu('blogs')"><strong>📚 Blogs</strong></a>
-          <ul class="submenu" id="submenu-blogs" style="display: block;"> <!-- Open by default on blogs page -->
-            <li><a href="assets/blogs/blog1.html">Blog 1</a></li>
-            <li><a href="assets/blogs/blog2.html">Blog 2</a></li>
-            <li><a href="assets/blogs/blog3.html">Blog 3</a></li>
-          </ul>
+      <!-- Blog Card 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 card-hover flex flex-col h-full">
+        <div class="mb-4">
+          <div class="inline-block bg-green-100 text-green-600 text-xs font-bold px-2 py-1 rounded-full mb-2">
+            GUIDANCE</div>
+          <h2 class="text-xl font-bold text-gray-900 leading-tight">Why Building a Portfolio Website is a Must for
+            Every Student</h2>
         </div>
-        👉 <a href="https://whatsapp.com/channel/0029Vb6Fy24KbYMQpWj0oQ1t" target="_blank">Join What's app Channel</a>
-      </aside>
+        <p class="text-gray-600 mb-6 flex-grow">In the digital-first world of 2025, having a strong online presence
+          is no longer optional...</p>
+        <a href="assets/blogs/blog3.html" class="text-indigo-600 font-bold hover:underline flex items-center gap-2">Read
+          More <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
 
-      <section class="content-area">
-
-        <div class="blog-card" data-aos="fade-up">
-          <h2>Your Grades Won't Open Job Doors — But Your GitHub Repo Will! </h2>
-          <p>The Harsh Truth: Grades Aren’t Enough in 2025....</p>
-          <a class="read-more" href="assets/blogs/blog1.html">Read More →</a>
-        </div>
-
-        <div class="blog-card" data-aos="fade-up">
-          <h2>Top 7 Free AI Tools Every Student Must Use in 2025...!</h2>
-          <p>In today’s fast-paced digital world, students need to be smarter, faster, and more productive.</p>
-          <a class="read-more" href="assets/blogs/blog2.html">Read More →</a>
-        </div>
-
-        <div class="blog-card" data-aos="fade-up">
-          <h2>Why Building a Portfolio Website is a Must for Every Computer Engineering Student</h2>
-          <p>In the digital-first world of 2025, having a strong online presence is no longer optional...</p>
-          <a class="read-more" href="assets/blogs/blog3.html">Read More →</a>
-        </div>
-
-      </section>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="assets/privacy-policy.html">Privacy Policy</a> | <a href="assets/terms-and-conditions.html">Terms and
-        Conditions</a> | <a href="assets/disclaimer.html">Disclaimer</a>
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.linkedin.com/in/reshma-kapadi-2588492a1/"><i
+              class="fab fa-linkedin hover:text-blue-400"></i></a>
+          <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg"><i
+              class="fab fa-youtube hover:text-red-500"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions">YouTube</a>
-      <a href="#">Instagram</a>
-    </div>
-
-    <div class="adsense-placeholder">AdSense Banner Placeholder</div>
-    &copy; 2025 <strong>TopStudyMaterial</strong> Designed by <u>Reshma Kapadi</u> All rights reserved.
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial</p>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init();
-  </script>
-
-  <!-- Mobile friendly navbar toggle -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-
-  <!-- Script for handling sidebar -->
-  <script>
-    // Hide all submenus by default
-    document.querySelectorAll('.submenu').forEach(menu => {
-      // Keep blogs open if we are on blogs page, logic could be more robust but manual override for now
-      if (menu.id !== 'submenu-blogs') {
-        menu.style.display = 'none';
+    // Toggle Submenu
+    function toggleSubmenu(id) {
+      const submenu = document.getElementById('submenu-' + id);
+      if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+      } else {
+        submenu.style.display = 'block';
       }
-    });
+    }
 
-    // Add click event to all toggle links
-    document.querySelectorAll('.toggle-link').forEach(link => {
-      link.addEventListener('click', () => {
-        const submenu = link.nextElementSibling;
-        if (submenu) {
-          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-        }
+    // Ensure the blogs submenu shows by default (CSS handles hidden by default, HTML inline style or JS can override)
+    // We set id="submenu-blogs" class="... block" in HTML, so it starts visible.
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
-    });
+    }
   </script>
 </body>
 
