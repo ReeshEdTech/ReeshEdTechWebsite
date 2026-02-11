@@ -1,159 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Grades Won't Open Job Doors — But Your GitHub Repo Will! | TopStudyMaterial</title>
+
   <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
 
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Grades Won't Open Job Doors — But Your GitHub Repo Will!</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="canonical" href="https://www.topstudymaterial.com" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    article h2 {
+      @apply text-2xl font-bold text-gray-900 mt-8 mb-4 border-b pb-2;
+    }
+
+    article p {
+      @apply text-gray-700 mb-6 leading-relaxed text-lg;
+    }
+
+    article ul {
+      @apply list-disc list-inside space-y-2 mb-6 text-gray-700 ml-4;
+    }
+
+    article ol {
+      @apply list-decimal list-inside space-y-2 mb-6 text-gray-700 ml-4;
+    }
+
+    article blockquote {
+      @apply border-l-4 border-indigo-500 pl-4 py-2 italic text-gray-600 bg-gray-50 rounded-r my-6;
+    }
+
+    table {
+      @apply w-full border-collapse border border-gray-200 mb-6;
+    }
+
+    th,
+    td {
+      @apply border border-gray-200 p-3 text-left;
+    }
+
+    th {
+      @apply bg-gray-50 font-bold text-gray-800;
+    }
+
+    .cta-button {
+      @apply inline-block px-8 py-4 bg-red-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-105;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow py-6">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold">Your Grades Won't Open Job Doors — But Your GitHub Repo Will!</h1>
-      <!-- <p class="text-sm text-gray-600 mt-2">By John Doe · April 15, 2024</p> -->
+<body class="bg-gray-50 font-sans text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="../../index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="../../index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="../../blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="../../about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="../../index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="../../blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="../../about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero-gradient text-white py-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span
+        class="bg-indigo-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Career
+        Guide</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Your Grades Won't Open Job Doors — But Your
+        GitHub Repo Will!</h1>
+      <p class="text-lg opacity-90">Why proof of work matters more than your CGPA in 2025.</p>
     </div>
   </header>
 
-  <main class="container mx-auto px-4 py-10 max-w-4xl">
-    <article class="bg-white rounded-lg shadow p-6">
-      <!-- <img src="../images/online-teaching.jpg" alt="Online Teaching" class="rounded mb-6 w-full"> -->
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <article class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
 
-      <p><strong>In 2025</strong>, your college CGPA might still impress your relatives, but recruiters? <em>Not so much.</em></p>
+      <p><strong>In 2025</strong>, your college CGPA might still impress your relatives, but recruiters? <em>Not so
+          much.</em></p>
+      <p>Today’s tech hiring is all about <strong>skills, projects, collaboration</strong>, and most importantly —
+        <strong>proof of work</strong>. And there’s no better proof than your <strong>GitHub portfolio</strong>.</p>
 
-<p>Today’s tech hiring is all about <strong>skills, projects, collaboration</strong>, and most importantly — <strong>proof of work</strong>. And there’s no better proof than your <strong>GitHub portfolio</strong>.</p>
+      <h2>The Harsh Truth: Grades Aren’t Enough in 2025</h2>
+      <p>Here’s a bitter pill:</p>
+      <blockquote>“A 9.0 GPA with no practical experience loses out to a 6.5 GPA with real-world projects on GitHub.”
+      </blockquote>
+      <p>College exams test theory, not problem-solving. Real-world jobs need <strong>code</strong>, not crammed
+        answers.</p>
 
-<h2>The Harsh Truth: Grades Aren’t Enough in 2025</h2>
-<br>
-<p>Here’s a bitter pill:</p>
-<blockquote>“A 9.0 GPA with no practical experience loses out to a 6.5 GPA with real-world projects on GitHub.”</blockquote>
-<p>College exams test theory, not problem-solving. Real-world jobs need <strong>code</strong>, not crammed answers.</p>
-<br>
-<h2>What Recruiters Actually Look For</h2>
-<table >
-<thead><tr><th>✅ Skills</th><th>❌ Grades</th></tr></thead>
-<tbody>
-<tr><td>Clean code on GitHub</td> <td>CGPA out of 10</td></tr>
-<tr><td>Real-world projects</td> <td>Lab assignments</td></tr>
-<tr><td>Open-source contributions</td> <td>Semester toppers</td></tr>
-<tr><td>Collaboration (PRs, issues)</td> <td>Attendance records</td></tr>
-<tr><td>Problem-solving on LeetCode</td> <td>    Rank in class</td></tr>
-</tbody>
-</table>
-<br> <br> 
-<h2>Why GitHub is Your New Resume</h2>
-<p>Your GitHub profile tells a story:</p>
-<ul>
-<li>What languages do you know?</li>
-<li>How active are you in coding?</li>
-<li>Are you a team player (open source PRs)?</li>
-<li>Can you build full-stack apps, scripts, tools?</li>
-</ul>
-<br>
-<p>💡 <strong>Pro Tip:</strong> Many recruiters search candidates directly on GitHub and filter by language, stars, and contribution graph.</p>
-<br>
-<h2>How to Build a Powerful GitHub Profile (Action Plan)</h2>
-<ol>
-<li><strong>Start Building Projects</strong> – Weather app, Chat app, Portfolio site</li>
-<li><strong>Contribute to Open Source</strong> – Look for “good first issues”</li>
-<li><strong>Be Consistent</strong> – Green graph matters</li>
-<li><strong>Link GitHub Everywhere</strong> – Resume, LinkedIn, Website</li>
-</ol>
-<br>
-<h2><b>Final Thoughts: Build Projects, Not Just CGPA </b></h2>
-<p>Your grades may help clear eligibility filters, but they don’t prove your skills.</p>
+      <h2>What Recruiters Actually Look For</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>✅ Skills</th>
+              <th>❌ Grades</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clean code on GitHub</td>
+              <td>CGPA out of 10</td>
+            </tr>
+            <tr>
+              <td>Real-world projects</td>
+              <td>Lab assignments</td>
+            </tr>
+            <tr>
+              <td>Open-source contributions</td>
+              <td>Semester toppers</td>
+            </tr>
+            <tr>
+              <td>Collaboration (PRs, issues)</td>
+              <td>Attendance records</td>
+            </tr>
+            <tr>
+              <td>Problem-solving on LeetCode</td>
+              <td>Rank in class</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<blockquote>🎯 “So next time you study for an exam, spend an hour on GitHub too. Your future self will thank you.”</blockquote>
+      <h2>Why GitHub is Your New Resume</h2>
+      <p>Your GitHub profile tells a story:</p>
+      <ul>
+        <li>What languages do you know?</li>
+        <li>How active are you in coding?</li>
+        <li>Are you a team player (open source PRs)?</li>
+        <li>Can you build full-stack apps, scripts, tools?</li>
+      </ul>
+      <p class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">💡 <strong>Pro Tip:</strong> Many recruiters
+        search candidates directly on GitHub and filter by language, stars, and contribution graph.</p>
 
-<!-- <h3>🔗 Related Reads:</h3>
-<ul>
-<li><a href="/top-github-projects-students-2025">Top 5 GitHub Projects Every CS Student Should Build in 2025</a></li>
-<li><a href="/resume-vs-github-real-recruiter-checklist">Resume vs GitHub: What Do Recruiters Really See?</a></li>
-<li><a href="/start-open-source-college">How to Start Contributing to Open Source in College</a></li>
-</ul> -->
+      <h2>How to Build a Powerful GitHub Profile (Action Plan)</h2>
+      <ol>
+        <li><strong>Start Building Projects</strong> – Weather app, Chat app, Portfolio site</li>
+        <li><strong>Contribute to Open Source</strong> – Look for “good first issues”</li>
+        <li><strong>Be Consistent</strong> – Green graph matters</li>
+        <li><strong>Link GitHub Everywhere</strong> – Resume, LinkedIn, Website</li>
+      </ol>
+
+      <h2>Final Thoughts: Build Projects, Not Just CGPA</h2>
+      <p>Your grades may help clear eligibility filters, but they don’t prove your skills.</p>
+      <blockquote>🎯 “So next time you study for an exam, spend an hour on GitHub too. Your future self will thank you.”
+      </blockquote>
+
     </article>
 
-    <!-- Related Posts -->
-    <!-- <section class="mt-12">
-      <h3 class="text-2xl font-bold mb-6">Related Posts</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-lg shadow p-4">
-          <h4 class="text-lg font-semibold"><a href="lifelong-learning.html" class="text-blue-600 hover:underline">The Benefits of Lifelong Learning</a></h4>
-          <p class="text-sm text-gray-600">April 10, 2024 · Jane Smith</p>
-        </div>
-        <div class="bg-white rounded-lg shadow p-4">
-          <h4 class="text-lg font-semibold"><a href="student-engagement.html" class="text-blue-600 hover:underline">5 Ways to Boost Student Engagement Online</a></h4>
-          <p class="text-sm text-gray-600">March 28, 2024 · Alex Brown</p>
-        </div>
-      </div>
-    </section> -->
-    <br>
- <div style="text-align: center; margin-top: 40px;">
-    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-      <button  style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    "> For More AI & Career Tips Click Here....!!!</button>     
-  </div>
-<br>
+    <!-- CTA -->
+    <div class="text-center my-16">
+      <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank"
+        class="cta-button">
+        Get More Career Tips on YouTube <i class="fab fa-youtube ml-2"></i>
+      </a>
+    </div>
+
     <!-- Comments Section -->
-    <section class="mt-12">
-      <h3 class="text-2xl font-bold mb-4">Comments</h3>
+    <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-12">
+      <h3 class="text-2xl font-bold mb-6">Comments</h3>
       <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-2 border rounded" />
-        <textarea placeholder="Your Comment" rows="4" class="w-full p-2 border rounded"></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Post Comment</button>
+        <input type="text" placeholder="Your Name"
+          class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+        <textarea placeholder="Your Comment" rows="4"
+          class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+        <button type="submit"
+          class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition">Post
+          Comment</button>
       </form>
     </section>
 
-    <div class="mt-8 text-left">
-      <a href="/blogs.html" class="text-blue-600 hover:underline">← Back to Blog</a>
+    <div class="mt-8">
+      <a href="../../blogs.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition flex items-center">
+        <i class="fas fa-arrow-left mr-2"></i> Back to All Blogs
+      </a>
     </div>
+
   </main>
 
- <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-family: sans-serif;">
-  
-  <!-- Laptop Card -->
-  <div style="border: 2px solid #ccc; padding: 15px; border-radius: 10px; width: 350px; background: #f9f9f9; box-sizing: border-box;">
-    <h3 style="color: #2c3e50;">🔥<b>Best Laptop for Engineering Students</b></h3>
-    <img src="https://m.media-amazon.com/images/I/71bagLp2sXL._SX679_.jpg" alt="Laptop" style="width:100%; height: 200px; object-fit: contain; border-radius: 8px;">
-    <p style="margin-top: 10px; min-height: 60px;">Powerful performance, sleek design, and long battery life – ideal for coding, design, and engineering software.</p>
-    <a href="https://amzn.to/3SgRxJq" target="_blank" style="display:inline-block; padding:10px 15px; background-color:#ff9900; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">🔗 Buy on Amazon</a>
-  </div>
+  <!-- Product Recommendations -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Student Essentials</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Laptop -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+        <h4 class="font-bold text-lg mb-4 text-gray-800">Best Laptop for Engineers</h4>
+        <img src="https://m.media-amazon.com/images/I/71bagLp2sXL._SX679_.jpg" alt="Laptop"
+          class="h-40 object-contain mb-4">
+        <p class="text-sm text-gray-600 mb-4 flex-grow">Powerful performance, sleek design, and long battery life –
+          ideal for coding.</p>
+        <a href="https://amzn.to/3SgRxJq" target="_blank"
+          class="bg-yellow-500 text-white px-4 py-2 rounded font-bold hover:bg-yellow-600 transition w-full">View on
+          Amazon</a>
+      </div>
 
-  <!-- Headphones Card -->
-  <div style="border: 2px solid #ccc; padding: 15px; border-radius: 10px; width: 350px; background: #f9f9f9; box-sizing: border-box;">
-    <h3 style="color: #2c3e50;">🎧 <b>Best Sports Headphones for Active Lifestyles</b></h3>
-    <img src="https://m.media-amazon.com/images/I/41OJjgbEB7L._SX679_.jpg" alt="Sports Headphones" style="width:100%; height: 200px; object-fit: contain; border-radius: 8px;">
- 
-    <p style="margin-top: 10px; min-height: 60px;">Wireless, sweatproof, and made for high-performance workouts. Ideal for gym-goers, runners, and music lovers on the move!</p>
-    <a href="https://amzn.to/3Sj33UC" target="_blank" style="display:inline-block; padding:10px 15px; background-color:#ff9900; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">🔗 Buy on Amazon</a>
-  </div>
-    <!-- Keyboard Card -->
+      <!-- Headphones -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+        <h4 class="font-bold text-lg mb-4 text-gray-800">Best Sports Headphones</h4>
+        <img src="https://m.media-amazon.com/images/I/41OJjgbEB7L._SX679_.jpg" alt="Headphones"
+          class="h-40 object-contain mb-4">
+        <p class="text-sm text-gray-600 mb-4 flex-grow">Wireless, sweatproof, and high-performance audio for your
+          workouts.</p>
+        <a href="https://amzn.to/3Sj33UC" target="_blank"
+          class="bg-yellow-500 text-white px-4 py-2 rounded font-bold hover:bg-yellow-600 transition w-full">View on
+          Amazon</a>
+      </div>
 
-<div style="border: 2px solid #ccc; padding: 15px; border-radius: 10px; width: 350px; background: #f9f9f9; box-sizing: border-box; font-family: sans-serif;">
-  
-  <h3 style="color: #2c3e50;">⌨️ <b>Top Wireless Keyboard for Productivity</b></h3>
-  <img src="https://m.media-amazon.com/images/I/61pUul1oDlL._SX679_.jpg" alt="Wireless Keyboard" style="width:100%; height: 200px; object-fit: contain; border-radius: 8px;">
- 
-  <p style="margin-top: 10px; min-height: 60px;">Sleek, compact wireless keyboard ideal for students and professionals. Enjoy smooth typing, long battery life, and a clutter-free desk.</p>
-  <a href="https://amzn.to/3SgramY" target="_blank" style="display:inline-block; padding:10px 15px; background-color:#ff9900; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">🔗 Buy on Amazon</a>
-</div>
-</div>
+      <!-- Keyboard -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+        <h4 class="font-bold text-lg mb-4 text-gray-800">Productivity Keyboard</h4>
+        <img src="https://m.media-amazon.com/images/I/61pUul1oDlL._SX679_.jpg" alt="Keyboard"
+          class="h-40 object-contain mb-4">
+        <p class="text-sm text-gray-600 mb-4 flex-grow">Sleek, compact wireless keyboard for a clutter-free desk setup.
+        </p>
+        <a href="https://amzn.to/3SgramY" target="_blank"
+          class="bg-yellow-500 text-white px-4 py-2 rounded font-bold hover:bg-yellow-600 transition w-full">View on
+          Amazon</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="../../assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="../../assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="../../assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
 </body>
-</html>
 
+</html>

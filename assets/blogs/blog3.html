@@ -1,114 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Building a Portfolio Website is a Must | TopStudyMaterial</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Grades Won't Open Job Doors — But Your GitHub Repo Will!</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="canonical" href="https://www.topstudymaterial.com" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2S5XM7GD6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D2S5XM7GD6');
+  </script>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .content-card {
+      @apply bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8;
+    }
+
+    h2 {
+      @apply text-2xl font-bold text-gray-900 mt-6 mb-4;
+    }
+
+    p {
+      @apply text-gray-700 mb-4 leading-relaxed;
+    }
+
+    ul {
+      @apply list-disc list-inside space-y-2 mb-4 text-gray-700 ml-4;
+    }
+
+    .tip {
+      @apply bg-blue-50 text-blue-800 p-4 rounded-lg text-sm mt-2 border-l-4 border-blue-500 font-medium;
+    }
+
+    .cta-button {
+      @apply inline-block px-8 py-4 bg-red-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-105;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow py-6">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold"> 💻 Why Building a Portfolio Website is a Must for Every Computer Engineering Student</h1>
+<body class="bg-gray-50 font-sans text-gray-900">
 
-      <!-- <p class="text-sm text-gray-600 mt-2">By John Doe · April 15, 2024</p> -->
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="../../index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+          class="text-gray-800">Material</span></a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="../../index.html#notes" class="hover:text-indigo-600">Notes</a>
+        <a href="../../blogs.html" class="hover:text-indigo-600">Blogs</a>
+        <a href="../../about.html" class="hover:text-indigo-600">About</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 p-4" id="mobile-menu">
+      <a href="../../index.html#notes" class="block py-2 text-gray-700 hover:text-indigo-600">Notes</a>
+      <a href="../../blogs.html" class="block py-2 text-gray-700 hover:text-indigo-600">Blogs</a>
+      <a href="../../about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero-gradient text-white py-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span
+        class="bg-indigo-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Web
+        Development</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Why Building a Portfolio Website is a Must for
+        Every Student</h1>
+      <p class="text-lg opacity-90">Your digital resume, project showcase, and personal brand — all in one.</p>
     </div>
   </header>
 
-  <main class="container mx-auto px-4 py-10 max-w-4xl">
-    <article class="bg-white rounded-lg shadow p-6">
-      <!-- <img src="../images/online-teaching.jpg" alt="Online Teaching" class="rounded mb-6 w-full"> -->
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <article class="content-card">
 
-  <p>In the digital-first world of 2025, having a strong <strong>online presence</strong> is no longer optional — it’s essential, especially for computer engineering students. Whether you're aiming for internships, placements, freelancing gigs, or even higher education, a <strong>personal portfolio website</strong> acts as your <em>digital resume, project showcase,</em> and <em>personal brand</em> — all rolled into one.</p>
-  <br>
+      <p class="text-xl font-medium mb-8">In the digital-first world of 2025, having a strong <strong>online
+          presence</strong> is no longer optional — it’s essential. Whether you're aiming for internships, placements,
+        or freelancing gigs, a <strong>personal portfolio</strong> sets you apart.</p>
 
-  <h2><b>🚀 1. It Shows You’re a Serious Professional (Even Before You Graduate)</b></h2> 
-  <p>Anyone can say they're "passionate about coding" on a resume. But having a <strong>live website</strong> that displays your work proves it.</p>
-  <ul>
-    <li>You’re tech-savvy and career-oriented</li>
-    <li>You understand how to present your work</li>
-    <li>You’re ahead of most peers</li>
-  </ul>
-  <div class="tip">👨‍💻 <strong>Tip:</strong> Use free platforms like GitHub Pages, Netlify, or Vercel to host your site.</div>
-<br>
-<h2><b>🛠️ 2. Demonstrates Your Technical Skills in Real-Time</b></h2>
-  <p>Your portfolio isn’t just design — it’s a project in itself!</p>
-  <ul>
-    <li>HTML, CSS, and JavaScript skills</li>
-    <li>Use of frameworks like React, Tailwind</li>
-    <li>Deployment, Git version control</li>
-  </ul>
-  <div class="tip">🎓 <strong>Bonus:</strong> It counts as a project during interviews!</div>
-<br>
-  <h2><b>📁 3. A Central Hub for Your Work (No More Scattered Links)</b></h2>
-  <p>Your portfolio neatly displays:</p>
-  <ul>
-    <li>Projects (hosted or GitHub)</li>
-    <li>Certifications with links</li>
-    <li>Internships, blogs, or tutorials</li>
-    <li>Downloadable resume</li>
-  </ul>
-  <div class="tip">📌 <strong>Tip:</strong> Add tags like #Python, #AI, or #JavaScript to your projects.</div>
- <br>
-  <h2>🌐<b> 4. Makes You Searchable on Google</b></h2>
-  <p>Ever Googled your name and found nothing? A portfolio site helps build your <strong>digital identity</strong>.</p>
-  <div class="tip">✨ <strong>Pro Tip:</strong> Buy a domain like <code>yourname.dev</code> or <code>yourname.tech</code> for impact.</div>
-<br>
-  <h2><b>🧠 5. Great Tool for Self-Learning & Growth</b></h2>
-  <p>Creating a site helps you:</p>
-  <ul>
-    <li>Practice frontend and design</li>
-    <li>Understand UI/UX basics</li>
-    <li>Document your journey and learnings</li>
-  </ul>
-  <div class="tip">📈 <strong>Tip:</strong> Update your site regularly to track your growth.</div>
-<br>
-  <h2><b>🎯 6. Gives You an Edge in Interviews and Career Fairs</b></h2>
-  <p>Imagine saying in an interview: <em>“Please visit my website to see my work.”</em></p>
-  <p>That kind of confidence can lead to:</p>
-  <ul>
-    <li>More interview calls</li>
-    <li>College project recognition</li>
-    <li>Freelance clients and opportunities</li>
-  </ul>
-  <br>
-   <div style="text-align: center; margin-top: 40px;">
-    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank">
-      <button  style="
-      padding: 14px 30px; 
-      font-size: 18px; 
-      background-color: #FF0000; 
-      color: white; 
-      border: none; 
-      border-radius: 8px; 
-      cursor: pointer; 
-      transition: 0.3s;
-      animation: pulse 2s infinite;
-    "> For More AI & Career Tips Click Here....!!!</button>     
-  </div>
-<br>
-    <section class="mt-12">
-      <h3 class="text-2xl font-bold mb-4">Comments</h3>
+      <h2>🚀 1. It Shows You’re a Serious Professional</h2>
+      <p>Anyone can say they're "passionate about coding" on a resume. But having a <strong>live website</strong> that
+        displays your work proves it.</p>
+      <ul>
+        <li>You’re tech-savvy and career-oriented</li>
+        <li>You understand how to present your work</li>
+        <li>You’re ahead of most peers</li>
+      </ul>
+      <div class="tip">👨‍💻 <strong>Tip:</strong> Use free platforms like GitHub Pages, Netlify, or Vercel to host your
+        site.</div>
+
+      <h2>🛠️ 2. Demonstrates Your Technical Skills in Real-Time</h2>
+      <p>Your portfolio isn’t just design — it’s a project in itself!</p>
+      <ul>
+        <li>HTML, CSS, and JavaScript skills</li>
+        <li>Use of frameworks like React, Tailwind</li>
+        <li>Deployment, Git version control</li>
+      </ul>
+      <div class="tip">🎓 <strong>Bonus:</strong> It counts as a live project during interviews!</div>
+
+      <h2>📁 3. A Central Hub for Your Work</h2>
+      <p>Your portfolio neatly displays:</p>
+      <ul>
+        <li>Projects (hosted or GitHub)</li>
+        <li>Certifications with links</li>
+        <li>Internships, blogs, or tutorials</li>
+        <li>Downloadable resume</li>
+      </ul>
+      <div class="tip">📌 <strong>Tip:</strong> Add tags like #Python, #AI, or #JavaScript to your projects for better
+        visibility.</div>
+
+      <h2>🌐 4. Makes You Searchable on Google</h2>
+      <p>Ever Googled your name and found nothing? A portfolio site helps build your <strong>digital identity</strong>.
+      </p>
+      <div class="tip">✨ <strong>Pro Tip:</strong> Buy a domain like <code>yourname.dev</code> or
+        <code>yourname.tech</code> for maximum impact.</div>
+
+      <h2>🧠 5. Great Tool for Self-Learning & Growth</h2>
+      <p>Creating a site helps you:</p>
+      <ul>
+        <li>Practice frontend and design</li>
+        <li>Understand UI/UX basics</li>
+        <li>Document your journey and learnings</li>
+      </ul>
+      <div class="tip">📈 <strong>Tip:</strong> Update your site regularly to track your growth over time.</div>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="text-center my-16">
+      <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg?sub_confirmation=1" target="_blank"
+        class="cta-button">
+        Get More Web Dev & Career Tips <i class="fab fa-youtube ml-2"></i>
+      </a>
+    </div>
+
+    <!-- Comments Section -->
+    <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-12">
+      <h3 class="text-2xl font-bold mb-6">Comments</h3>
       <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-2 border rounded" />
-        <textarea placeholder="Your Comment" rows="4" class="w-full p-2 border rounded"></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Post Comment</button>
+        <input type="text" placeholder="Your Name"
+          class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+        <textarea placeholder="Your Comment" rows="4"
+          class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+        <button type="submit"
+          class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition">Post
+          Comment</button>
       </form>
     </section>
 
-    <div class="mt-8 text-left">
-      <a href="/blogs.html" class="text-blue-600 hover:underline">← Back to Blog</a>
+    <div class="mt-8">
+      <a href="../../blogs.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition flex items-center">
+        <i class="fas fa-arrow-left mr-2"></i> Back to All Blogs
+      </a>
     </div>
+
   </main>
 
- 
-  
-</body>
-</html>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+        <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="opacity-70 space-y-2">
+          <li><a href="../../assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+          <li><a href="../../assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a></li>
+          <li><a href="../../assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://www.youtube.com/@SPPU_CS_IT_Solutions"><i class="fab fa-youtube hover:text-red-500"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial. Designed by
+      Reshma Kapadi.</p>
+  </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+
+</html>
