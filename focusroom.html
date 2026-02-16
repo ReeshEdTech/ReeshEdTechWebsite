@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Focus Room | TopStudyMaterial</title>
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; }
+        .header { background: #764ba2; color: white; padding: 15px 20px; text-align: center; }
+        
+        .study-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 20px; 
+            max-width: 1400px; 
+            margin: auto; 
+        }
+
+        #video-section { 
+            flex: 3; 
+            min-width: 600px; 
+            height: 650px; 
+            background: #000; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        #sidebar { 
+            flex: 1; 
+            min-width: 300px; 
+            padding: 25px; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #timer-display { 
+            font-size: 64px; 
+            font-weight: bold; 
+            color: #ff4757; 
+            margin: 20px 0; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            background: #2ed573;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover { transform: scale(1.05); background: #26af5f; }
+
+        .stats { width: 100%; margin-top: 30px; text-align: left; }
+        .online-dot { height: 10px; width: 10px; background-color: #2ed573; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        
+        @media (max-width: 800px) {
+            #video-section { min-width: 100%; height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🚀 TopStudyMaterial Live Focus Room</h1>
+    <p>Study together, Grow together.</p>
+</div>
+
+<div class="study-container">
+    <div id="video-section"></div>
+    
+    <div id="sidebar">
+        <h2>Focus Timer</h2>
+        <div id="timer-display">25:00</div>
+        <button id="start-session">Start 25m Session</button>
+        
+        <div class="stats">
+            <hr>
+            <h3><span class="online-dot"></span> Students Online: <span id="online-count">0</span></h3>
+            <p style="color: #666; font-size: 14px;">Body doubling active. Others can see you studying!</p>
+            <ul id="user-list" style="list-style: none; padding: 0; color: #444;"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://meet.jit.si/external_api.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<script>
+    // --- FIREBASE CONFIGURATION ---
+    // PASTE YOUR FIREBASE SDK CONFIG OBJECT HERE
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT.firebaseapp.com",
+        databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT.appspot.com",
+        messagingSenderId: "YOUR_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // --- JITSI VIDEO INTEGRATION ---
+    const domain = "meet.jit.si";
+    const options = {
+        roomName: "TopStudyMaterial_Global_Focus_Room_2026", // Change this to something unique
+        parentNode: document.querySelector('#video-section'),
+        width: "100%",
+        height: "100%",
+        configOverwrite: { 
+            startWithAudioMuted: true,
+            disableModeratorIndicator: true,
+            enableEmailInStats: false
+        },
+        interfaceConfigOverwrite: {
+            TOOLBAR_BUTTONS: ['microphone', 'camera', 'chat', 'tileview']
+        }
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+
+    // --- SYNCED POMODORO TIMER ---
+    const timerRef = db.ref("shared_timer");
+    const timerDisplay = document.getElementById('timer-display');
+    const startBtn = document.getElementById('start-session');
+
+    // Update Firebase when button clicked
+    startBtn.onclick = () => {
+        const endTime = Date.now() + (25 * 60 * 1000); 
+        timerRef.set({ endTime: endTime, active: true });
+    };
+
+    // Listen for timer changes
+    timerRef.on("value", (snapshot) => {
+        const data = snapshot.val();
+        if (data && data.active) {
+            if (window.timerInterval) clearInterval(window.timerInterval);
+            
+            window.timerInterval = setInterval(() => {
+                const now = Date.now();
+                const remaining = data.endTime - now;
+
+                if (remaining <= 0) {
+                    clearInterval(window.timerInterval);
+                    timerDisplay.innerText = "00:00";
+                    timerDisplay.style.color = "#2ed573"; // Turn green when finished
+                    return;
+                }
+
+                const mins = Math.floor(remaining / 60000);
+                const secs = Math.floor((remaining % 60000) / 1000);
+                timerDisplay.innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                timerDisplay.style.color = "#ff4757";
+            }, 1000);
+        }
+    });
+
+    // --- PRESENCE TRACKING ---
+    const onlineCountLabel = document.getElementById('online-count');
+    const presenceRef = db.ref("presence");
+    const myUserRef = presenceRef.push();
+
+    db.ref(".info/connected").on("value", (snap) => {
+        if (snap.val() === true) {
+            myUserRef.onDisconnect().remove();
+            myUserRef.set({ status: "studying", joinedAt: Date.now() });
+        }
+    });
+
+    presenceRef.on("value", (snap) => {
+        onlineCountLabel.innerText = snap.numChildren();
+    });
+
+</script>
+</body>
+</html>

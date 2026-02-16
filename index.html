@@ -37,9 +37,9 @@
                 <a href="blogs.html" class="hover:text-indigo-600">Blogs</a>
                 <a href="about.html" class="hover:text-indigo-600">About</a>
             </div>
-           <a href="#notes"> <button 
-                class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">Get
-                Started </button></a>
+            <a href="#notes"> <button
+                    class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">Get
+                    Started </button></a>
         </div>
     </nav>
 
@@ -88,6 +88,7 @@
                         class="fas fa-arrow-right text-sm"></i></a>
             </div>
         </div>
+        <!-- Smart Student Tools section (commented out for now)
         <section class="bg-indigo-50 py-16 px-4">
             <div class="max-w-7xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-12">Smart Student Tools</h2>
@@ -120,9 +121,9 @@
                             class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4">
                             <i class="fas fa-tasks text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2">Syllabus Tracker</h3>
-                        <p class="text-sm text-gray-600 mb-4">Track which units you've finished and what's pending.</p>
-                        <button class="text-purple-600 font-bold text-sm hover:underline">Open Dashboard →</button>
+                        <h3 class="font-bold text-lg mb-2">Live Focus Room</h3>
+                        <p class="text-sm text-gray-600 mb-4">Stop Procrastinating via Body Doubling. Don't study harder, study together.</p>
+                        <button class="text-purple-600 font-bold text-sm hover:underline">Study Together →</button>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-500">
@@ -139,6 +140,8 @@
                 </div>
             </div>
         </section>
+        -->
+
     </main>
 
     <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
@@ -170,6 +173,18 @@
         <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial</p>
     </footer>
 
+    <div id="doubt-buster-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <button id="mic-btn"
+            style="background: #007bff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+            <span id="mic-icon" style="font-size: 24px;">🎙️</span>
+        </button>
+        <div id="response-box"
+            style="display: none; position: absolute; bottom: 80px; right: 0; width: 300px; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); font-family: sans-serif;">
+            <p id="status-text" style="font-size: 12px; color: gray;">Listening...</p>
+            <p id="ai-response" style="font-size: 14px; color: #333;"></p>
+        </div>
+    </div>
+    <script src="assets/js/voice-bot.js"></script>
 </body>
 
 </html>
