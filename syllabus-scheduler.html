@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus to Schedule Converter | TopStudyMaterial</title>
+    <meta name="description"
+        content="Convert your syllabus into a daily study schedule and export it to Google Calendar. Never miss a chapter before your exams.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-focus:focus {
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-row {
+            animation: fadeInUp 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .progress-bar {
+            transition: width 1s ease;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+        }
+
+        .chapter-entry {
+            animation: fadeInUp 0.3s ease forwards;
+        }
+
+        .subtopic-tag {
+            transition: all 0.2s ease;
+        }
+
+        .subtopic-tag:hover {
+            transform: scale(1.03);
+        }
+
+        /* Table styles */
+        .schedule-table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .schedule-table thead th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .schedule-table thead th:first-child {
+            border-radius: 12px 0 0 0;
+        }
+
+        .schedule-table thead th:last-child {
+            border-radius: 0 12px 0 0;
+        }
+
+        .schedule-table tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 12px;
+        }
+
+        .schedule-table tbody tr:last-child td:last-child {
+            border-radius: 0 0 12px 0;
+        }
+
+        .schedule-table tbody tr:hover {
+            background-color: #f0f0ff;
+        }
+
+        .day-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 4px 12px;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        .exam-row td {
+            background: linear-gradient(90deg, #fef2f2, #fff7ed) !important;
+        }
+
+        @media print {
+
+            nav,
+            footer,
+            .no-print {
+                display: none !important;
+            }
+
+            .schedule-row {
+                animation: none;
+                opacity: 1;
+            }
+
+            .schedule-table thead th {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .day-badge {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .schedule-table-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">TopStudy<span
+                    class="text-gray-800">Material</span></a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-indigo-600">Home</a>
+                <a href="blogs.html" class="hover:text-indigo-600">Blogs</a>
+                <a href="about.html" class="hover:text-indigo-600">About</a>
+            </div>
+            <a href="index.html">
+                <button
+                    class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-indigo-700 transition">
+                    ← Back to Home
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient text-white py-14 md:py-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-yellow-300 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10">
+            <div
+                class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium mb-6">
+                <i class="fas fa-calendar-check mr-2"></i> Smart Study Planner
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+                Syllabus → Schedule
+            </h1>
+            <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+                Enter your chapters with subtopics & exam date. Get a daily study plan exported directly to your
+                calendar.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+
+        <!-- Input Section -->
+        <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6 md:p-10 mb-10 no-print">
+            <div class="flex items-center gap-3 mb-8">
+                <div
+                    class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 text-xl">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold">Setup Your Study Plan</h2>
+                    <p class="text-gray-500 text-sm">Add chapters with their subtopics and we'll generate your schedule
+                    </p>
+                </div>
+            </div>
+
+            <!-- Basic Info -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        <i class="fas fa-book mr-1 text-indigo-500"></i> Subject Name
+                    </label>
+                    <input type="text" id="subjectName" placeholder="e.g. Artificial Intelligence"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 input-focus outline-none text-gray-800">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        <i class="fas fa-calendar-alt mr-1 text-indigo-500"></i> Exam Date
+                    </label>
+                    <input type="date" id="examDate"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 input-focus outline-none text-gray-800">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        <i class="fas fa-clock mr-1 text-indigo-500"></i> Study Hours Per Day
+                    </label>
+                    <input type="number" id="studyHours" min="1" max="16" value="4" placeholder="e.g. 4"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 input-focus outline-none text-gray-800">
+                </div>
+            </div>
+
+            <!-- Chapter Builder -->
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <label class="block text-sm font-semibold text-gray-700">
+                        <i class="fas fa-layer-group mr-1 text-indigo-500"></i> Chapters & Subtopics
+                    </label>
+                    <span class="text-xs text-gray-400" id="chapterCount">0 chapters added</span>
+                </div>
+
+                <!-- Add Chapter Input -->
+                <div class="bg-indigo-50/50 border border-indigo-100 rounded-2xl p-5 mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-500 mb-1">Chapter Name</label>
+                            <input type="text" id="newChapterName" placeholder="e.g. Search Algorithms"
+                                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-indigo-500 input-focus outline-none text-sm"
+                                onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('newSubtopics').focus();}">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-500 mb-1">Subtopics <span
+                                    class="text-gray-400">(comma-separated)</span></label>
+                            <input type="text" id="newSubtopics"
+                                placeholder="e.g. BFS, DFS, A* Algorithm, Greedy Search"
+                                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-indigo-500 input-focus outline-none text-sm"
+                                onkeydown="if(event.key==='Enter'){event.preventDefault();addChapter();}">
+                        </div>
+                    </div>
+                    <button onclick="addChapter()"
+                        class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-indigo-700 transition cursor-pointer">
+                        <i class="fas fa-plus mr-1"></i> Add Chapter
+                    </button>
+                </div>
+
+                <!-- Chapter List -->
+                <div id="chapterList" class="space-y-3 max-h-[400px] overflow-y-auto pr-1">
+                    <!-- Dynamic chapter entries go here -->
+                </div>
+            </div>
+
+            <!-- Quick Paste Option -->
+            <div class="mb-6">
+                <button onclick="toggleBulkInput()"
+                    class="text-indigo-600 text-sm font-semibold hover:underline cursor-pointer flex items-center gap-1">
+                    <i class="fas fa-paste"></i>
+                    <span id="bulkToggleText">Or paste entire syllabus at once</span>
+                </button>
+                <div id="bulkInputArea" class="hidden mt-3">
+                    <p class="text-xs text-gray-500 mb-2">
+                        Format: each line is a chapter. Use <code class="bg-gray-100 px-1 rounded">|</code> to separate
+                        chapter name from subtopics.
+                        Subtopics are comma-separated.
+                    </p>
+                    <textarea id="bulkSyllabus" rows="6"
+                        placeholder="Introduction to AI | History of AI, Turing Test, AI Applications&#10;Intelligent Agents | Agent types, PEAS, Environment types&#10;Search Algorithms | BFS, DFS, A*, Greedy Search&#10;Knowledge Representation | Propositional Logic, FOL, Inference"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 input-focus outline-none text-gray-800 resize-none text-sm font-mono"></textarea>
+                    <button onclick="importBulkSyllabus()"
+                        class="mt-2 bg-green-600 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-green-700 transition cursor-pointer">
+                        <i class="fas fa-file-import mr-1"></i> Import Syllabus
+                    </button>
+                </div>
+            </div>
+
+            <button onclick="generateSchedule()"
+                class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg w-full md:w-auto cursor-pointer">
+                <i class="fas fa-magic mr-2"></i> Generate Study Schedule
+            </button>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorMsg"
+            class="hidden bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-xl mb-8 flex items-center gap-3">
+            <i class="fas fa-exclamation-circle text-xl"></i>
+            <span id="errorText"></span>
+        </div>
+
+        <!-- Stats Overview -->
+        <section id="statsSection" class="hidden mb-10">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="stat-card rounded-2xl p-5 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl font-extrabold text-indigo-600" id="statDays">—</div>
+                    <div class="text-sm text-gray-500 mt-1 font-medium">Days Remaining</div>
+                </div>
+                <div class="stat-card rounded-2xl p-5 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl font-extrabold text-purple-600" id="statChapters">—</div>
+                    <div class="text-sm text-gray-500 mt-1 font-medium">Total Chapters</div>
+                </div>
+                <div class="stat-card rounded-2xl p-5 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl font-extrabold text-blue-600" id="statSubtopics">—</div>
+                    <div class="text-sm text-gray-500 mt-1 font-medium">Total Subtopics</div>
+                </div>
+                <div class="stat-card rounded-2xl p-5 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl font-extrabold text-green-600" id="statPerDay">—</div>
+                    <div class="text-sm text-gray-500 mt-1 font-medium">Chapters / Day</div>
+                </div>
+                <div class="stat-card rounded-2xl p-5 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl font-extrabold text-orange-500" id="statHours">—</div>
+                    <div class="text-sm text-gray-500 mt-1 font-medium">Hours / Chapter</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Table -->
+        <section id="scheduleSection" class="hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold">
+                        <i class="fas fa-table text-indigo-500 mr-2"></i> Your Study Schedule
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-1" id="scheduleSubtitle"></p>
+                </div>
+                <div class="flex flex-wrap gap-3 no-print">
+                    <button onclick="downloadICS()"
+                        class="btn-secondary bg-white border-2 border-gray-200 text-gray-700 px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2 cursor-pointer">
+                        <i class="fas fa-download text-indigo-500"></i> Download .ics
+                    </button>
+                    <button onclick="openGoogleCalendar()"
+                        class="btn-secondary bg-white border-2 border-gray-200 text-gray-700 px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2 cursor-pointer">
+                        <i class="fab fa-google text-red-500"></i> Google Calendar
+                    </button>
+                    <button onclick="window.print()"
+                        class="btn-secondary bg-white border-2 border-gray-200 text-gray-700 px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2 cursor-pointer">
+                        <i class="fas fa-print text-gray-500"></i> Print
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="bg-gray-100 rounded-full h-3 mb-8 overflow-hidden no-print">
+                <div id="overallProgress" class="progress-bar h-full rounded-full"
+                    style="width: 0%; background: linear-gradient(90deg, #667eea, #764ba2);"></div>
+            </div>
+
+            <!-- Table -->
+            <div class="schedule-table-wrap bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <table class="schedule-table w-full text-left" id="scheduleTable">
+                    <thead>
+                        <tr>
+                            <th class="px-5 py-4 text-sm font-bold uppercase tracking-wider">Day</th>
+                            <th class="px-5 py-4 text-sm font-bold uppercase tracking-wider">Date</th>
+                            <th class="px-5 py-4 text-sm font-bold uppercase tracking-wider">Chapters & Subtopics</th>
+                            <th class="px-5 py-4 text-sm font-bold uppercase tracking-wider text-center">Study Time</th>
+                            <th class="px-5 py-4 text-sm font-bold uppercase tracking-wider text-center">Sync</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleTableBody">
+                        <!-- Dynamic rows go here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-xl font-bold mb-4">TopStudyMaterial</h4>
+                <p class="opacity-70">Dedicated to helping engineering students excel with premium study resources.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                <ul class="opacity-70 space-y-2">
+                    <li><a href="assets/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
+                    <li><a href="assets/terms-and-conditions.html" class="hover:text-yellow-400">Terms of Service</a>
+                    </li>
+                    <li><a href="assets/disclaimer.html" class="hover:text-yellow-400">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                <div class="flex justify-center md:justify-start gap-4 text-2xl">
+                    <a href="https://www.linkedin.com/in/reshma-kapadi-2588492a1/"><i
+                            class="fab fa-linkedin hover:text-blue-400"></i></a>
+                    <a href="https://www.youtube.com/channel/UCPVPNtPOEMD7Pmw1GnZ-OVg"><i
+                            class="fab fa-youtube hover:text-red-500"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center opacity-50 mt-12 border-t border-gray-800 pt-8">&copy; 2025 TopStudyMaterial</p>
+    </footer>
+
+    <script>
+        // ===== STATE =====
+        let chaptersData = []; // Array of { name: string, subtopics: string[] }
+        let scheduleData = [];
+        let subjectTitle = '';
+
+        // ===== SET MIN DATE =====
+        (function () {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('examDate').min = tomorrow.toISOString().split('T')[0];
+        })();
+
+        // ===== CHAPTER MANAGEMENT =====
+        function addChapter() {
+            const nameInput = document.getElementById('newChapterName');
+            const subtopicsInput = document.getElementById('newSubtopics');
+            const name = nameInput.value.trim();
+            if (!name) {
+                nameInput.focus();
+                nameInput.classList.add('border-red-400');
+                setTimeout(() => nameInput.classList.remove('border-red-400'), 1500);
+                return;
+            }
+
+            const subtopics = subtopicsInput.value
+                .split(',')
+                .map(s => s.trim())
+                .filter(s => s.length > 0);
+
+            chaptersData.push({ name, subtopics });
+            nameInput.value = '';
+            subtopicsInput.value = '';
+            nameInput.focus();
+            renderChapterList();
+        }
+
+        function removeChapter(index) {
+            chaptersData.splice(index, 1);
+            renderChapterList();
+        }
+
+        function renderChapterList() {
+            const container = document.getElementById('chapterList');
+            const countLabel = document.getElementById('chapterCount');
+            countLabel.textContent = `${chaptersData.length} chapter${chaptersData.length !== 1 ? 's' : ''} added`;
+
+            container.innerHTML = chaptersData.map((ch, i) => `
+                <div class="chapter-entry bg-gray-50 border border-gray-200 rounded-xl p-4 flex items-start justify-between gap-3" style="animation-delay: ${i * 0.05}s">
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 text-xs font-bold flex-shrink-0">${i + 1}</span>
+                            <h4 class="font-semibold text-gray-800 truncate">${escapeHtml(ch.name)}</h4>
+                        </div>
+                        ${ch.subtopics.length > 0 ? `
+                            <div class="flex flex-wrap gap-1.5 mt-2 ml-9">
+                                ${ch.subtopics.map(st => `
+                                    <span class="subtopic-tag inline-flex items-center text-xs bg-white border border-gray-200 text-gray-600 px-2.5 py-1 rounded-md">
+                                        <i class="fas fa-circle text-indigo-300 mr-1" style="font-size: 5px;"></i>${escapeHtml(st)}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        ` : '<p class="text-xs text-gray-400 ml-9 mt-1">No subtopics added</p>'}
+                    </div>
+                    <button onclick="removeChapter(${i})" class="text-gray-400 hover:text-red-500 transition p-1 cursor-pointer flex-shrink-0" title="Remove chapter">
+                        <i class="fas fa-trash-alt text-sm"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // ===== BULK INPUT =====
+        function toggleBulkInput() {
+            const area = document.getElementById('bulkInputArea');
+            const text = document.getElementById('bulkToggleText');
+            const isHidden = area.classList.contains('hidden');
+            area.classList.toggle('hidden');
+            text.textContent = isHidden ? 'Hide bulk input' : 'Or paste entire syllabus at once';
+        }
+
+        function importBulkSyllabus() {
+            const raw = document.getElementById('bulkSyllabus').value.trim();
+            if (!raw) return;
+
+            const lines = raw.split('\n').filter(l => l.trim().length > 0);
+            lines.forEach(line => {
+                const parts = line.split('|');
+                const name = parts[0].trim();
+                const subtopics = parts.length > 1
+                    ? parts[1].split(',').map(s => s.trim()).filter(s => s.length > 0)
+                    : [];
+                if (name) {
+                    chaptersData.push({ name, subtopics });
+                }
+            });
+
+            document.getElementById('bulkSyllabus').value = '';
+            toggleBulkInput();
+            renderChapterList();
+        }
+
+        // ===== GENERATE SCHEDULE =====
+        function generateSchedule() {
+            hideError();
+
+            const subject = document.getElementById('subjectName').value.trim() || 'Study';
+            const examDateStr = document.getElementById('examDate').value;
+            const studyHours = parseInt(document.getElementById('studyHours').value) || 4;
+
+            // Validation
+            if (chaptersData.length === 0) {
+                showError('Please add at least one chapter before generating a schedule.');
+                return;
+            }
+            if (!examDateStr) {
+                showError('Please select your exam date.');
+                return;
+            }
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const examDate = new Date(examDateStr);
+            examDate.setHours(0, 0, 0, 0);
+
+            const diffTime = examDate.getTime() - today.getTime();
+            const daysRemaining = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (daysRemaining < 1) {
+                showError('Exam date must be in the future. Please choose a date after today.');
+                return;
+            }
+
+            const numChapters = chaptersData.length;
+            const totalSubtopics = chaptersData.reduce((sum, ch) => sum + ch.subtopics.length, 0);
+            subjectTitle = subject;
+
+            // === Distribution Algorithm ===
+            // Flatten all subtopics into individual items, then distribute across days
+            scheduleData = [];
+
+            // Build flat list: each item = { chapterName, subtopic }
+            // Chapters with no subtopics become a single item
+            const allItems = [];
+            chaptersData.forEach(ch => {
+                if (ch.subtopics.length > 0) {
+                    ch.subtopics.forEach(st => {
+                        allItems.push({ chapterName: ch.name, subtopic: st });
+                    });
+                } else {
+                    allItems.push({ chapterName: ch.name, subtopic: null });
+                }
+            });
+
+            const availableDays = daysRemaining - 1; // Exclude the exam day itself
+            if (availableDays < 1) {
+                showError('You need at least 2 days before the exam to generate a schedule with revision.');
+                return;
+            }
+
+            const totalItems = allItems.length;
+            const revisionDaysCount = 2; // Always keep 2 days for revision
+            const studyDaysCount = Math.max(1, availableDays - revisionDaysCount);
+            const itemsPerStudyDay = totalItems / studyDaysCount;
+
+            let itemIndex = 0;
+            for (let day = 0; day < availableDays; day++) {
+                const dayDate = new Date(today);
+                dayDate.setDate(dayDate.getDate() + day + 1);
+
+                const isRevisionDay = day >= studyDaysCount;
+
+                if (!isRevisionDay && itemIndex < totalItems) {
+                    const startItem = itemIndex;
+                    const endItem = Math.min(
+                        Math.round((day + 1) * itemsPerStudyDay),
+                        totalItems
+                    );
+
+                    const dayItems = allItems.slice(startItem, Math.max(endItem, startItem));
+
+                    if (dayItems.length > 0) {
+                        // Group items by chapter name (preserving order)
+                        const grouped = [];
+                        dayItems.forEach(item => {
+                            const existing = grouped.find(g => g.chapterName === item.chapterName);
+                            if (existing) {
+                                if (item.subtopic) existing.subtopics.push(item.subtopic);
+                            } else {
+                                grouped.push({
+                                    chapterName: item.chapterName,
+                                    subtopics: item.subtopic ? [item.subtopic] : []
+                                });
+                            }
+                        });
+
+                        scheduleData.push({
+                            day: day + 1,
+                            date: dayDate,
+                            chapters: grouped,
+                            totalItems: dayItems.length,
+                            hoursPerItem: (studyHours / dayItems.length).toFixed(1)
+                        });
+                        itemIndex = endItem;
+                    } else {
+                        // Fallback if rounding leaves a gap
+                        const lastItem = allItems[Math.max(0, itemIndex - 1)];
+                        scheduleData.push({
+                            day: day + 1,
+                            date: dayDate,
+                            chapters: lastItem ? [{ chapterName: lastItem.chapterName, subtopics: lastItem.subtopic ? [lastItem.subtopic] : [] }] : [],
+                            totalItems: 0,
+                            hoursPerItem: studyHours.toFixed(1),
+                            isRevision: true
+                        });
+                    }
+                } else {
+                    // Revision days (last 2 days)
+                    scheduleData.push({
+                        day: day + 1,
+                        date: dayDate,
+                        chapters: [{
+                            chapterName: "Full Syllabus Revision",
+                            subtopics: ["Review all key concepts", "Solve previous year questions", "Final formula check"]
+                        }],
+                        totalItems: 0,
+                        hoursPerItem: studyHours.toFixed(1),
+                        isRevision: true
+                    });
+                }
+            }
+
+            // === Render Stats ===
+            document.getElementById('statDays').textContent = availableDays;
+            document.getElementById('statChapters').textContent = numChapters;
+            document.getElementById('statSubtopics').textContent = totalSubtopics;
+            document.getElementById('statPerDay').textContent = itemsPerStudyDay % 1 === 0
+                ? itemsPerStudyDay
+                : itemsPerStudyDay.toFixed(1);
+            const totalHours = studyHours * availableDays;
+            const hoursPerTopic = totalItems > 0 ? (totalHours / totalItems).toFixed(1) : studyHours;
+            document.getElementById('statHours').textContent = hoursPerTopic + 'h';
+            document.getElementById('statsSection').classList.remove('hidden');
+
+            // === Render Schedule Table ===
+            document.getElementById('scheduleSubtitle').textContent =
+                `${subject} — ${formatDate(today)} to ${formatDate(new Date(today.getTime() + availableDays * 24 * 60 * 60 * 1000))} · ${totalItems} topics · ${revisionDaysCount} final revision days`;
+
+            const tbody = document.getElementById('scheduleTableBody');
+            tbody.innerHTML = '';
+
+            let rowIndex = 0;
+            scheduleData.forEach((entry) => {
+                const isToday = isSameDay(entry.date, new Date());
+                const isRevision = entry.isRevision || false;
+
+                const row = document.createElement('tr');
+                const rowBg = isToday ? 'bg-green-50/60' : isRevision ? 'bg-amber-50/40' : '';
+                row.className = `schedule-row border-b border-gray-100 ${rowBg}`;
+                row.style.animationDelay = `${rowIndex * 0.06}s`;
+
+                // Build chapters + subtopics cell
+                const chaptersHtml = entry.chapters.map((ch, chIdx) => `
+                    <div class="${chIdx > 0 ? 'mt-3 pt-3 border-t border-gray-100' : ''}">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-book-open ${isRevision ? 'text-amber-400' : 'text-indigo-400'} text-xs flex-shrink-0"></i>
+                            <span class="font-semibold text-gray-800 text-sm">${escapeHtml(ch.chapterName)}</span>
+                            ${isRevision ? '<span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-bold">REVISION</span>' : ''}
+                        </div>
+                        ${ch.subtopics.length > 0 ? `
+                            <div class="flex flex-wrap gap-1.5 ml-6">
+                                ${ch.subtopics.map(st => `
+                                    <span class="inline-flex items-center text-xs ${isRevision ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-indigo-50 text-indigo-700 border-indigo-100'} px-2.5 py-1 rounded-md border">
+                                        ${escapeHtml(st)}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+
+                const studyHoursVal = parseInt(document.getElementById('studyHours').value) || 4;
+
+                row.innerHTML = `
+                    <td class="px-5 py-4 align-top">
+                        <span class="day-badge">${isToday ? '📌 Today' : `Day ${entry.day}`}</span>
+                    </td>
+                    <td class="px-5 py-4 align-top whitespace-nowrap">
+                        <div class="font-semibold text-gray-800">${formatDateShort(entry.date)}</div>
+                        <div class="text-xs text-gray-400 mt-0.5">${getDayName(entry.date)}</div>
+                    </td>
+                    <td class="px-5 py-4">
+                        ${chaptersHtml}
+                    </td>
+                    <td class="px-5 py-4 align-top text-center">
+                        <div class="text-lg font-bold ${isRevision ? 'text-amber-600' : 'text-indigo-600'}">${studyHoursVal}h</div>
+                        <div class="text-xs text-gray-400 mt-1">${isRevision ? 'Revision' : `${entry.totalItems} topic${entry.totalItems > 1 ? 's' : ''}`}</div>
+                    </td>
+                    <td class="px-5 py-4 align-top text-center">
+                        <button onclick="syncDayToCalendar(${rowIndex})" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors" title="Sync this day to Google Calendar">
+                            <i class="fab fa-google"></i>
+                        </button>
+                    </td>
+                `;
+
+                tbody.appendChild(row);
+                rowIndex++;
+            });
+
+            // Exam day row
+            const examRow = document.createElement('tr');
+            examRow.className = 'schedule-row exam-row border-t-2 border-red-200';
+            examRow.style.animationDelay = `${rowIndex * 0.06}s`;
+            examRow.innerHTML = `
+                <td class="px-5 py-4">
+                    <span class="inline-block bg-red-500 text-white font-bold rounded-lg px-3 py-1 text-xs">🎯 EXAM</span>
+                </td>
+                <td class="px-5 py-4 whitespace-nowrap">
+                    <div class="font-semibold text-red-700">${formatDateShort(examDate)}</div>
+                    <div class="text-xs text-red-400 mt-0.5">${getDayName(examDate)}</div>
+                </td>
+                <td class="px-5 py-4" colspan="3">
+                    <div class="text-sm text-gray-600">
+                        <span class="font-semibold text-red-600">All ${numChapters} chapters covered!</span>
+                        <span class="ml-2">💪 You've got this!</span>
+                    </div>
+                </td>
+            `;
+            tbody.appendChild(examRow);
+
+            document.getElementById('scheduleSection').classList.remove('hidden');
+
+            // Animate progress bar
+            setTimeout(() => {
+                document.getElementById('overallProgress').style.width = '100%';
+            }, 300);
+
+            // Scroll to stats
+            document.getElementById('statsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // ===== GOOGLE CALENDAR LINK =====
+        function syncDayToCalendar(index) {
+            if (!scheduleData[index]) return;
+            const url = buildGoogleCalendarUrl(scheduleData[index]);
+            window.open(url, '_blank');
+        }
+
+        function openGoogleCalendar() {
+            if (scheduleData.length === 0) return;
+
+            const entry = scheduleData[0];
+            const url = buildGoogleCalendarUrl(entry);
+            window.open(url, '_blank');
+
+            if (scheduleData.length > 1) {
+                const proceed = confirm(
+                    `This will open Google Calendar for Day 1.\n\n` +
+                    `For all ${scheduleData.length} study sessions, we recommend downloading the .ics file ` +
+                    `and importing it into Google Calendar:\n` +
+                    `Google Calendar → Settings → Import & Export → Import\n\n` +
+                    `Would you like to open Google Calendar links for ALL days? ` +
+                    `(This will open ${scheduleData.length} tabs)`
+                );
+                if (proceed) {
+                    scheduleData.slice(1).forEach((e, index) => {
+                        setTimeout(() => {
+                            window.open(buildGoogleCalendarUrl(e), '_blank');
+                        }, index * 500);
+                    });
+                }
+            }
+        }
+
+        function buildGoogleCalendarUrl(entry) {
+            const studyHours = parseInt(document.getElementById('studyHours').value) || 4;
+            const startDate = formatDateForGCal(entry.date, 9, 0);
+            const endDate = formatDateForGCal(entry.date, 9 + studyHours, 0);
+
+            const chapterList = entry.chapters.map(ch => {
+                let line = ch.chapterName;
+                if (ch.subtopics.length > 0) {
+                    line += ': ' + ch.subtopics.join(', ');
+                }
+                return line;
+            });
+
+            const title = encodeURIComponent(`📚 ${subjectTitle}: ${chapterList.map(c => c.split(':')[0]).join(', ')}`);
+            const details = encodeURIComponent(
+                `Study Plan - Day ${entry.day}\n\n` +
+                `Topics to cover:\n${chapterList.map(c => '• ' + c).join('\n')}\n\n` +
+                `⏱ ~${entry.hoursPerItem || '1'}h per topic\n` +
+                `📖 Generated by TopStudyMaterial Syllabus Scheduler`
+            );
+
+            return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+                `&text=${title}` +
+                `&dates=${startDate}/${endDate}` +
+                `&details=${details}` +
+                `&sf=true&output=xml`;
+        }
+
+        // ===== .ICS DOWNLOAD =====
+        function downloadICS() {
+            if (scheduleData.length === 0) return;
+
+            const studyHours = parseInt(document.getElementById('studyHours').value) || 4;
+            let icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//TopStudyMaterial//Syllabus Scheduler//EN',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH',
+                `X-WR-CALNAME:${subjectTitle} Study Plan`
+            ];
+
+            scheduleData.forEach(entry => {
+                const startDT = formatDateForICS(entry.date, 9, 0);
+                const endDT = formatDateForICS(entry.date, 9 + studyHours, 0);
+                const uid = `${entry.date.getTime()}-${Math.random().toString(36).substr(2, 9)}@topstudymaterial`;
+
+                const chapterNames = entry.chapters.map(ch => ch.chapterName).join(', ');
+                const descLines = entry.chapters.map(ch => {
+                    let line = '• ' + ch.chapterName;
+                    if (ch.subtopics.length > 0) {
+                        line += '\\n  ' + ch.subtopics.map(st => '  - ' + st).join('\\n  ');
+                    }
+                    return line;
+                });
+
+                icsContent.push(
+                    'BEGIN:VEVENT',
+                    `UID:${uid}`,
+                    `DTSTART:${startDT}`,
+                    `DTEND:${endDT}`,
+                    `SUMMARY:📚 ${subjectTitle}: ${chapterNames}`,
+                    `DESCRIPTION:Study Plan - Day ${entry.day}\\n\\nTopics to cover:\\n${descLines.join('\\n')}\\n\\n⏱ ~${entry.hoursPerItem || '1'}h per topic`,
+                    'STATUS:CONFIRMED',
+                    `CATEGORIES:Study,${subjectTitle}`,
+                    'BEGIN:VALARM',
+                    'TRIGGER:-PT30M',
+                    'ACTION:DISPLAY',
+                    'DESCRIPTION:Study session starting in 30 minutes!',
+                    'END:VALARM',
+                    'END:VEVENT'
+                );
+            });
+
+            icsContent.push('END:VCALENDAR');
+
+            const blob = new Blob([icsContent.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${subjectTitle.replace(/[^a-zA-Z0-9]/g, '_')}_study_plan.ics`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // ===== HELPERS =====
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', {
+                weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'
+            });
+        }
+
+        function formatDateShort(date) {
+            return date.toLocaleDateString('en-US', {
+                month: 'short', day: 'numeric'
+            });
+        }
+
+        function getDayName(date) {
+            return date.toLocaleDateString('en-US', { weekday: 'long' });
+        }
+
+        function formatDateForGCal(date, hours, minutes) {
+            const d = new Date(date);
+            d.setHours(hours, minutes, 0, 0);
+            return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+        }
+
+        function formatDateForICS(date, hours, minutes) {
+            const d = new Date(date);
+            d.setHours(hours, minutes, 0, 0);
+            const pad = n => String(n).padStart(2, '0');
+            return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+        }
+
+        function isSameDay(d1, d2) {
+            return d1.getFullYear() === d2.getFullYear() &&
+                d1.getMonth() === d2.getMonth() &&
+                d1.getDate() === d2.getDate();
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+
+        function showError(msg) {
+            document.getElementById('errorText').textContent = msg;
+            document.getElementById('errorMsg').classList.remove('hidden');
+            document.getElementById('errorMsg').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideError() {
+            document.getElementById('errorMsg').classList.add('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
