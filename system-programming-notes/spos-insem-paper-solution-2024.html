@@ -441,8 +441,6 @@ MEND</pre>
         </div>
       </div>
 
-      <div id="q4b" class="mt-8 pt-8 border-t border-gray-100">
-        <h3>Q.4 (b) Single Pass Macro Processor</h3>
         <p>Expands macros in a single pass of the source code. Requires macros to be defined <em>before</em> they are
           called.</p>
 
@@ -454,6 +452,62 @@ MEND</pre>
           <li>If standard instruction, output as is.</li>
         </ol>
       </div>
+    </section>
+
+    <!-- SPPU Exam Section -->
+    <section id="exam-points" class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl shadow-xl mb-8">
+      <h2 class="text-white border-none mb-6">🎓 Strategic Points for SPPU Insem Exams</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+          <div><strong>Focus Areas:</strong> Assembler pass structure and Macro data structures (MNT, MDT, ALA) are high-weightage topics.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+          <div><strong>Diagrams:</strong> Always draw the flowchart for Pass 1/Pass 2 Assembler if asked, even for 5-mark questions.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+          <div><strong>Numerical Problems:</strong> Practice tracing the LC and building SYMTAB for a given 5-10 line assembly code.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+          <div><strong>Comparison Questions:</strong> Be ready to compare Assembler vs Compiler, and Macro vs Subroutine.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Review Questions Section -->
+    <section id="review-questions" class="note-card">
+      <h2 class="text-indigo-900">5 High-Probability Exam Questions & Answers</h2>
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-bold">Q1. Why is the START directive important in an assembler?</h4>
+          <p class="text-sm"><strong>Ans:</strong> It provides the initial value for the Location Counter (LC), defining where the program will be loaded in memory.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q2. What is the difference between a Positional Parameter and a Keyword Parameter in Macros?</h4>
+          <p class="text-sm"><strong>Ans:</strong> Positional parameters must follow a specific order in the call, whereas keyword parameters are identified by names (e.g., &REG=AREG) and can be in any order.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q3. Give an example of a Pseudo-op used in Assemblers.</h4>
+          <p class="text-sm"><strong>Ans:</strong> <code>EQU</code> (Equate) is a pseudo-op used to define a constant or a symbolic name for a value without allocating memory.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q4. What is the role of the MDT (Macro Definition Table)?</h4>
+          <p class="text-sm"><strong>Ans:</strong> It stores the skeletal body of the macro definition with positional notations used for parameter replacement during expansion.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q5. Define 'Forward Reference' and how it is resolved?</h4>
+          <p class="text-sm"><strong>Ans:</strong> A forward reference occurs when a symbol is used before it is defined. It is resolved by a two-pass assembler where Pass 1 collects all definitions and Pass 2 performs the substitution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="bg-indigo-50 p-8 rounded-2xl border border-indigo-200">
+      <h2 class="text-indigo-800 border-indigo-200">Summary for Quick Revision</h2>
+      <p class="text-sm">This 2024 paper highlights the core fundamentals of System Programming. Key takeaways include the two-pass logic of translators, the crucial role of data structures like tables in managing metadata, and the efficiency gained through macro expansion. Mastering these patterns is essential for any engineering student studying SPOS.</p>
     </section>
 
   </main>

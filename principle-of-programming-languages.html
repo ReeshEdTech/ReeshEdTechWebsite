@@ -127,12 +127,175 @@
   <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 py-16 space-y-20">
 
+    <!-- Educational Article Section -->
+    <section id="article" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 mb-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Comparative Study of Programming Paradigms and Language Design</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-10"></div>
+
+        <article class="prose prose-indigo max-w-none text-gray-700 leading-relaxed text-justify">
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">1. Introduction to Programming Languages</h3>
+          <p>
+            For any Computer Engineering student at Savitribai Phule Pune University (SPPU), the subject "Principles of Programming Languages" (PPL) is a foundational pillar. It is not just about learning how to code in a specific language like Java or C++; it is about understanding the <strong>philosophy</strong> and <strong>logic</strong> behind all programming languages. PPL teaches us why certain languages are designed the way they are and how different "paradigms" (styles) of programming solve different types of problems.
+          </p>
+          <p>
+            Understanding PPL allows an engineer to evaluate and choose the best tool for a given task. Whether you are building a high-performance system kernel or a complex AI model, the principles of language design—syntax, semantics, and abstraction—govern the efficiency of your solution.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">2. Definition and Core Explanation</h3>
+          <p>
+            <strong>Definition:</strong> A Programming Language is a formal language comprising a set of instructions that produce various kinds of output. The study of PPL involves the analysis of the design, implementation, and comparison of these languages.
+          </p>
+          <p>
+            At its core, PPL focuses on four major programming paradigms:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Imperative:</strong> Focuses on "How" to achieve a result using state changes and commands (e.g., C, Pascal).</li>
+            <li><strong>Object-Oriented (OOP):</strong> Organizes code into "Objects" that combine data and behavior (e.g., Java, C++).</li>
+            <li><strong>Functional:</strong> Treats computation as the evaluation of mathematical functions (e.g., Lisp, Haskell).</li>
+            <li><strong>Logic:</strong> Based on formal logic and rules (e.g., Prolog).</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">3. Real-World Examples</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Java (OOP):</strong> Used for enterprise-level applications and Android app development due to its robustness and portability.</li>
+            <li><strong>C (Imperative):</strong> Used for system-level programming and embedded systems where hardware control is critical.</li>
+            <li><strong>SQL (Declarative/Logic-based):</strong> Used for database management where the user specifies "What" data is needed, not "How" to retrieve it.</li>
+            <li><strong>JavaScript (Multi-paradigm):</strong> Used for web development, supporting both functional and imperative styles.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">4. Step-by-Step Explanation: The Language Evolution Process</h3>
+          <p>How do we move from a human idea to machine execution? The process involves these stages:</p>
+          <ol class="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>Design:</strong> Defining the syntax (rules for writing) and semantics (meaning) of the language.
+            </li>
+            <li>
+              <strong>Translation:</strong> Converting high-level code into machine-understandable form.
+              <ul class="list-circle pl-6 mt-2">
+                <li><strong>Compilation:</strong> Translating the entire program at once (e.g., C++).</li>
+                <li><strong>Interpretation:</strong> Translating code line-by-line (e.g., Python).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Execution:</strong> The hardware runs the binary instructions.
+            </li>
+            <li>
+              <strong>Memory Management:</strong> Handling how data is stored/deleted (e.g., Java's Garbage Collection).
+            </li>
+          </ol>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">5. Conceptual Explanation: Syntax vs. Semantics</h3>
+          <p>
+            In PPL, we distinguish between how a program looks and what it does:
+          </p>
+          <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-600 my-6">
+            <p><strong>Syntax:</strong> The form or structure of the expressions, statements, and program units. (The "Grammar").</p>
+            <p class="mt-2"><strong>Semantics:</strong> The meaning of the expressions, statements, and program units. (The "Action").</p>
+            <p class="text-sm mt-2 italic">Example: `x = 10 / 0;` is syntactically correct in C, but semantically it causes a runtime error (division by zero).</p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">6. Advantages and Disadvantages of Paradigms</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-800 mb-2">OOP (Java)</h4>
+              <p class="text-sm font-semibold">Pros:</p>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-blue-700">
+                <li>Reusability via Inheritance.</li>
+                <li>Modularity and easier maintenance.</li>
+              </ul>
+              <p class="text-sm font-semibold mt-2">Cons:</p>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-blue-700">
+                <li>Slower execution compared to C.</li>
+                <li>Requires more memory.</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg">
+              <h4 class="font-bold text-green-800 mb-2">Functional</h4>
+              <p class="text-sm font-semibold">Pros:</p>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-green-700">
+                <li>Easier to test (no side effects).</li>
+                <li>Great for parallel processing.</li>
+              </ul>
+              <p class="text-sm font-semibold mt-2">Cons:</p>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-green-700">
+                <li>Steep learning curve.</li>
+                <li>Not efficient for low-level tasks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">7. Applications in Real Systems</h3>
+          <p>
+            PPL impacts <strong>Compiler Design</strong>, where languages are translated. It's used in <strong>Game Engines</strong> (often C++ for speed) and <strong>Web Browsers</strong> (JavaScript for dynamism). Understanding PPL even helps in <strong>Domain Specific Languages (DSLs)</strong> like HTML or CSS.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 text-orange-600">8. Important Points for SPPU Exams</h3>
+          <ul class="list-inside list-square bg-orange-50 p-6 rounded-xl space-y-2 border border-orange-200">
+            <li><strong>Unit 3 Java:</strong> Focus on `static` vs `final`, String pooling, and Garbage Collection.</li>
+            <li><strong>Unit 4 OOP:</strong> Inheritance types (Single, Multilevel, Hierarchical) and Interfaces are mandatory.</li>
+            <li><strong>Unit 5 Threads:</strong> The "Life Cycle of a Thread" is a 10-mark favorite!</li>
+            <li><strong>Lambda Calculus:</strong> Be ready for basics of functional programming reduction rules.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">9. University Exam Questions with Answers</h3>
+          <div class="space-y-6">
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q1: What are the criteria for a good programming language?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> Readability, Writability, Reliability, and Cost (training, compilation, execution).</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q2: Explain "Encapsulation" in OOP.</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> It is the mechanism that binds together code and the data it manipulates, keeping both safe from outside interference and misuse.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q3: What is the difference between Abstract Class and Interface?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> An Abstract class can have both abstract and non-abstract methods, whereas an Interface (pre-Java 8) only has abstract methods. A class can implement multiple interfaces but inherit only one class.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q4: What is Garbage Collection in Java?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> It is an automatic process where the JVM identifies and deletes objects that are no longer reachable in the program to free up memory.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q5: Explain "Method Overloading" with an example.</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> It allows multiple methods to have the same name but different parameters (e.g., `add(int a, int b)` and `add(double a, double b)`).</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">10. Summary for Quick Revision</h3>
+          <p class="bg-gray-100 p-6 rounded-xl italic">
+            PPL is about the "Why" of programming. Master the four paradigms, understand syntax vs semantics, and deep-dive into Java's OOP implementation for your SPPU exams. Focus on inheritance, multithreading, and garbage collection for passing with flying colors!
+          </p>
+
+          <div class="mt-12 p-8 bg-indigo-600 text-white rounded-2xl text-center">
+            <h4 class="text-2xl font-bold mb-4">Conclusion</h4>
+            <p class="mb-6 opacity-90">Learning PPL makes you a versatile programmer. Don't just learn a language; learn the principles that power all languages.</p>
+            <p class="font-bold mb-6">Want to practice your Java skills?</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="blogs.html" class="bg-white text-indigo-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">Read Programming Blogs</a>
+              <a href="index.html#notes" class="bg-indigo-500 text-white border border-white px-6 py-2 rounded-full font-bold hover:bg-indigo-400 transition">Explore More Resources</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Question Papers Section -->
     <section id="questionpapers" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">SPPU PPL Previous Year Question Papers</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Practice with previous years’ question papers to boost your
-          preparation.</p>
+        <div class="bg-indigo-50 p-6 rounded-2xl mb-8 text-left border-l-4 border-indigo-600">
+          <h3 class="font-bold text-indigo-800 mb-2 underline">Why Practice PPL Papers?</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            PPL can be a tricky subject with a mix of theory and Java coding. Solving previous papers allows you to:
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+            <li><strong>Master Expected Java Programs:</strong> Certain code snippets like Multithreading or Exception Handling have a high repetition rate.</li>
+            <li><strong>Clarify Theory Concepts:</strong> Get a clear idea of how to explain complex paradigms like Functional or Logic programming for maximum marks.</li>
+            <li><strong>Be Exam-Ready:</strong> Familiarize yourself with the marking scheme and internal choices in the paper.</li>
+          </ul>
+        </div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Practice with previous years’ question papers to boost your preparation.</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -230,6 +393,11 @@
     <section id="videos" class="bg-gray-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4">Free PPL Video Lectures</h2>
+        <div class="max-w-2xl mx-auto mb-8 text-indigo-200">
+          <p>
+            Complex concepts like <strong>Java Garbage Collection</strong> and <strong>Memory Management</strong> are much easier to understand when you see them animated and explained step-by-step. Our videos break down the "How" and "Why" behind the code.
+          </p>
+        </div>
         <div class="w-20 h-1 bg-indigo-500 mx-auto rounded-full"></div>
         <p class="mt-4 opacity-80 max-w-2xl mx-auto">Comprehensive explanations perfect for visual learners.</p>
       </div>
@@ -264,7 +432,10 @@
     <!-- Lecture Notes Section -->
     <section id="lecturenotes">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">PPL Handwritten Notes</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">PPL Handwritten Notes & PPTs</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-6">
+          Handwritten notes and structured PPTs are your best friends during <strong>Insem-Endsem revision</strong>. They offer a concentrated summary of the entire syllabus, saving you valuable time before the exams.
+        </p>
         <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -125,13 +125,163 @@
   <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 py-16 space-y-20">
 
+    <!-- Educational Article Section -->
+    <section id="article" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 mb-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Core Concepts of System Programming and Operating System Architecture</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-10"></div>
+
+        <article class="prose prose-indigo max-w-none text-gray-700 leading-relaxed text-justify">
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">1. Introduction to SPOS</h3>
+          <p>
+            For engineering students at Savitribai Phule Pune University (SPPU), <strong>System Programming and Operating System (SPOS)</strong> is a critical subject that bridges the gap between hardware and software. While application programming focuses on solving user problems (like a calculator or a social media app), system programming focuses on creating the <strong>infrastructure</strong> that allows these applications to run efficiently.
+          </p>
+          <p>
+            In this course, we move deep into the "heart" of the computer. We explore how code is translated from assembly to machine language, how macros simplify programming, and how the Operating System (OS) manages limited resources like memory, CPU time, and storage.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">2. Definition and Core Explanation</h3>
+          <p>
+            <strong>System Programming:</strong> The activity of programming computer system software. The primary characteristic of system software is that it is <strong>machine-dependent</strong>. It includes assemblers, compilers, macro processors, loaders, and linkers.
+          </p>
+          <p>
+            <strong>Operating System:</strong> A specialized system software that acts as an intermediary between a user of a computer and the computer hardware. Its primary goals are <strong>Efficiency</strong> (resource management) and <strong>Convenience</strong> (user interface).
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">3. Real-World Examples</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>The Linux Kernel:</strong> The most famous example of an operating system kernel that manages hardware resources and provides services for other software.</li>
+            <li><strong>GCC (GNU Compiler Collection):</strong> A system program that translates source code into machine code across various languages.</li>
+            <li><strong>Windows Task Manager:</strong> A tool that reflects the OS's internal process management and CPU scheduling in real-time.</li>
+            <li><strong>Virtual Machines (VMware/VirtualBox):</strong> Systems that emulate hardware to run multiple OS instances on a single physical machine.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">4. Step-by-Step Explanation: The Life of a Program</h3>
+          <p>How does your code eventually run on the CPU? Follow these system-level steps:</p>
+          <ol class="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>Source Code:</strong> You write a high-level program (e.g., in Java or C++).
+            </li>
+            <li>
+              <strong>Macro Expansion:</strong> The macro processor replaces macro calls with their definitions, simplifying the code.
+            </li>
+            <li>
+              <strong>Translation (Assembler/Compiler):</strong> The translated code is converted into object files (machine language) but is not yet ready to run.
+            </li>
+            <li>
+              <strong>Linking (Linker):</strong> Small object files and external libraries are combined into a single <strong>Executable File</strong>.
+            </li>
+            <li>
+              <strong>Loading (Loader):</strong> The OS loader brings the executable from the disk (HDD/SSD) into the main memory (RAM).
+            </li>
+            <li>
+              <strong>Execution (OS Scheduling):</strong> The OS scheduler picks the process and gives it CPU time to execute.
+            </li>
+          </ol>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">5. Conceptual Explanation: OS Components</h3>
+          <p>
+            An OS is made of several key managers working in harmony:
+          </p>
+          <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-600 my-6">
+            <ul class="space-y-2">
+              <li><strong>Process Manager:</strong> Handles CPU scheduling, process creation, and synchronization.</li>
+              <li><strong>Memory Manager:</strong> Manages RAM, including paging and segmentation.</li>
+              <li><strong>File System Manager:</strong> Handles how data is stored on disks (Folders, permissions).</li>
+              <li><strong>I/O Manager:</strong> Manages communication with hardware like keyboards, mice, and printers via "Device Drivers."</li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">6. Advantages and Disadvantages of Monolithic vs. Microkernel</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-bold text-purple-800 mb-2">Monolithic (Linux)</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-purple-700">
+                <li><strong>Pro:</strong> High performance (all services in one space).</li>
+                <li><strong>Con:</strong> A single bug in a driver can crash the entire system.</li>
+              </ul>
+            </div>
+            <div class="bg-indigo-50 p-4 rounded-lg">
+              <h4 class="font-bold text-indigo-800 mb-2">Microkernel (QNX)</h4>
+              <ul class="list-disc pl-4 text-xs space-y-1 text-indigo-700">
+                <li><strong>Pro:</strong> Highly stable and modular.</li>
+                <li><strong>Con:</strong> Slower due to overhead of communication between services.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">7. Applications in Real Systems</h3>
+          <p>
+            SPOS knowledge is vital for <strong>Embedded Systems</strong> (like smart refrigerators), <strong>Real-Time Operating Systems (RTOS)</strong> used in rockets and medical devices, and <strong>Cloud Infrastructure</strong> where resource management is handled at a massive scale.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 text-orange-600">8. Important Points for SPPU Exams</h3>
+          <ul class="list-inside list-square bg-orange-50 p-6 rounded-xl space-y-2 border border-orange-200">
+            <li><strong>Assembler:</strong> Practice "Pass 1" and "Pass 2" logic. Expected 10-mark question on data structures like SYMTAB and LITTAB.</li>
+            <li><strong>CPU Scheduling:</strong> Learn FCFS, SJF, and Round Robin. Numerical problems are guaranteed!</li>
+            <li><strong>Deadlocks:</strong> Understand Banker's Algorithm and the four conditions for deadlock (Mutual Exclusion, etc.).</li>
+            <li><strong>Memory Management:</strong> Study Paging and Segmentation differences.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">9. University Exam Questions with Answers</h3>
+          <div class="space-y-6">
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q1: Define a Macro and Macro expansion.</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> A macro is a unit of specification for program generation through expansion. Macro expansion is the process of replacing the macro call with the macro definition.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q2: What is the difference between a Linker and a Loader?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> A Linker combines separate object files into a single executable. A Loader brings that executable from storage into memory for execution.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q3: What are the conditions for Deadlock?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q4: Explain Demand Paging.</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> It is a memory management scheme where pages are loaded into memory only when they are required (on-demand), rather than all at once.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q5: What is a System Call?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> A system call is a programmatic way in which a computer program requests a service from the kernel of the operating system.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">10. Summary for Quick Revision</h3>
+          <p class="bg-gray-100 p-6 rounded-xl italic">
+            SPOS is about the "engine" of the computer. Remember the flow: Macro -> Assembler -> Linker -> Loader -> OS Management. Focus on numeric problems for CPU scheduling and page replacement algorithms for your SPPU exams!
+          </p>
+
+          <div class="mt-12 p-8 bg-indigo-600 text-white rounded-2xl text-center">
+            <h4 class="text-2xl font-bold mb-4">Conclusion</h4>
+            <p class="mb-6 opacity-90">By mastering SPOS, you gain the superpower to control computer hardware. This knowledge forms the base of high-performance engineering.</p>
+            <p class="font-bold mb-6">Need help with SPOS Practicals?</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#labexperiments" class="bg-white text-indigo-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">View Lab Code</a>
+              <a href="blogs.html" class="bg-indigo-500 text-white border border-white px-6 py-2 rounded-full font-bold hover:bg-indigo-400 transition">Read SPOS Blogs</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- PPT Section -->
     <section id="ppts">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Download SPOS PPTs</h2>
+        <div class="bg-indigo-50 p-6 rounded-2xl mb-8 text-left border-l-4 border-indigo-600">
+          <h3 class="font-bold text-indigo-800 mb-2 underline">Why Use SPOS PPTs for Revision?</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            System Programming concepts like Assembler Passes and Macro Expansion are highly logical. Our PPTs offer:
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+            <li><strong>Visual Flowcharts:</strong> See exactly how data flows between different tables (SYMTAB, LITTAB) during assembly.</li>
+            <li><strong>Concise Summaries:</strong> Perfect for a 10-minute refresh of OS concepts like Paging or Scheduling before your viva or exam.</li>
+            <li><strong>Diagrammatic Clarity:</strong> Clear illustrations of the relationship between high-level code and machine-executable binary.</li>
+          </ul>
+        </div>
         <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Get well-structured, syllabus-based SPOS PowerPoint
-          presentations. Ideal for self-study and revision.</p>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Get well-structured, syllabus-based SPOS PowerPoint presentations. Ideal for self-study and revision.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Unit 1 -->
@@ -187,8 +337,12 @@
     <section id="questionpapers" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">SPPU Previous Year Question Papers</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Compare the marking scheme to understand how answers are evaluated.
-        </p>
+        <div class="max-w-3xl mx-auto mb-8 text-gray-600 italic">
+          <p>
+            Practicing previous year papers is the <strong>fastest way to pass</strong> SPOS. It helps you recognize the pattern of numerical problems (which often carry the highest marks) and ensures you are comfortable with the technical terminology used by SPPU examiners.
+          </p>
+        </div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Compare the marking scheme to understand how answers are evaluated.</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -362,6 +516,11 @@
     <section id="videos" class="bg-gray-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4">SPOS Video Lectures</h2>
+        <div class="max-w-2xl mx-auto mb-10 text-indigo-200">
+          <p>
+            Sometimes, a simple diagram isn't enough to explain how an operating system context switches between two processes. Our video lectures provide <strong>real-time walkthroughs</strong> and code-level explanations that turn abstract concepts into practical knowledge.
+          </p>
+        </div>
         <div class="w-20 h-1 bg-indigo-500 mx-auto rounded-full"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

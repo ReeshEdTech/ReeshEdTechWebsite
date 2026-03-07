@@ -267,6 +267,62 @@ DL 02 C 5
 DL 02 C 3</code></pre>
     </section>
 
+    <!-- SPPU Exam Section -->
+    <section id="exam-points" class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl shadow-xl mb-8">
+      <h2 class="text-white border-none mb-6">🎓 Important Points for SPPU Exams (Oral/Practical)</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Data Structures:</strong> Questions are often asked on the structure of SYMTAB (Symbol, Address, Length) and LITTAB (Literal, Address).</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>IC Format:</strong> Understand the variant formats (Variant I and Variant II) of Intermediate Code.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Assembler Directives:</strong> Be ready to explain why directives like START and ORIGIN do not have machine code.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Literal Processing:</strong> Explain how literals are handled during Pass 1 versus Pass 2.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Review Questions Section -->
+    <section id="review-questions" class="note-card">
+      <h2 class="text-indigo-900">5 University Exam Questions & Answers</h2>
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-bold">Q1. What is the role of the Symbol Table in Pass 1?</h4>
+          <p class="text-sm"><strong>Ans:</strong> It stores all symbols (labels) defined in the program along with their assigned addresses and lengths for resolution in Pass 2.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q2. Define Literal and how it differs from a Symbol?</h4>
+          <p class="text-sm"><strong>Ans:</strong> A literal is a value represented directly in an instruction (e.g., ='5'), whereas a symbol is a name given to a memory location or value (e.g., ONE).</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q3. Why is a Two-Pass Assembler used instead of a Single-Pass?</h4>
+          <p class="text-sm"><strong>Ans:</strong> Primarily to handle <strong>Forward References</strong> (symbols used before they are defined).</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q4. What is the use of the Location Counter (LC)?</h4>
+          <p class="text-sm"><strong>Ans:</strong> It keeps track of the memory address of the next instruction or data byte to be generated.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q5. Explain the importance of Intermediate Code (IC).</h4>
+          <p class="text-sm"><strong>Ans:</strong> IC allows the assembler to perform machine-independent analysis in Pass 1 and machine-dependent synthesis in Pass 2 efficiently.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="bg-green-50 p-8 rounded-2xl border border-green-200">
+      <h2 class="text-green-800 border-green-200">Summary for Quick Revision</h2>
+      <p class="text-sm">Pass I of the assembler involves reading the source code, building metadata tables (SYMTAB, LITTAB, OPTAB), and generating a version of the code that is easier to translate into machine instructions (Intermediate Code). It handles all "Analysis" tasks of translation.</p>
+    </section>
+
   </main>
 
   <!-- Footer -->

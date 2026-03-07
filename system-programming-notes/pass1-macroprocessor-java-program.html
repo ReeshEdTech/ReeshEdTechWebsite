@@ -265,6 +265,62 @@ Macro: DECR
   #1 -> 10</code></pre>
     </section>
 
+    <!-- SPPU Exam Section -->
+    <section id="exam-points" class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl shadow-xl mb-8">
+      <h2 class="text-white border-none mb-6">🎓 Important Points for SPPU Exams (Oral/Practical)</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Data Structures:</strong> Be thorough with MNT (Macro Name Table) and MDT (Macro Definition Table) structures.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Argument Handling:</strong> Explain the difference between Positional Parameters and Keyword Parameters.</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>MDT Construction:</strong> Why do we use positional notations like #0, #1 instead of actual argument names in MDT? (Ans: For generic expansion).</div>
+        </li>
+        <li class="flex items-start gap-4">
+          <i class="fas fa-star text-yellow-400 mt-1"></i>
+          <div><strong>Pass 1 vs Pass 2:</strong> Pass 1 is for <strong>Definition</strong> processing, while Pass 2 is for <strong>Call</strong> expansion.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Review Questions Section -->
+    <section id="review-questions" class="note-card">
+      <h2 class="text-indigo-900">5 University Exam Questions & Answers</h2>
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-bold">Q1. Define Macro and Macro Expansion.</h4>
+          <p class="text-sm"><strong>Ans:</strong> A macro is a single line of code that represents a block of instructions. Macro expansion is the process of replacing the macro call with its corresponding body.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q2. What is the purpose of the MNT (Macro Name Table)?</h4>
+          <p class="text-sm"><strong>Ans:</strong> MNT stores the names of all macros defined in the program along with a pointer to their definition in the MDT.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q3. What represents the end of a macro definition in MDT?</h4>
+          <p class="text-sm"><strong>Ans:</strong> The <strong>MEND</strong> (Macro End) directive signifies the end of a macro definition.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q4. What is ALA (Argument List Array)?</h4>
+          <p class="text-sm"><strong>Ans:</strong> ALA is used during macro expansion to substitute formal parameters with actual arguments provided during the macro call.</p>
+        </div>
+        <div>
+          <h4 class="font-bold">Q5. Explain the difference between a Macro and a Subroutine.</h4>
+          <p class="text-sm"><strong>Ans:</strong> Macros are expanded at compile-time (faster execution, more memory), while Subroutines are called at run-time (slower execution, less memory).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="bg-blue-50 p-8 rounded-2xl border border-blue-200">
+      <h2 class="text-blue-800 border-blue-200">Summary for Quick Revision</h2>
+      <p class="text-sm">Pass I of a Macro Processor focuses on identifying macro definitions, storing their names in MNT, and their bodies in MDT. It also prepares the ALA for parameter substitution, ensuring the system is ready for the expansion phase in Pass II.</p>
+    </section>
+
   </main>
 
   <!-- Footer -->

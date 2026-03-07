@@ -127,10 +127,166 @@
   <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 py-16 space-y-20">
 
+    <!-- Educational Article Section -->
+    <section id="article" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 mb-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Understanding Blockchain Architecture: From Transactions to Consensus</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-10"></div>
+
+        <article class="prose prose-indigo max-w-none text-gray-700 leading-relaxed text-justify">
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">1. Introduction to Blockchain Technology</h3>
+          <p>
+            The digital world is undergoing a paradigm shift with the advent of Blockchain Technology. For engineering students at Savitribai Phule Pune University (SPPU), Blockchain represents more than just the foundation of cryptocurrencies like Bitcoin; it is a fundamental shift in how we handle data, trust, and security in a decentralized manner. As we move towards Web 3.0, the "Internet of Trust," Blockchain becomes a critical skill for any modern software engineer.
+          </p>
+          <p>
+            Traditionally, our digital interactions have relied on central authorities—banks for money, tech giants for social data, and governments for identity. Blockchain challenges this status quo by introducing a peer-to-peer network where trust is built into the protocol itself through mathematics and cryptography, rather than a single entity.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">2. Definition and Core Explanation</h3>
+          <p>
+            <strong>Definition:</strong> Blockchain is a decentralized, distributed, and oftentimes public, digital ledger consisting of records called blocks that is used to record transactions across many computers so that any involved block cannot be altered retroactively, without the alteration of all subsequent blocks.
+          </p>
+          <p>
+            At its core, think of Blockchain as a shared spreadsheet that everyone on the network has a copy of. When a new transaction happens, it's not just updated in one place; every "node" (computer) on the network verifies it and adds it to their own copy. This ensures that no single person can cheat, as the majority of the network would have to agree on the change—a concept known as <strong>Consensus</strong>.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">3. Real-World Examples</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Cryptocurrencies:</strong> Bitcoin (Store of value) and Ethereum (Platform for smart contracts).</li>
+            <li><strong>Supply Chain Management:</strong> IBM Food Trust uses blockchain to track the journey of food products from farm to table, ensuring freshness and safety.</li>
+            <li><strong>Smart Contracts:</strong> Self-executing contracts with the terms of the agreement directly written into code, used in decentralized finance (DeFi).</li>
+            <li><strong>Digital Identity:</strong> Platforms like Microsoft's ION use blockchain to give users control over their own digital identities without relying on a central server.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">4. Step-by-Step Explanation: How a Block is Created</h3>
+          <p>The process of adding data to a blockchain (Mining/Validation) follows these steps:</p>
+          <ol class="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>Transaction Request:</strong> Someone requests a transaction (e.g., sending 1 BTC).
+            </li>
+            <li>
+              <strong>Broadcast:</strong> The requested transaction is broadcast to a P2P network consisting of computers, known as nodes.
+            </li>
+            <li>
+              <strong>Verification:</strong> The network of nodes validates the transaction and the user's status using known algorithms. A verified transaction can involve cryptocurrency, contracts, or other information.
+            </li>
+            <li>
+              <strong>Block Formation:</strong> Once verified, the transaction is combined with other transactions to create a new block of data for the ledger.
+            </li>
+            <li>
+              <strong>Hash Calculation:</strong> The new block is given a unique cryptographic hash and also contains the hash of the previous block, creating a "chain."
+            </li>
+            <li>
+              <strong>Completion:</strong> The new block is added to the existing blockchain, in a way that is permanent and unalterable.
+            </li>
+          </ol>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">5. Conceptual Explanation: The 5-Layer Architecture</h3>
+          <p>
+            Understanding Blockchain requires looking at its architectural layers, as defined in the SPPU syllabus:
+          </p>
+          <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-600 my-6">
+            <ul class="space-y-2">
+              <li><strong>1. Application Layer:</strong> Smart contracts, DApps, and user interfaces (e.g., MetaMask).</li>
+              <li><strong>2. Execution Layer:</strong> Where the instructions are carried out (e.g., Ethereum Virtual Machine).</li>
+              <li><strong>3. Semantic Layer:</strong> Defining the data structures and meanings of transactions.</li>
+              <li><strong>4. Propagation Layer:</strong> The P2P network communication protocols.</li>
+              <li><strong>5. Consensus Layer:</strong> The heart of the system—Proof of Work (PoW), Proof of Stake (PoS), etc.</li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">6. Advantages and Disadvantages</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div class="bg-green-50 p-4 rounded-lg">
+              <h4 class="font-bold text-green-800 mb-2">Advantages</h4>
+              <ul class="list-disc pl-4 text-sm space-y-1 text-green-700">
+                <li>Immutability: Data cannot be tampered with.</li>
+                <li>No Central Authority: Reduces dependency on middle-men.</li>
+                <li>High Security: Cryptography makes it nearly unhackable.</li>
+                <li>Transparency: All transactions are publicly viewable.</li>
+              </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg">
+              <h4 class="font-bold text-red-800 mb-2">Disadvantages</h4>
+              <ul class="list-disc pl-4 text-sm space-y-1 text-red-700">
+                <li>Scalability: Some blockchains are slow at processing transactions.</li>
+                <li>Energy Consumption: PoW (Mining) requires massive electricity.</li>
+                <li>Irreversibility: If you lose your "private key," your assets are gone forever.</li>
+                <li>Regulatory Uncertainty: Governments are still figuring out how to handle it.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">7. Applications in Real Systems</h3>
+          <p>
+            Beyond finance, blockchain is used in <strong>Voting Systems</strong> to prevent fraud, in <strong>Intellectual Property</strong> to track ownership of digital art (NFTs), and in <strong>Real Estate</strong> to streamline the process of title transfers and fractional ownership.
+          </p>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 text-orange-600">8. Important Points for SPPU Exams</h3>
+          <ul class="list-inside list-square bg-orange-50 p-6 rounded-xl space-y-2 border border-orange-200">
+            <li><strong>Hash Functions:</strong> Understand properties of SHA-256 (Pre-image resistance, Collision resistance).</li>
+            <li><strong>Consensus Algorithms:</strong> Compare PoW vs PoS vs DPoS. Expect a 10-mark question here!</li>
+            <li><strong>Double Spending:</strong> Understand how blockchain prevents spending the same coin twice.</li>
+            <li><strong>Public vs Private:</strong> Know the difference between Permissionless (Bitcoin) and Permissioned (Hyperledger) blockchains.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">9. University Exam Questions with Answers</h3>
+          <div class="space-y-6">
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q1: What is a Genesis Block?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> The Genesis Block is the first block of a blockchain. It is the only block that does not contain a hash of a previous block.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q2: Explain the concept of Mining.</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> Mining is the process by which new transactions are added to a blockchain. In PoW, it involves solving complex mathematical puzzles (finding a nonce) to secure the network.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q3: What are Smart Contracts?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> Smart contracts are self-executing contracts where the agreement is written in code. They automatically execute when certain predefined conditions are met.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q4: Why is a 51% attack dangerous?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> If a single entity controls more than 50% of the network's computing power, they could potentially halt new transactions, reverse their own transactions (causing double spending), and compromise trust.</p>
+            </div>
+            <div class="border-b pb-4">
+              <p class="font-bold text-gray-900">Q5: What is the Role of a Nonce?</p>
+              <p class="text-sm mt-1"><strong>Answer:</strong> A "nonce" (number used once) is a value found by miners that, when combined with the block's data, produces a hash that meets the network's difficulty target.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-indigo-700 mt-8 mb-4">10. Summary for Quick Revision</h3>
+          <p class="bg-gray-100 p-6 rounded-xl italic">
+            Blockchain is a distributed ledger technology that ensures security and trust through decentralization and cryptography. Focus on the 5-layer architecture, hash link between blocks, and the vital role of consensus mechanisms. Remember: "Don't trust, verify."
+          </p>
+
+          <div class="mt-12 p-8 bg-indigo-600 text-white rounded-2xl text-center">
+            <h4 class="text-2xl font-bold mb-4">Conclusion</h4>
+            <p class="mb-6 opacity-90">Decentralization is the future. By mastering Blockchain, you're not just learning a technology, you're learning the foundation of the future digital economy.</p>
+            <p class="font-bold mb-6">Want to learn more about the math behind it?</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="blockchain-technology-notes/mathematical-foundation-for-blockchain.html" class="bg-white text-indigo-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">Mathematical Foundations</a>
+              <a href="blogs.html" class="bg-indigo-500 text-white border border-white px-6 py-2 rounded-full font-bold hover:bg-indigo-400 transition">Read Blockchain Blogs</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Question Papers Section -->
     <section id="questionpapers" class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">SPPU Blockchain Question Papers</h2>
+        <div class="bg-indigo-50 p-6 rounded-2xl mb-8 text-left border-l-4 border-indigo-600">
+          <h3 class="font-bold text-indigo-800 mb-2 underline">The Strategic Value of Previous Papers</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            Blockchain is a relatively new but highly technical subject in the SPPU curriculum. Practicing previous papers helps you:
+          </p>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+            <li><strong>Identify Core Algorithms:</strong> Spot recurring questions on SHA-256, RSA, and Consensus mechanisms.</li>
+            <li><strong>Master Numerical Problems:</strong> Practice modular arithmetic and hash calculation problems that appear every year.</li>
+            <li><strong>Perfect Your Diagrams:</strong> Learn how to draw the 5-layer architecture and block structures exactly as expected by examiners.</li>
+          </ul>
+        </div>
         <p class="text-gray-600 max-w-2xl mx-auto">Latest Insem and Endsem papers for practice.</p>
       </div>
 
@@ -193,6 +349,11 @@
     <section id="videos" class="bg-gray-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4">Video Lectures</h2>
+        <div class="max-w-2xl mx-auto mb-8 text-indigo-200">
+          <p>
+            Understanding decentralized networks and consensus protocols can be challenging through text alone. Our video lectures provide <strong>visual walkthroughs</strong> of how a transaction propagates through a network and how blocks are cryptographically linked.
+          </p>
+        </div>
         <div class="w-20 h-1 bg-indigo-500 mx-auto rounded-full"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -221,6 +382,9 @@
     <section id="lecturenotes">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Blockchain Notes</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+          Structured notes and PPTs are essential for <strong>last-minute preparation</strong>. They summarize complex concepts like Elliptic Curve Cryptography (ECC) into bullet points and easy-to-recall diagrams.
+        </p>
         <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

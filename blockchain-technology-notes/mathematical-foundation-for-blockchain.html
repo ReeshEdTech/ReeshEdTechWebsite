@@ -206,42 +206,143 @@
 
     <section id="topic3" class="note-card">
       <h2>Topic 3: History of Blockchain</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>The journey of blockchain didn't start with Bitcoin. It was a gradual evolution of cryptographic ideas:</p>
+      <ul>
+        <li><strong>1991:</strong> Stuart Haber and W. Scott Stornetta describe the first cryptographically secured chain of blocks using time-stamping.</li>
+        <li><strong>1998:</strong> Nick Szabo designs "Bit Gold," a decentralized digital currency (though never implemented).</li>
+        <li><strong>2008:</strong> <strong>Satoshi Nakamoto</strong> publishes the Bitcoin whitepaper: "Bitcoin: A Peer-to-Peer Electronic Cash System."</li>
+        <li><strong>2009:</strong> The first block, the <strong>Genesis Block</strong>, is mined.</li>
+        <li><strong>2015:</strong> Vitalik Buterin launches <strong>Ethereum</strong>, introducing "Smart Contracts."</li>
+      </ul>
     </section>
 
     <section id="topic4" class="note-card">
       <h2>Topic 4: Mathematical Foundation for Blockchain</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>Blockchain relies on three main mathematical pillars: <strong>Number Theory</strong>, <strong>Probability</strong>, and <strong>Graph Theory</strong>.</p>
+      <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100 mb-6">
+        <h4 class="text-indigo-900">Key Mathematical Concepts:</h4>
+        <ul class="list-none space-y-3">
+          <li class="flex items-start gap-2"><i class="fas fa-calculator mt-1 text-indigo-600"></i> <strong>Modular Arithmetic:</strong> Essential for cryptographic algorithms like RSA and ECC. (e.g., `a mod n`).</li>
+          <li class="flex items-start gap-2"><i class="fas fa-project-diagram mt-1 text-indigo-600"></i> <strong>Merkle Trees:</strong> A binary tree structure for efficient and secure verification of large data sets.</li>
+          <li class="flex items-start gap-2"><i class="fas fa-chart-line mt-1 text-indigo-600"></i> <strong>Game Theory:</strong> Used in consensus mechanisms to incentivize honest behavior (Mechanism Design).</li>
+        </ul>
+      </div>
     </section>
 
     <section id="topic5" class="note-card">
       <h2>Topic 5: Cryptography</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>Cryptography is the "secret sauce" of blockchain. It ensures <strong>Confidentiality, Integrity, and Authenticity</strong>.</p>
+      <div class="blockquote">
+        “Cryptography is the practice and study of techniques for secure communication in the presence of third parties.”
+      </div>
+      <p>In blockchain, we primarily use it for creating digital signatures and connecting blocks through hashes.</p>
     </section>
 
     <section id="topic6" class="note-card">
       <h2>Topic 6: Symmetric & Asymmetric Key Cryptography</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="text-gray-900 border-b pb-2 mb-3 text-center">Symmetric (Secret Key)</h4>
+          <p class="text-xs italic mb-2 text-center">One key for both encryption and decryption.</p>
+          <ul class="text-xs space-y-1">
+            <li>Faster processing.</li>
+            <li>Risk: How to share the key safely?</li>
+            <li>Example: AES.</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+          <h4 class="text-indigo-900 border-b pb-2 mb-3 text-center">Asymmetric (Public-Private)</h4>
+          <p class="text-xs italic mb-2 text-center">Two keys: Public key (to encrypt) and Private key (to decrypt).</p>
+          <ul class="text-xs space-y-1">
+            <li>Foundation of Blockchain wallets.</li>
+            <li>Public key = Your Account Number.</li>
+            <li>Private key = Your PIN/Password.</li>
+            <li>Example: RSA, ECC.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="topic7" class="note-card">
       <h2>Topic 7: Elliptic Curve Cryptography (ECC)</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>Bitcoin and Ethereum use <strong>ECC</strong> because it provides the same security as RSA but with much smaller keys. For example, a 256-bit ECC key is as secure as a 3072-bit RSA key.</p>
+      <div class="bg-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+        Equation: y² = x³ + ax + b (mod p)
+      </div>
+      <p class="mt-4">In Bitcoin, the specific curve used is <strong>secp256k1</strong>.</p>
     </section>
 
     <section id="topic8" class="note-card">
       <h2>Topic 8: Cryptographic Hash Functions: SHA256</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>A hash function takes an input (of any size) and turns it into a fixed-size string of characters. <strong>SHA-256</strong> (Secure Hash Algorithm 256-bit) is used by Bitcoin.</p>
+      <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+        <h4 class="text-orange-900">Properties of SHA-256:</h4>
+        <ol>
+          <li><strong>Deterministic:</strong> Same input always produces same hash.</li>
+          <li><strong>Pre-image resistance:</strong> Impossible to find input if you only have the hash.</li>
+          <li><strong>Avalanche Effect:</strong> Changing one tiny bit in the input changes the entire hash.</li>
+          <li><strong>Collision Resistance:</strong> Impossible to find two different inputs that produce the same hash.</li>
+        </ol>
+      </div>
     </section>
 
     <section id="topic9" class="note-card">
       <h2>Topic 9: Digital Signature Algorithm (DSA)</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>How do we know a transaction actually came from the owner? We use digital signatures based on <strong>ECDSA</strong> (Elliptic Curve Digital Signature Algorithm).</p>
+      <div class="flex flex-col md:flex-row gap-8 items-center bg-indigo-50 p-8 rounded-2xl">
+        <div class="flex-1">
+          <h4 class="font-bold mb-2">Process:</h4>
+          <ol class="text-sm space-y-2">
+            <li>Apply Hash function to transaction data.</li>
+            <li>Encrypt the hash with your <strong>Private Key</strong> (creating the signature).</li>
+            <li>Broadcast transaction + Signature + Public Key.</li>
+            <li>Network verifies it using your <strong>Public Key</strong>.</li>
+          </ol>
+        </div>
+        <div class="flex-1 text-center bg-white p-4 rounded-xl shadow-inner border">
+          <span class="text-indigo-600 font-bold block mb-2">🔒 Private Key</span>
+          <p class="text-xs text-gray-500">Signs the Transaction</p>
+          <div class="h-4 w-full bg-gray-100 my-2 rounded"></div>
+          <span class="text-green-600 font-bold block mb-2">🔓 Public Key</span>
+          <p class="text-xs text-gray-500">Verifies the Sender</p>
+        </div>
+      </div>
     </section>
 
     <section id="topic10" class="note-card">
       <h2>Topic 10: Merkel Trees</h2>
-      <p class="text-gray-500 italic">Content coming soon...</p>
+      <p>A <strong>Merkle Tree</strong> (Hash Tree) allows for efficient and secure verification of transactions in a block. Each leaf node is a hash of a transaction, and every non-leaf node is the hash of its children.</p>
+      <div class="bg-indigo-900 text-white p-8 rounded-2xl text-center">
+        <h4 class="text-indigo-300 font-bold mb-4">Why Merkle Trees?</h4>
+        <p class="text-sm opacity-90 mb-4">In a block with 1000 transactions, if you want to verify just ONE transaction, you don't need to download all 1000. You only need the <strong>Merkle Path</strong>!</p>
+        <div class="w-24 h-1 bg-indigo-500 mx-auto rounded-full mb-6"></div>
+        <p class="font-bold text-lg">Integrity at Scale 🚀</p>
+      </div>
+
+      <!-- SPPU Exam Section -->
+      <div class="mt-12 p-8 bg-orange-600 text-white rounded-3xl shadow-xl">
+        <h3 class="text-2xl font-bold mb-4 border-none text-white">🎓 SPPU Exam Prep: Unit 1 Math</h3>
+        <ul class="list-none space-y-4 mb-8">
+          <li class="flex items-start gap-4">
+            <div class="bg-orange-500 p-2 rounded-lg"><i class="fas fa-question-circle"></i></div>
+            <div>
+              <p class="font-bold mb-1">Differentiate between Symmetric vs Asymmetric Cryptography (5-10 Marks)</p>
+              <p class="text-xs opacity-90">Always provide a table comparison for better marks!</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="bg-orange-500 p-2 rounded-lg"><i class="fas fa-question-circle"></i></div>
+            <div>
+              <p class="font-bold mb-1">Explain the structure of Merkle Tree and its role in Blockchain (8 Marks)</p>
+              <p class="text-xs opacity-90">Draw a diagram with H1, H2, H12 nodes!</p>
+            </div>
+          </li>
+        </ul>
+        <div class="text-center">
+          <p class="italic mb-4 text-sm">"Success is a series of small wins."</p>
+          <a href="../blockchain-technology.html" class="inline-block bg-white text-orange-600 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition">Back to Main Subject</a>
+        </div>
+      </div>
     </section>
 
   </main>
